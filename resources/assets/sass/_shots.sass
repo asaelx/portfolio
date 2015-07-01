@@ -1,0 +1,43 @@
+/* Shots */
+
+.shots
+    +center
+    position: relative
+    overflow: auto
+    .slider
+        +clearfix
+        .slide
+            float: left
+            padding-bottom: 3rem
+            .list
+                +clearfix
+                .shot
+                    float: left
+                    padding: 0.5rem
+                    .link
+                        display: block
+                        border-radius: rem(3px)
+                        height: rem(188px)
+                        width: rem(250px)
+                        overflow: hidden
+                        .img
+                            width: 100%
+                            vertical-align: bottom
+    .dots
+        +clearfix
+        position: absolute
+        left: 50%
+        bottom: 1rem
+        transform: translateX(-50%)
+        .dot
+            text-indent: -99999px
+            background: lighten($blueish, 15)
+            display: block
+            float: left
+            border-radius: 50%
+            height: rem(12px)
+            width: rem(12px)
+            margin: 0 0.3rem
+            &.active, &:hover
+                background: $blue
+                cursor: pointer

@@ -6,7 +6,7 @@ elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
     // Styles
-    mix.rubySass('style.sass', 'public/css');
+    mix.rubySass('handsome.sass', 'public/css/handsome.css');
 
     // Scripts
     mix.scripts([

@@ -4,9 +4,11 @@ html(lang="en")
         meta(charset="utf-8")
         block title
             title Portafolio de Asael Jaimes
-        link(type="text/css", rel="stylesheet", href="{{url('css/handsome.css')}}")
+        link(type="text/css", rel="stylesheet", href="{{ url('css/handsome.css') }}")
     body
         block topbar
         block profile
         block shots
         block footer
+    
+        script(type="text/javascript", src="{{ url('js/min/scripts.min.js') }}")
