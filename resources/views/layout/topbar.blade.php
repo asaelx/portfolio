@@ -9,5 +9,5 @@
     </div>
     <div class="lang">Español</div>
   </div>
-  <!-- About--><a href="#" class="about green btn">Acerca de mí</a>
+  <!-- About--><a href="#" data-target="about" class="about trigger-modal green btn">Acerca de mí</a>
 </div>

@@ -16,7 +16,7 @@ $(function(){
         });
     }
 
-    //Shots
+    // Shots
     var shots = $('.shots');
 
     if(shots.length){
@@ -25,5 +25,44 @@ $(function(){
             keys: true,
             dots: true
         });
+    }
+
+    // Modal
+
+    var modal = $('.modal');
+
+    if(modal.length){
+
+        var $layer           = $('.layer'),
+            trigger_modal    = $('.trigger-modal')
+            close_modal      = modal.find('.close');
+
+        function show_modal(target){
+            $layer.toggleClass('visible');
+            modal.filter('[data-target="'+ target +'"]').addClass('visible');
+        }
+
+        function hide_modal(){
+            $layer.removeClass('visible');
+            modal.removeClass('visible');
+        }
+
+        trigger_modal.click(function(e){
+            e.preventDefault();
+            var $this   = $(this),
+                target  = $this.data('target');
+
+            show_modal(target);
+
+        });
+
+        close_modal.click(function(e){
+            hide_modal();
+        });
+
+        $layer.click(function(e){
+            hide_modal();
+        });
+
     }
 });
