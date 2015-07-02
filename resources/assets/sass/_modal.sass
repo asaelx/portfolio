@@ -1,6 +1,7 @@
 /* Modal */
 
 .layer
+    display: none
     animation: fade-out 0.3s forwards ease
     +opacity(0)
     background: $white
@@ -12,9 +13,11 @@
     z-index: 99
     transition: all 0.3s ease
     &.visible
+        display: block
         animation: fade-in 0.3s forwards ease
 
 .modal
+    display: none
     animation: modal-out 0.3s forwards ease
     background: $grayish
     border-radius: rem(3px)
@@ -106,4 +109,5 @@
                 top: -0.3rem
                 margin-left: 0.5rem
     &.visible
+        display: block
         animation: modal-in 0.3s forwards ease

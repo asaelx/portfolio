@@ -6,7 +6,13 @@ $(function(){
 
     if(lang_switch.length){
         var lang_label      = lang_switch.find('label'),
-            lang_checkbox   = lang_switch.find('#lang_switch');
+            lang_checkbox   = lang_switch.find('#lang_switch'),
+            language        = window.navigator.userLanguage || window.navigator.language;
+
+        function change_lang(){
+
+        }
+
         lang_checkbox.click(function(){
             if(lang_checkbox.is(':checked')){
                 lang_label.toggleClass('en sp');
@@ -28,7 +34,6 @@ $(function(){
     }
 
     // Modal
-
     var modal = $('.modal');
 
     if(modal.length){
@@ -62,6 +67,11 @@ $(function(){
 
         $layer.click(function(e){
             hide_modal();
+        });
+
+        $(document).keyup(function(e) {
+             if (e.keyCode == 27)
+                hide_modal();
         });
 
     }
