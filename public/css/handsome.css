@@ -97,6 +97,8 @@ html, body {
   color: #FFFFFF; }
   .btn.green {
     background: #1ABC9C; }
+  .btn.blue {
+    background: #2980B9; }
 
 /* Animations */
 @-webkit-keyframes fade-in {
@@ -486,6 +488,18 @@ html, body {
       margin-bottom: 1rem; }
       .the-shot .content p:last-child {
         margin: 0; }
+
+/* Login */
+.login {
+  text-align: center;
+  margin-top: 5rem; }
+  .login .title {
+    font-size: 20px;
+    font-size: 1.42857rem;
+    margin-bottom: 1rem; }
+  .login .btn {
+    font-size: 18px;
+    font-size: 1.28571rem; }
 
 /* Footer */
 .footer {

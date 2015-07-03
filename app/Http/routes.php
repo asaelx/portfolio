@@ -18,3 +18,29 @@ Route::get('/', function () {
 Route::get('shot', function () {
     return view('shot');
 });
+
+Route::get('login', 'LoginController@index');
+
+Route::get('admin', function () {
+    return view('admin');
+});
+
+Route::get('twitter/login', [
+    'uses'  => 'LoginController@login',
+    'as'    => 'twitter.login'
+]);
+
+Route::get('twitter/callback', [
+    'uses'  => 'LoginController@callback',
+    'as'    => 'twitter.callback'
+]);
+
+Route::get('twitter/error', [
+    'uses'  => 'LoginController@error',
+    'as'    => 'twitter.error'
+]);
+
+Route::get('twitter/logout', [
+    'uses'  => 'LoginController@logout',
+    'as'    => 'twitter.logout'
+]);
