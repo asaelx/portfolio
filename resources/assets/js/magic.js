@@ -75,4 +75,29 @@ $(function(){
         });
 
     }
+
+    // Form
+    var form = $('.form');
+
+    if(form.length){
+        var inputs = $('input');
+
+        inputs.on('focusout', function(){
+            var $input = $(this),
+                value = $input.val();
+
+            if(value != ''){
+                $input.addClass('hasValue');
+            }else{
+                $input.removeClass('hasValue');
+            }
+        });
+
+        var textareas = $('textarea');
+
+        if(textareas.length){
+            // Autosize textarea
+            textareas.textareaAutoSize();
+        }
+    }
 });

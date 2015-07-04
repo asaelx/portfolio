@@ -91,14 +91,19 @@ html, body {
 .btn {
   display: inline-block;
   padding: 0.5rem 0.8rem 0.3rem 0.8rem;
+  border: 0;
   border-radius: 0.21429rem;
   font-size: 13px;
   font-size: 0.92857rem;
   color: #FFFFFF; }
+  .btn:hover {
+    cursor: pointer; }
   .btn.green {
     background: #1ABC9C; }
   .btn.blue {
     background: #2980B9; }
+  .btn.red {
+    background: #E74C3C; }
 
 /* Animations */
 @-webkit-keyframes fade-in {
@@ -288,7 +293,9 @@ html, body {
           left: 0.14286rem; }
         .topbar .languages .switch label.sp:before {
           right: 0.14286rem; }
-  .topbar .about {
+  .topbar .title {
+    float: left; }
+  .topbar .about, .topbar .logout {
     float: right; }
 
 /* Profile */
@@ -500,6 +507,81 @@ html, body {
   .login .btn {
     font-size: 18px;
     font-size: 1.28571rem; }
+
+/* Admin */
+.admin {
+  -webkit-animation: down-in 0.8s forwards ease;
+  animation: down-in 0.8s forwards ease;
+  margin: 0 auto;
+  width: 75.71429rem; }
+  .admin .title {
+    font-size: 20px;
+    font-size: 1.42857rem;
+    margin: 1rem auto 1rem auto;
+    text-align: left;
+    width: 60%; }
+    .admin .title .btn {
+      float: right; }
+  .admin .table-shots {
+    margin: 0 auto;
+    width: 60%;
+    overflow: hidden;
+    border-radius: 0.21429rem; }
+    .admin .table-shots thead th {
+      background: #2980B9;
+      color: #FFFFFF;
+      padding: 0.8rem 1rem;
+      text-align: left; }
+    .admin .table-shots tbody tr:nth-child(odd) {
+      background: #ECF0F1; }
+    .admin .table-shots tbody td {
+      text-align: left;
+      padding: 0.5rem 1rem; }
+    .admin .table-shots .btn {
+      font-size: 11px;
+      font-size: 0.78571rem;
+      padding: 0.3rem 0.5rem;
+      margin-right: 0.5rem; }
+      .admin .table-shots .btn:last-child {
+        margin-right: 0; }
+  .admin .form {
+    color: #34495E;
+    margin: 0 auto;
+    width: 60%; }
+    .admin .form .group {
+      margin: 1rem 0;
+      position: relative; }
+      .admin .form .group .label-file {
+        font-size: 16px;
+        font-size: 1.14286rem; }
+      .admin .form .group .label {
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        font-size: 16px;
+        font-size: 1.14286rem;
+        transition: all 0.3s ease;
+        pointer-events: none; }
+      .admin .form .group .input {
+        border: 0;
+        border-bottom: 2px solid #2980B9;
+        padding: 1rem 0;
+        width: 100%;
+        font-size: 16px;
+        font-size: 1.14286rem;
+        resize: none;
+        height: 4rem;
+        transition: all 0.3s ease; }
+        .admin .form .group .input:focus {
+          border-bottom: 2px solid #1ABC9C; }
+        .admin .form .group .input:focus + .label, .admin .form .group .input.hasValue + .label {
+          font-size: 11px;
+          font-size: 0.78571rem;
+          -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+          transition: all 0.3s ease; }
+      .admin .form .group input[type="submit"] {
+        float: right; }
 
 /* Footer */
 .footer {

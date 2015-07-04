@@ -25,6 +25,10 @@ Route::get('admin', function () {
     return view('admin');
 });
 
+Route::get('admin/new', function () {
+    return view('new');
+});
+
 Route::get('twitter/login', [
     'uses'  => 'LoginController@login',
     'as'    => 'twitter.login'
