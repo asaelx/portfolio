@@ -146,6 +146,7 @@ return [
 
         'Thujohn\Twitter\TwitterServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
+        'Intervention\Image\ImageServiceProvider'
 
     ],
 
@@ -196,7 +197,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Twitter'   => 'Thujohn\Twitter\Facades\Twitter',
         'Form'      => 'Illuminate\Html\FormFacade',
-        'HTML'      => 'Illuminate\Html\HtmlFacade'
+        'HTML'      => 'Illuminate\Html\HtmlFacade',
+        'Image'     => 'Intervention\Image\Facades\Image'
 
     ],
 

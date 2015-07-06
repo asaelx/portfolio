@@ -1,0 +1,33 @@
+extend layout/base
+
+block title
+    title Tags
+    
+block admin
+    
+    include layout/admin-topbar
+    include mixins/blade
+    
+    .admin
+    
+        h2.title Tags
+            a.btn.green(href="{{ url('admin/tag') }}") Add new
+        
+        table.table-shots
+            thead
+                tr
+                    th Name
+                    th Options
+            tbody
+            +if('count($tags) > 0')
+                +foreach('$tags as $tag')
+                    tr
+                        td {{ $tag->name_sp }}
+                        td
+                            a.btn.green(href!="{{ url('admin/tag/' . $tag->id) }}") Edit
+                            a.btn.red(href!="{{ url('admin/tag/delete/' . $tag->id) }}") Delete
+                +else
+                    tr
+                        td No tags yet :(
+                        td
+                            a.btn.green(href="{{ url('admin/tag') }}") Add one

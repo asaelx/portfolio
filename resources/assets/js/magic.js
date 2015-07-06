@@ -80,7 +80,18 @@ $(function(){
     var form = $('.form');
 
     if(form.length){
-        var inputs = $('input');
+        var inputs = $('.input');
+
+        inputs.each(function(){
+            var $input = $(this),
+                value = $input.val();
+
+            if(value != ''){
+                $input.addClass('hasValue');
+            }else{
+                $input.removeClass('hasValue');
+            }
+        });
 
         inputs.on('focusout', function(){
             var $input = $(this),

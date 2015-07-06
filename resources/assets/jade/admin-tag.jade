@@ -1,0 +1,40 @@
+extend layout/base
+
+block title
+    title New tag
+
+block admin
+    
+    include layout/admin-topbar
+    include mixins/blade
+    
+    .admin
+        
+        h2.title Add new tag
+        
+        +if('isset($tag)')
+            | {!! Form::open(['url' => 'admin/tag/edit/' . $tag->id, 'files' => true, 'class' => 'form']) !!}
+            +else
+                | {!! Form::open(['url' => 'admin/tag/create', 'files' => true, 'class' => 'form']) !!}
+    
+        .group
+            +if('isset($tag)')
+                | {!! Form::text('name_sp',  $tag->name_sp, ['class' => 'input']) !!}
+                +else
+                    | {!! Form::text('name_sp',null, ['class' => 'input']) !!}
+            | {!! Form::label('name_sp', 'Name (SP)', ['class' => 'label']) !!}
+            
+        .group
+            +if('isset($tag)')
+                | {!! Form::text('name_en', $tag->name_en, ['class' => 'input']) !!}
+                +else
+                    | {!! Form::text('name_en', null, ['class' => 'input']) !!}
+            | {!! Form::label('name_en', 'Name (EN)', ['class' => 'label']) !!}
+        
+        .group
+            +if('isset($tag)')
+                | {!! Form::submit('Update', ['class' => 'btn green']) !!}
+                +else
+                    | {!! Form::submit('Add', ['class' => 'btn green']) !!}
+        
+        | {!! Form::close() !!}
