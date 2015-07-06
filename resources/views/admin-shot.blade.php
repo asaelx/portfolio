@@ -74,6 +74,28 @@
 
       </div>
       <div class="group">
+<?php $shot_programs = $data['shot']->programs->toArray() ?>
+@foreach($shot_programs as $key => $program)
+
+<?php unset($shot_programs[$key]['pivot']) ?>
+@endforeach
+
+@if(isset($data['programs']))
+
+@foreach($data['programs'] as $program)
+
+@if(isset($data['shot']) && in_array((array)json_decode($program), $shot_programs))
+{!! Form::checkbox('programs[]', $program->id, true) !!} {{ $program->name }} (SP) <br>
+@else
+{!! Form::checkbox('programs[]', $program->id) !!} {{ $program->name }} (SP) <br>
+@endif
+
+@endforeach
+
+@endif
+
+      </div>
+      <div class="group">
 @if(isset($data['shot']))
 {!! Form::submit('Update', ['class' => 'btn green']) !!}
 @else

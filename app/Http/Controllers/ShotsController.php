@@ -10,6 +10,8 @@ use Redirect;
 
 use App\Shot;
 use App\Tag;
+use App\Program;
+use App\Shots_programs;
 
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -24,8 +26,10 @@ class ShotsController extends Controller
     public function show($id = null){
 
         $tags = Tag::all();
+        $programs = Program::all();
 
         $data['tags'] = $tags;
+        $data['programs'] = $programs;
 
         if(!is_null($id)):
             $shot = Shot::find($id);
@@ -52,6 +56,12 @@ class ShotsController extends Controller
 
         $shot->save();
 
+        Shots_programs::where('shot_id', $shot->id)->delete();
+
+        foreach($request->get('programs') as $program):
+            $shot->programs()->attach($program);
+        endforeach;
+
         return Redirect::to('admin/shots');
     }
 
@@ -69,6 +79,12 @@ class ShotsController extends Controller
         endif;
 
         $shot->save();
+
+        Shots_programs::where('shot_id', $shot->id)->delete();
+
+        foreach($request->get('programs') as $program):
+            $shot->programs()->attach($program);
+        endforeach;
 
         return Redirect::to('admin/shot/' . $shot->id);
 

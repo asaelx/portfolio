@@ -15,15 +15,15 @@ class CreateShotsProgramsTable extends Migration
         Schema::create('shots_programs', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->unsignedInteger('shot');
-            $table->unsignedInteger('program');
+            $table->unsignedInteger('shot_id');
+            $table->unsignedInteger('program_id');
             $table->timestamps();
 
         });
 
         Schema::table('shots_programs', function (Blueprint $table) {
-            $table->foreign('shot')->references('id')->on('shots');
-            $table->foreign('program')->references('id')->on('programs');
+            $table->foreign('shot_id')->references('id')->on('shots');
+            $table->foreign('program_id')->references('id')->on('programs');
         });
     }
 
@@ -35,8 +35,8 @@ class CreateShotsProgramsTable extends Migration
     public function down()
     {
         Schema::table('shots_programs', function (Blueprint $table) {
-            $table->dropForeign('shots_programs_shot_foreign');
-            $table->dropForeign('shots_programs_program_foreign');
+            $table->dropForeign('shots_programs_shot_id_foreign');
+            $table->dropForeign('shots_programs_program_id_foreign');
         });
 
         Schema::drop('shots_programs');
