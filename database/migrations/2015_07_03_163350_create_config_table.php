@@ -15,8 +15,8 @@ class CreateConfigTable extends Migration
         Schema::create('config', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->string('title_sp', 16);
-            $table->string('title_en', 16);
+            $table->string('title_sp', 30);
+            $table->string('title_en', 30);
             $table->string('name');
             $table->string('tel');
             $table->string('email');

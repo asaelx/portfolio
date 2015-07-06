@@ -15,6 +15,7 @@ class CreateShotsTable extends Migration
         Schema::create('shots', function (Blueprint $table) {
 
             $table->increments('id');
+            $table->string('slug');
             $table->string('title_sp');
             $table->string('title_en');
             $table->text('content_sp');

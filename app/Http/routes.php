@@ -35,6 +35,8 @@ Route::get('twitter/logout', [
 
 // Admin
 Route::get('admin', 'AdminController@index');
+Route::get('admin/config', 'AdminController@show');
+Route::post('admin/config/update', 'AdminController@update');
 
 // Shots
 Route::get('admin/shots', 'ShotsController@index');

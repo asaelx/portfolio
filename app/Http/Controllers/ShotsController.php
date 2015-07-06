@@ -43,6 +43,7 @@ class ShotsController extends Controller
     public function create(Request $request){
         $shot = new Shot;
 
+        $shot->slug = str_slug($request->get('title_en'));
         $shot->title_sp = $request->get('title_sp');
         $shot->title_en = $request->get('title_en');
         $shot->content_sp = $request->get('content_sp');
@@ -68,6 +69,7 @@ class ShotsController extends Controller
     public function edit($id, Request $request){
 
         $shot = Shot::find($id);
+        $shot->slug = str_slug($request->get('title_en'));
         $shot->title_sp = $request->get('title_sp');
         $shot->title_en = $request->get('title_en');
         $shot->content_sp = $request->get('content_sp');
