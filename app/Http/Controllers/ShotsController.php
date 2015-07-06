@@ -43,13 +43,13 @@ class ShotsController extends Controller
         $shot->title_en = $request->get('title_en');
         $shot->content_sp = $request->get('content_sp');
         $shot->content_en = $request->get('content_en');
+        $shot->tag = $request->get('tag');
 
         $file = $request->file('image');
         $extension = $file->getClientOriginalExtension();
 
         $this->saveImage($request, $shot);
 
-        $shot->tag = $request->get('tag');
         $shot->save();
 
         return Redirect::to('admin/shots');
@@ -62,6 +62,7 @@ class ShotsController extends Controller
         $shot->title_en = $request->get('title_en');
         $shot->content_sp = $request->get('content_sp');
         $shot->content_en = $request->get('content_en');
+        $shot->tag = $request->get('tag');
 
         if($request->hasFile('image')):
             $this->saveImage($request, $shot);

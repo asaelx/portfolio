@@ -49,3 +49,10 @@ Route::get('admin/tag/{id?}', 'TagsController@show');
 Route::post('admin/tag/create', 'TagsController@create');
 Route::post('admin/tag/edit/{id}', 'TagsController@edit');
 Route::get('admin/tag/delete/{id}', 'TagsController@delete');
+
+// Programs
+Route::get('admin/programs', 'ProgramsController@index');
+Route::get('admin/program/{id?}', 'ProgramsController@show');
+Route::post('admin/program/create', 'ProgramsController@create');
+Route::post('admin/program/edit/{id}', 'ProgramsController@edit');
+Route::get('admin/program/delete/{id}', 'ProgramsController@delete');
