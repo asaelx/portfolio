@@ -74,11 +74,15 @@
 
       </div>
       <div class="group">
+@if(isset($data['shot']))
+
 <?php $shot_programs = $data['shot']->programs->toArray() ?>
 @foreach($shot_programs as $key => $program)
 
 <?php unset($shot_programs[$key]['pivot']) ?>
 @endforeach
+
+@endif
 
 @if(isset($data['programs']))
 
