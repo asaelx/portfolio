@@ -10,6 +10,7 @@ use Session;
 
 use App\Config;
 use App\Tag;
+use App\Shot;
 use Markdown;
 
 class HomeController extends Controller
@@ -45,8 +46,9 @@ class HomeController extends Controller
 
     private function setLang($lang){
 
-        $config = Config::find(1);
-        $tags = Tag::all();
+        $config     = Config::find(1);
+        $tags       = Tag::all();
+        $shots      = Shot::all();
 
         switch($lang):
             case 'sp':
@@ -80,6 +82,7 @@ class HomeController extends Controller
         $data['email'] = $config->email;
         $data['resume'] = $config->resume;
         $data['tags'] = $tags;
+        $data['shots'] = $shots;
 
         return $data;
     }
