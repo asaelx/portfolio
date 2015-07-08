@@ -1,10 +1,11 @@
+include ../mixins/blade
+
 nav.categories
     ul.list
-        li.option
-            a.link.active(href="#") Web
-        li.option
-            a.link(href="#") Móvil
-        li.option
-            a.link(href="#") Gráfico
-        li.option
-            a.link(href="#") Fotografía
+        +foreach("$data['tags'] as $tag")
+            +if("$data['lang'] == 'sp'")
+                li.option
+                    a.link(href!="{{ $tag->name_en }}") {{ $tag->name_sp }}
+                +else
+                    li.option
+                        a.link(href!="{{ $tag->name_en }}") {{ $tag->name_en }}

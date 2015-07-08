@@ -1,13 +1,9 @@
 <?php
 
 // Home
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
 
-Route::get('shot', function () {
-    return view('shot');
-});
+Route::get('shot/{id?}', 'HomeController@shoht');
 
 // Login
 Route::get('login', 'LoginController@index');

@@ -33,6 +33,38 @@
       </div>
       <div class="group">
 @if(isset($config))
+{!! Form::text('degree_sp', $config->degree_sp, ['class' => 'input']) !!}
+@else
+{!! Form::text('degree_sp', null, ['class' => 'input']) !!}
+@endif
+{!! Form::label('degree_sp', 'Degree (SP)', ['class' => 'label']) !!}
+      </div>
+      <div class="group">
+@if(isset($config))
+{!! Form::text('degree_en', $config->degree_en, ['class' => 'input']) !!}
+@else
+{!! Form::text('degree_en', null, ['class' => 'input']) !!}
+@endif
+{!! Form::label('degree_en', 'Degree (EN)', ['class' => 'label']) !!}
+      </div>
+      <div class="group">
+@if(isset($config))
+{!! Form::text('job_sp', $config->job_sp, ['class' => 'input']) !!}
+@else
+{!! Form::text('job_sp', null, ['class' => 'input']) !!}
+@endif
+{!! Form::label('job_sp', 'Job (SP)', ['class' => 'label']) !!}
+      </div>
+      <div class="group">
+@if(isset($config))
+{!! Form::text('job_en', $config->job_en, ['class' => 'input']) !!}
+@else
+{!! Form::text('job_en', null, ['class' => 'input']) !!}
+@endif
+{!! Form::label('job_en', 'Job (EN)', ['class' => 'label']) !!}
+      </div>
+      <div class="group">
+@if(isset($config))
 {!! Form::text('name', $config->name, ['class' => 'input']) !!}
 @else
 {!! Form::text('name', null, ['class' => 'input']) !!}
@@ -73,19 +105,19 @@
       </div>
       <div class="group">
 @if(isset($config))
-{!! Form::text('about_sp', $config->about_sp, ['class' => 'input']) !!}
+{!! Form::textarea('about_content_sp', $config->about_content_sp, ['class' => 'input']) !!}
 @else
-{!! Form::text('about_sp', null, ['class' => 'input']) !!}
+{!! Form::textarea('about_content_sp', null, ['class' => 'input']) !!}
 @endif
-{!! Form::label('about_sp', 'About content (SP)', ['class' => 'label']) !!}
+{!! Form::label('about_content_sp', 'About content (SP)', ['class' => 'label']) !!}
       </div>
       <div class="group">
 @if(isset($config))
-{!! Form::text('about_en', $config->about_en, ['class' => 'input']) !!}
+{!! Form::textarea('about_content_en', $config->about_content_en, ['class' => 'input']) !!}
 @else
-{!! Form::text('about_en', null, ['class' => 'input']) !!}
+{!! Form::textarea('about_content_en', null, ['class' => 'input']) !!}
 @endif
-{!! Form::label('about_en', 'About content (EN)', ['class' => 'label']) !!}
+{!! Form::label('about_content_en', 'About content (EN)', ['class' => 'label']) !!}
       </div>
       <div class="group">
 @if(isset($config))
@@ -105,19 +137,19 @@
       </div>
       <div class="group">
 @if(isset($config))
-{!! Form::text('contact_sp', $config->contact_sp, ['class' => 'input']) !!}
+{!! Form::textarea('contact_content_sp', $config->contact_content_sp, ['class' => 'input']) !!}
 @else
-{!! Form::text('contact_sp', null, ['class' => 'input']) !!}
+{!! Form::textarea('contact_content_sp', null, ['class' => 'input']) !!}
 @endif
-{!! Form::label('contact_sp', 'Contact content (SP)', ['class' => 'label']) !!}
+{!! Form::label('contact_content_sp', 'Contact content (SP)', ['class' => 'label']) !!}
       </div>
       <div class="group">
 @if(isset($config))
-{!! Form::text('contact_en', $config->contact_en, ['class' => 'input']) !!}
+{!! Form::textarea('contact_content_en', $config->contact_content_en, ['class' => 'input']) !!}
 @else
-{!! Form::text('contact_en', null, ['class' => 'input']) !!}
+{!! Form::textarea('contact_content_en', null, ['class' => 'input']) !!}
 @endif
-{!! Form::label('contact_en', 'Contact content (EN)', ['class' => 'label']) !!}
+{!! Form::label('contact_content_en', 'Contact content (EN)', ['class' => 'label']) !!}
       </div>
       <div class="group">
 @if(isset($config))

@@ -1,27 +1,29 @@
+include ../mixins/blade
+
 .modal(data-target="contact")
-    h2.title Contáctame
+    h2.title {{ $data['contact_title'] }}
         .close
             img.img(src="{{ url('img/close.png') }}")
     .content
-        p Puedes contactarme para cosas como:
-        ul
-            li “Necesito un sitio web básico, simple, pero elegante para tener presencia en internet”.
-            li “Quiero una tienda en línea para vender mis productos”.
-            li “Necesito un sitio web administrable, al que le pueda editar su contenido fácilmente”.
-            li “Quiero unas tarjetas de presentación”.
-            li “Me gustaría un rediseño al sitio web que tengo”.
-            li “Vamos a tomarnos una cerveza y platicar de un proyecto interesante”.
-        p O para alguna otra cosa que se te ocurra y vemos qué se puede hacer.
+        {!! $data['contact_content'] !!}
         .info
             .photo
                 img.img(src="{{ url('img/profile-big.png') }}")
-            h3.title Mis datos
-            p.degree I.S.C. Asael Chavez Jaimes
+            h3.title
+                +if("$data['lang'] == 'sp'")
+                    | Mis datos
+                    +else
+                        | My contact info    
+            p.degree {{ $data['degree'] }}
             p.phone
                 img.img(src="{{ url('img/phone.png') }}")
-                | 9992175661
+                | {{ $data['tel'] }}
             p.email
                 img.img(src="{{ url('img/email.png') }}")
-                a.link(href="mailto:asaelx@gmail.com") asaelx@gmail.com
-        a.cv.btn.green(href="#") Ver Currículum
+                a.link(href="mailto:{{ $data['email'] }}") {{ $data['email'] }}
+        a.cv.btn.green(href="#")
+            +if("$data['lang'] == 'sp'")
+                | Ver Currículum
+                +else
+                    | Resume
             img.img(src="{{ url('img/right.png') }}")

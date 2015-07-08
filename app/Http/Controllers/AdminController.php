@@ -6,14 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Redirect;
 
 use App\Config;
 
 class AdminController extends Controller
 {
     public function index(){
-        return Redirect::to('admin/shots');
+        return redirect('admin/shots');
     }
 
     public function show(){
@@ -34,17 +33,21 @@ class AdminController extends Controller
 
         $config->title_sp = $request->get('title_sp');
         $config->title_en = $request->get('title_en');
+        $config->degree_sp = $request->get('degree_sp');
+        $config->degree_en = $request->get('degree_en');
+        $config->job_sp = $request->get('job_sp');
+        $config->job_en = $request->get('job_en');
         $config->name = $request->get('name');
         $config->tel = $request->get('tel');
         $config->email = $request->get('email');
         $config->about_title_sp = $request->get('about_title_sp');
         $config->about_title_en = $request->get('about_title_en');
-        $config->about_sp = $request->get('about_sp');
-        $config->about_en = $request->get('about_en');
+        $config->about_content_sp = $request->get('about_content_sp');
+        $config->about_content_en = $request->get('about_content_en');
         $config->contact_title_sp = $request->get('contact_title_sp');
         $config->contact_title_en = $request->get('contact_title_en');
-        $config->contact_sp = $request->get('contact_sp');
-        $config->contact_en = $request->get('contact_en');
+        $config->contact_content_sp = $request->get('contact_content_sp');
+        $config->contact_content_en = $request->get('contact_content_en');
         $config->footer_sp = $request->get('footer_sp');
         $config->footer_en = $request->get('footer_en');
 
@@ -59,7 +62,7 @@ class AdminController extends Controller
 
         $config->save();
 
-        return Redirect::to('admin/config');
+        return redirect('admin/config');
     }
 
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "acb7a258eaf82cbea26b990f22915799",
+    "hash": "747b750dcc86c717f2531b09e8559481",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -215,6 +215,45 @@
                 "string"
             ],
             "time": "2014-12-20 21:24:13"
+        },
+        {
+            "name": "erusev/parsedown",
+            "version": "1.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "b9e5228e92e5f5c17d7774cfb2de8e5e8362de1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/b9e5228e92e5f5c17d7774cfb2de8e5e8362de1a",
+                "reference": "b9e5228e92e5f5c17d7774cfb2de8e5e8362de1a",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2015-04-29 20:22:24"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -733,6 +772,51 @@
                 "storage"
             ],
             "time": "2015-06-07 21:27:37"
+        },
+        {
+            "name": "maxhoffmann/parsedown-laravel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxhoffmann/parsedown-laravel.git",
+                "reference": "0499236974239d2193c12e7925b8178d9af8bc4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxhoffmann/parsedown-laravel/zipball/0499236974239d2193c12e7925b8178d9af8bc4e",
+                "reference": "0499236974239d2193c12e7925b8178d9af8bc4e",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "MaxHoffmann\\Parsedown": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maximilian Hoffmann",
+                    "email": "max@maximilianhoffmann.com"
+                }
+            ],
+            "description": "A parsedown (markdown) wrapper for Laravel ",
+            "homepage": "https://github.com/maxhoffmann/parsedown-laravel",
+            "keywords": [
+                "Laravel 4",
+                "laravel",
+                "markdown",
+                "parsedown",
+                "php"
+            ],
+            "time": "2013-12-13 23:54:04"
         },
         {
             "name": "monolog/monolog",
@@ -2745,16 +2829,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "92408bb1968a81b3217a6fdf6c1a198da83caa35"
+                "reference": "1c330b1b6e1ea8fd15f2fbea46770576e366855c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/92408bb1968a81b3217a6fdf6c1a198da83caa35",
-                "reference": "92408bb1968a81b3217a6fdf6c1a198da83caa35",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/1c330b1b6e1ea8fd15f2fbea46770576e366855c",
+                "reference": "1c330b1b6e1ea8fd15f2fbea46770576e366855c",
                 "shasum": ""
             },
             "require": {
@@ -2796,7 +2880,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-06-11 15:55:48"
+            "time": "2015-07-04 05:41:32"
         },
         {
             "name": "sebastian/comparator",
@@ -3221,7 +3305,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "maxhoffmann/parsedown-laravel": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

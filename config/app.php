@@ -146,7 +146,8 @@ return [
 
         'Thujohn\Twitter\TwitterServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
-        'Intervention\Image\ImageServiceProvider'
+        'Intervention\Image\ImageServiceProvider',
+        'MaxHoffmann\Parsedown\ParsedownServiceProvider'
 
     ],
 
@@ -198,7 +199,8 @@ return [
         'Twitter'   => 'Thujohn\Twitter\Facades\Twitter',
         'Form'      => 'Illuminate\Html\FormFacade',
         'HTML'      => 'Illuminate\Html\HtmlFacade',
-        'Image'     => 'Intervention\Image\Facades\Image'
+        'Image'     => 'Intervention\Image\Facades\Image',
+        'Markdown'  => 'MaxHoffmann\Parsedown\ParsedownFacade',
 
     ],
 

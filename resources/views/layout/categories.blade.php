@@ -1,9 +1,17 @@
 
 <nav class="categories">
   <ul class="list">
-    <li class="option"><a href="#" class="link active">Web</a></li>
-    <li class="option"><a href="#" class="link">Móvil</a></li>
-    <li class="option"><a href="#" class="link">Gráfico</a></li>
-    <li class="option"><a href="#" class="link">Fotografía</a></li>
+@foreach($data['tags'] as $tag)
+
+@if($data['lang'] == 'sp')
+
+    <li class="option"><a href="{{ $tag->name_en }}" class="link">{{ $tag->name_sp }}</a></li>
+@else
+
+    <li class="option"><a href="{{ $tag->name_en }}" class="link">{{ $tag->name_en }}</a></li>
+@endif
+
+@endforeach
+
   </ul>
 </nav>
