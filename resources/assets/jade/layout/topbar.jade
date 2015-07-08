@@ -5,8 +5,8 @@ include ../mixins/blade
     .languages
         .lang English
         .switch
-            label.sp(for="lang_switch") Language
-            +if("isset($data['lang']) && $data['lang'] == 'sp'")
+            label(for="lang_switch", class="{{ $data['lang'] }}") Language
+            +if("$data['lang'] == 'sp'")
                 input#lang_switch(type="checkbox", name="lang_switch", checked)
                 +else
                     input#lang_switch(type="checkbox", name="lang_switch")

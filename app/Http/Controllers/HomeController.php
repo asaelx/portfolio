@@ -30,6 +30,19 @@ class HomeController extends Controller
         return view('shot');
     }
 
+    public function changeLang($lang){
+
+        if($lang == 'en'):
+            Session::put('language', 'en');
+        elseif($lang == 'sp'):
+            Session::put('language', 'sp');
+        endif;
+
+        $data = $this->setLang($lang);
+
+        return redirect('/');
+    }
+
     private function setLang($lang){
 
         $config = Config::find(1);

@@ -11,8 +11,8 @@
       <div class="languages">
         <div class="lang">English</div>
         <div class="switch">
-          <label for="lang_switch" class="sp">Language</label>
-@if(isset($data['lang']) && $data['lang'] == 'sp')
+          <label for="lang_switch" class="{{ $data['lang'] }}">Language</label>
+@if($data['lang'] == 'sp')
 
               <input id="lang_switch" type="checkbox" name="lang_switch" checked>
 @else

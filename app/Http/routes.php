@@ -3,7 +3,9 @@
 // Home
 Route::get('/', 'HomeController@index');
 
-Route::get('shot/{id?}', 'HomeController@shoht');
+Route::get('shot/{id?}', 'HomeController@shot');
+
+Route::get('changeLang/{lang}', 'HomeController@changeLang');
 
 // Login
 Route::get('login', 'LoginController@index');
