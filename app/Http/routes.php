@@ -32,29 +32,32 @@ Route::get('twitter/logout', [
     'as'    => 'twitter.logout'
 ]);
 
+Route::group(['middleware' => 'login'], function () {
 
-// Admin
-Route::get('admin', 'AdminController@index');
-Route::get('admin/config', 'AdminController@show');
-Route::post('admin/config/update', 'AdminController@update');
+    // Admin
+    Route::get('admin', 'AdminController@index');
+    Route::get('admin/config', 'AdminController@show');
+    Route::post('admin/config/update', 'AdminController@update');
 
-// Shots
-Route::get('admin/shots', 'ShotsController@index');
-Route::get('admin/shot/{id?}', 'ShotsController@show');
-Route::post('admin/shot/create', 'ShotsController@create');
-Route::post('admin/shot/edit/{id}', 'ShotsController@edit');
-Route::get('admin/shot/delete/{id}', 'ShotsController@delete');
+    // Shots
+    Route::get('admin/shots', 'ShotsController@index');
+    Route::get('admin/shot/{id?}', 'ShotsController@show');
+    Route::post('admin/shot/create', 'ShotsController@create');
+    Route::post('admin/shot/edit/{id}', 'ShotsController@edit');
+    Route::get('admin/shot/delete/{id}', 'ShotsController@delete');
 
-// Tags
-Route::get('admin/tags', 'TagsController@index');
-Route::get('admin/tag/{id?}', 'TagsController@show');
-Route::post('admin/tag/create', 'TagsController@create');
-Route::post('admin/tag/edit/{id}', 'TagsController@edit');
-Route::get('admin/tag/delete/{id}', 'TagsController@delete');
+    // Tags
+    Route::get('admin/tags', 'TagsController@index');
+    Route::get('admin/tag/{id?}', 'TagsController@show');
+    Route::post('admin/tag/create', 'TagsController@create');
+    Route::post('admin/tag/edit/{id}', 'TagsController@edit');
+    Route::get('admin/tag/delete/{id}', 'TagsController@delete');
 
-// Programs
-Route::get('admin/programs', 'ProgramsController@index');
-Route::get('admin/program/{id?}', 'ProgramsController@show');
-Route::post('admin/program/create', 'ProgramsController@create');
-Route::post('admin/program/edit/{id}', 'ProgramsController@edit');
-Route::get('admin/program/delete/{id}', 'ProgramsController@delete');
+    // Programs
+    Route::get('admin/programs', 'ProgramsController@index');
+    Route::get('admin/program/{id?}', 'ProgramsController@show');
+    Route::post('admin/program/create', 'ProgramsController@create');
+    Route::post('admin/program/edit/{id}', 'ProgramsController@edit');
+    Route::get('admin/program/delete/{id}', 'ProgramsController@delete');
+
+});

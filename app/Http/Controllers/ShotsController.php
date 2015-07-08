@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Redirect;
 
 use App\Shot;
 use App\Tag;
@@ -63,7 +62,7 @@ class ShotsController extends Controller
             $shot->programs()->attach($program);
         endforeach;
 
-        return Redirect::to('admin/shots');
+        return redirect('admin/shots');
     }
 
     public function edit($id, Request $request){
@@ -88,7 +87,7 @@ class ShotsController extends Controller
             $shot->programs()->attach($program);
         endforeach;
 
-        return Redirect::to('admin/shot/' . $shot->id);
+        return redirect('admin/shot/' . $shot->id);
 
     }
 
@@ -96,7 +95,7 @@ class ShotsController extends Controller
         $shot = Shot::find($id);
         $shot->delete();
 
-        return Redirect::to('admin/shots');
+        return redirect('admin/shots');
     }
 
     private function saveImage($request, $shot){

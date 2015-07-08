@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Redirect;
 
 use App\Program;
 
@@ -38,7 +37,7 @@ class ProgramsController extends Controller
 
         $program->save();
 
-        return Redirect::to('admin/programs');
+        return redirect('admin/programs');
     }
 
     public function edit($id, Request $request){
@@ -52,7 +51,7 @@ class ProgramsController extends Controller
 
         $program->save();
 
-        return Redirect::to('admin/program/' . $program->id);
+        return redirect('admin/program/' . $program->id);
 
     }
 
@@ -60,7 +59,7 @@ class ProgramsController extends Controller
         $program = Program::find($id);
         $program->delete();
 
-        return Redirect::to('admin/programs');
+        return redirect('admin/programs');
     }
 
     private function saveImage($request, $program){

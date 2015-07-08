@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Redirect;
 
 use App\Tag;
 
@@ -40,7 +39,7 @@ class TagsController extends Controller
         $tag->name_en = $name_en;
         $tag->save();
 
-        return Redirect::to('admin/tags');
+        return redirect('admin/tags');
     }
 
     public function edit($id, Request $request){
@@ -53,7 +52,7 @@ class TagsController extends Controller
         $tag->name_en = $name_en;
         $tag->save();
 
-        return Redirect::to('admin/tag/' . $tag->id);
+        return redirect('admin/tag/' . $tag->id);
 
     }
 
@@ -61,6 +60,6 @@ class TagsController extends Controller
         $tag = Tag::find($id);
         $tag->delete();
 
-        return Redirect::to('admin/tags');
+        return redirect('admin/tags');
     }
 }
