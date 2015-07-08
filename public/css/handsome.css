@@ -314,7 +314,8 @@ html, body {
     .profile .photo .img {
       width: 100%;
       vertical-align: bottom; }
-  .profile .name {
+  .profile .name .link {
+    display: inline-block;
     font-family: "Olympic", "Gotham Rounded", "Lato", Helvetica, Arial, sans-seif;
     font-size: 80px;
     font-size: 5.71429rem;

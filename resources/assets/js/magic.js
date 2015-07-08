@@ -10,7 +10,7 @@ $(function(){
             language        = window.navigator.userLanguage || window.navigator.language;
 
         function change_lang(lang){
-            window.location.href="changeLang/" + lang;
+            window.location.href="/changeLang/" + lang;
         }
 
         lang_checkbox.click(function(){

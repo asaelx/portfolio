@@ -12,6 +12,7 @@ use App\Config;
 use App\Tag;
 use App\Shot;
 use Markdown;
+use DB;
 
 class HomeController extends Controller
 {
@@ -27,8 +28,52 @@ class HomeController extends Controller
         return view('home')->with('data', $data);
     }
 
-    public function shot(){
-        return view('shot');
+    public function shot($slug = null){
+
+        if(is_null($slug)) return redirect('/');
+
+        $shot = Shot::where('slug', $slug)->first();
+
+        if(Session::has('language')):
+            $data = $this->setLang(Session::get('language'));
+        else:
+            Session::put('language', 'sp');
+            $data = $this->setLang(Session::get('language'));
+        endif;
+
+        if($shot):
+
+            if(Session::get('language') == 'sp'):
+                $data['shot']['title'] = $shot->title_sp;
+                $data['shot']['content'] = Markdown::parse($shot->content_sp);
+            else:
+                $data['shot']['title'] = $shot->title_en;
+                $data['shot']['content'] = Markdown::parse($shot->content_en);
+            endif;
+
+            $data['shot']['image_big'] = $shot->image_big;
+            $data['shot']['programs'] = $shot->programs->toArray();
+
+            return view('shot')->with('data', $data);
+        else:
+            return redirect('/');
+        endif;
+
+    }
+
+    public function tag($tag = null){
+
+        if(is_null($tag)) return redirect('/');
+
+        if(Session::has('language')):
+            $data = $this->setLang(Session::get('language'), $tag);
+        else:
+            Session::put('language', 'sp');
+            $data = $this->setLang(Session::get('language'), $tag);
+        endif;
+
+        return view('home')->with('data', $data);
+
     }
 
     public function changeLang($lang){
@@ -41,14 +86,22 @@ class HomeController extends Controller
 
         $data = $this->setLang($lang);
 
-        return redirect('/');
+        return back();
     }
 
-    private function setLang($lang){
+    private function setLang($lang, $tag = null){
+
+        if(is_null($tag)):
+            $shots = Shot::all();
+        else:
+            $shots = DB::table('shots')
+                        ->leftJoin('tags', 'tags.id', '=', 'shots.tag')
+                        ->where('tags.name_en', $tag)
+                        ->get();
+        endif;
 
         $config     = Config::find(1);
         $tags       = Tag::all();
-        $shots      = Shot::all();
 
         switch($lang):
             case 'sp':

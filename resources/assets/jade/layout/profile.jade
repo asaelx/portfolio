@@ -1,5 +1,7 @@
 .profile
     .photo
-        img.img(src="{{ url('img/profile.png') }}", alt="asaelx")
-    .name {{ $data['name'] }}
+        a.link(href="{{ url('/') }}")
+            img.img(src="{{ url('img/profile.png') }}", alt="asaelx")
+    .name
+        a.link(href="{{ url('/') }}") {{ $data['name'] }}
     a.trigger-modal.btn.green(href="#", data-target="contact") {{ $data['contact_title'] }}

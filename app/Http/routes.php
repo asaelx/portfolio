@@ -3,8 +3,13 @@
 // Home
 Route::get('/', 'HomeController@index');
 
-Route::get('shot/{id?}', 'HomeController@shot');
+// Shot
+Route::get('shot/{slug?}', 'HomeController@shot');
 
+// Tag
+Route::get('tag/{tag?}', 'HomeController@tag');
+
+// Change Language
 Route::get('changeLang/{lang}', 'HomeController@changeLang');
 
 // Login

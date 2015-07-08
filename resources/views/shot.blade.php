@@ -26,24 +26,35 @@
       <!-- About--><a href="#" data-target="about" class="about trigger-modal green btn">{{ $data['about_title'] }}</a>
     </div>
     <div class="profile">
-      <div class="photo"><img src="{{ url('img/profile.png') }}" alt="asaelx" class="img"></div>
-      <div class="name">{{ $data['name'] }}</div><a href="#" data-target="contact" class="trigger-modal btn green">{{ $data['contact_title'] }}</a>
+      <div class="photo"><a href="{{ url('/') }}" class="link"><img src="{{ url('img/profile.png') }}" alt="asaelx" class="img"></a></div>
+      <div class="name"><a href="{{ url('/') }}" class="link">{{ $data['name'] }}</a></div><a href="#" data-target="contact" class="trigger-modal btn green">{{ $data['contact_title'] }}</a>
     </div>
     <div class="the-shot">
-      <nav class="nav"><a href="{{ url('/') }}" class="back"><img src="{{ url('img/left.png') }}" class="img">Regresar a todos los trabajos</a>
-        <div class="made"> <span>Hecho con</span>
+      <nav class="nav"><a href="{{ url('/') }}" class="back"><img src="{{ url('img/left.png') }}" class="img">
+@if($data['lang'] == 'sp')
+Regresar a todos los trabajos
+@else
+Back to all projects
+@endif
+</a>
+        <div class="made"> <span>
+@if($data['lang'] == 'sp')
+Hecho con
+@else
+Made with
+@endif
+</span>
           <ul class="list">
-            <li title="Adobe Photoshop CS6" class="item"><img src="{{ url('img/photoshop.png') }}" class="img"></li>
-            <li title="Adobe Illustratot CS6" class="item"><img src="{{ url('img/illustrator.png') }}" class="img"></li>
-            <li title="Sketch 3" class="item"><img src="{{ url('img/sketch.png') }}" class="img"></li>
+@foreach($data['shot']['programs'] as $program)
+
+                <li title="{{ $program['name'] }}" class="item"><img src="{{ url($program['icon']) }}" class="img"></li>
+@endforeach
+
           </ul>
         </div>
-      </nav><img src="{{ url('img/shot-big.jpg') }}" class="img">
-      <h1 class="title">Tarjetas de presentación</h1>
-      <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
+      </nav><img src="{{ url($data['shot']['image_big']) }}" class="img">
+      <h1 class="title">{{ $data['shot']['title'] }}</h1>
+      <div class="content">{!! $data['shot']['content'] !!}</div>
     </div>
     <footer class="footer">
       <p>{{ $data['footer'] }}</p>
