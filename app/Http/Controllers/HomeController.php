@@ -72,7 +72,13 @@ class HomeController extends Controller
             $data = $this->setLang(Session::get('language'), $tag);
         endif;
 
-        return view('home')->with('data', $data);
+        $data['current_tag'] = $tag;
+
+        if($data['shots']):
+            return view('home')->with('data', $data);
+        else:
+            return redirect('/');
+        endif;
 
     }
 
