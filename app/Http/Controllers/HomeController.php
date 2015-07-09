@@ -98,11 +98,12 @@ class HomeController extends Controller
     private function setLang($lang, $tag = null){
 
         if(is_null($tag)):
-            $shots = Shot::all();
+            $shots = Shot::orderBy('id', 'desc')->get();
         else:
             $shots = DB::table('shots')
                         ->leftJoin('tags', 'tags.id', '=', 'shots.tag')
                         ->where('tags.name_en', $tag)
+                        ->orderBy('shots.id', 'desc')
                         ->get();
         endif;
 

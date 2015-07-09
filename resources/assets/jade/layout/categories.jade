@@ -3,12 +3,13 @@ include ../mixins/blade
 nav.categories
     ul.list
         +foreach("$data['tags'] as $tag")
-            +if("$data['lang'] == 'sp'")
-                li.option
-                    +if("isset($data['current_tag']) && str_slug($data['current_tag']) == str_slug($tag->name_en)")
-                        a.link.active(href!="{{ url('tag/' . $tag->name_en) }}") {{ $tag->name_sp }}
-                        +else
-                            a.link(href!="{{ url('tag/' . $tag->name_en) }}") {{ $tag->name_sp }}
-                +else
+            +if("str_slug($tag->name_en) != 'mobile' && str_slug($tag->name_en) != 'photography'")
+                +if("$data['lang'] == 'sp'")
                     li.option
-                        a.link(href!="{{ $tag->name_en }}") {{ $tag->name_en }}
+                        +if("isset($data['current_tag']) && str_slug($data['current_tag']) == str_slug($tag->name_en)")
+                            a.link.active(href!="{{ url('tag/' . $tag->name_en) }}") {{ $tag->name_sp }}
+                            +else
+                                a.link(href!="{{ url('tag/' . $tag->name_en) }}") {{ $tag->name_sp }}
+                    +else
+                        li.option
+                            a.link(href!="{{ $tag->name_en }}") {{ $tag->name_en }}

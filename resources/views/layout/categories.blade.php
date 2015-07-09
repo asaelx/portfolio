@@ -3,6 +3,8 @@
   <ul class="list">
 @foreach($data['tags'] as $tag)
 
+@if(str_slug($tag->name_en) != 'mobile' && str_slug($tag->name_en) != 'photography')
+
 @if($data['lang'] == 'sp')
 
     <li class="option">
@@ -16,6 +18,8 @@
 @else
 
     <li class="option"><a href="{{ $tag->name_en }}" class="link">{{ $tag->name_en }}</a></li>
+@endif
+
 @endif
 
 @endforeach
