@@ -17,12 +17,12 @@ My contact info
       <p class="degree">{{ $data['degree'] }}</p>
       <p class="phone"><img src="{{ url('img/phone.png') }}" class="img"/>{{ $data['tel'] }}</p>
       <p class="email"><img src="{{ url('img/email.png') }}" class="img"/><a href="mailto:{{ $data['email'] }}" class="link">{{ $data['email'] }}</a></p>
-    </div><a href="#" class="cv btn green">
+    </div>
 @if($data['lang'] == 'sp')
-Ver Currículum
+<a href="{{ url('files/resume_sp.pdf') }}" target="_blank" class="cv btn green">Ver Currículum<img src="{{ url('img/right.png') }}" class="img"/></a>
 @else
-Resume
+<a href="{{ url('files/resume_en.pdf') }}" target="_blank" class="cv btn green">Resume<img src="{{ url('img/right.png') }}" class="img"/></a>
 @endif
-<img src="{{ url('img/right.png') }}" class="img"/></a>
+
   </div>
 </div>
