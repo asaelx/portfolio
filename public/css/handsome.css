@@ -643,8 +643,8 @@ html, body {
     color: #FFFFFF;
     position: relative;
     padding: 1rem 0;
-    font-size: 18px;
-    font-size: 1.28571rem; }
+    font-size: 16px;
+    font-size: 1.14286rem; }
     .modal > .title .close {
       position: absolute;
       right: 1rem;
@@ -656,8 +656,8 @@ html, body {
   .modal .content {
     color: #34495E;
     padding: 2rem;
-    font-size: 18px;
-    font-size: 1.28571rem; }
+    font-size: 16px;
+    font-size: 1.14286rem; }
     .modal .content > .photo {
       float: left;
       margin-right: 1.5rem;
