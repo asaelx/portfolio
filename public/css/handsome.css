@@ -601,7 +601,6 @@ html, body {
 
 /* Modal */
 .layer {
-  display: none;
   -webkit-animation: fade-out 0.3s forwards ease;
   animation: fade-out 0.3s forwards ease;
   visibility: hidden;
@@ -621,9 +620,7 @@ html, body {
     animation: fade-in 0.3s forwards ease; }
 
 .modal {
-  display: none;
-  -webkit-animation: modal-out 0.3s forwards ease;
-  animation: modal-out 0.3s forwards ease;
+  display: block;
   background: #EAEEF3;
   border-radius: 0.21429rem;
   overflow: hidden;
