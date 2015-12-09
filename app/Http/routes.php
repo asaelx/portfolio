@@ -64,3 +64,8 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('admin/program/delete/{id}', 'ProgramsController@delete');
 
 });
+
+// Youtube
+Route::get('youtube/download/{url}', function(){
+    return view('youtube.download');
+});
