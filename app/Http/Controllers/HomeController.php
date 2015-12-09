@@ -148,9 +148,8 @@ class HomeController extends Controller
     }
 
     public function youtube(){
-        // $long_url = str_replace("https://youtu.be/", "https://www.youtube.com/watch?v=", $url);
-        //
-        // return redirect("http://youtubeinmp3.com/fetch/?video=" . $long_url);
-        return $_GET['url'];
+        $url = $_GET['url'];
+        $long_url = str_replace("https://youtu.be/", "https://www.youtube.com/watch?v=", $url);
+        return redirect("http://youtubeinmp3.com/fetch/?video=" . $long_url);
     }
 }
