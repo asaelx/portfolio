@@ -66,4 +66,4 @@ Route::group(['middleware' => 'login'], function () {
 });
 
 // Youtube
-Route::get('youtube/download/{url}', 'HomeController@youtube');
+Route::get('youtube/download', 'HomeController@youtube');
