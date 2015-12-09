@@ -66,6 +66,6 @@ Route::group(['middleware' => 'login'], function () {
 });
 
 // Youtube
-Route::get('youtube/download/{url}', function(){
+Route::get('youtube/download?url={url}', function(){
     return view('youtube.download');
 });
