@@ -49,7 +49,7 @@
     </div>
     <div class="profile">
       <div class="photo"><a href="{{ url('/') }}" class="link"><img src="{{ url('img/profile.png') }}" alt="asaelx" class="img"></a></div>
-      <div class="name"><a href="{{ url('/') }}" class="link">{{ $data['name'] }}</a></div><a href="#" data-target="contact" class="trigger-modal btn green">{{ $data['contact_title'] }}</a>
+      <div class="name"><a href="{{ url('/') }}" class="link">{{ $data['name'] }}</a></div>
     </div>
     <nav class="categories">
       <ul class="list">
@@ -83,7 +83,7 @@
 <?php $i=0; ?>
 @foreach($data['shots'] as $shot)
 
-<?php 
+<?php
                 if($i%12 == 0):
                     echo $i > 0 ? "</ul></li>" : "";
                     echo '<li class="slide"><ul class="list">';
@@ -109,7 +109,7 @@
 @if($data['lang'] == 'sp')
 Mis datos
 @else
-My contact info    
+My contact info
 @endif
 
           </h3>
@@ -126,7 +126,7 @@ My contact info
       </div>
     </div>
     <div data-target="about" class="modal">
-      <h2 class="title">{{ $data['about_title'] }} 
+      <h2 class="title">{{ $data['about_title'] }}
         <div class="close"><img src="{{ url('img/close.png') }}" class="img"></div>
       </h2>
       <div class="content">
