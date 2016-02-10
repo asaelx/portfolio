@@ -49,7 +49,7 @@
     </div>
     <div class="profile">
       <div class="photo"><a href="{{ url('/') }}" class="link"><img src="{{ url('img/profile.png') }}" alt="asaelx" class="img"></a></div>
-      <div class="name"><a href="{{ url('/') }}" class="link">{{ $data['name'] }}</a></div><a href="#" data-target="contact" class="trigger-modal btn green">{{ $data['contact_title'] }}</a>
+      <div class="name"><a href="{{ url('/') }}" class="link">{{ $data['name'] }}</a></div>
     </div>
     <div class="the-shot">
       <nav class="nav"><a href="{{ url('/') }}" class="back"><img src="{{ url('img/left.png') }}" class="img">
@@ -92,7 +92,7 @@ Made with
 @if($data['lang'] == 'sp')
 Mis datos
 @else
-My contact info    
+My contact info
 @endif
 
           </h3>
@@ -109,7 +109,7 @@ My contact info
       </div>
     </div>
     <div data-target="about" class="modal">
-      <h2 class="title">{{ $data['about_title'] }} 
+      <h2 class="title">{{ $data['about_title'] }}
         <div class="close"><img src="{{ url('img/close.png') }}" class="img"></div>
       </h2>
       <div class="content">
