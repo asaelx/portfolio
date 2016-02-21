@@ -17,7 +17,7 @@ class CreateTagsTable extends Migration
             $table->increments('id');
             $table->string('name_sp');
             $table->string('name_en');
-            $table->timestamps();
+            $table->nullableTimestamps();
 
         });
     }

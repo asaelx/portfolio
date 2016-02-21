@@ -35,7 +35,7 @@ class CreateConfigTable extends Migration
             $table->text('contact_content_en');
             $table->string('footer_sp');
             $table->string('footer_en');
-            $table->timestamps();
+            $table->nullableTimestamps();
 
         });
     }

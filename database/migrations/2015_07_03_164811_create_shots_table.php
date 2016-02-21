@@ -23,7 +23,7 @@ class CreateShotsTable extends Migration
             $table->string('image_big');
             $table->string('image_small');
             $table->unsignedInteger('tag');
-            $table->timestamps();
+            $table->nullableTimestamps();
 
         });
 

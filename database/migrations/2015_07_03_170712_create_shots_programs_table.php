@@ -17,7 +17,7 @@ class CreateShotsProgramsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('shot_id');
             $table->unsignedInteger('program_id');
-            $table->timestamps();
+            $table->nullableTimestamps();
 
         });
 
