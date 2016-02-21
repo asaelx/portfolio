@@ -1,22 +1,24 @@
-var elixir      = require('laravel-elixir'),
-    jade        = require('laravel-elixir-jade'),
-    livereload  = require('laravel-elixir-livereload');
-
-elixir.config.sourcemaps = false;
+var elixir = require('laravel-elixir'),
+    jade = require('laravel-elixir-jade'),
+    livereload = require('laravel-elixir-livereload');
 
 elixir(function(mix) {
-    // Styles
-    mix.rubySass('handsome.sass', 'public/css/handsome.css');
+    mix.sass('app.scss');
+});
 
-    // Scripts
+elixir(function(mix) {
     mix.scripts([
-            'jquery.min.js',
-            'plugins/*.js',
-            'magic.js'
-            ], 'public/js/min/scripts.min.js', 'resources/assets/js');
+        'magic.js'
+    ], 'public/js/magic.js');
+});
 
-    // Templates
-    mix.jade({ src: '/assets/jade/', search: '**/*.jade' });
+elixir(function(mix) {
+    mix.jade({
+        search: '**/**/*.jade',
+        src: '/assets/jade/'
+    });
+});
 
+elixir(function(mix) {
     mix.livereload();
 });
