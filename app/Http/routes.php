@@ -1,5 +1,6 @@
 <?php
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/', 'HomeController@index');
+Route::get('shot', function(){
+    return view('single');
 });
