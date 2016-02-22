@@ -1,6 +1,7 @@
 var elixir = require('laravel-elixir'),
     jade = require('laravel-elixir-jade'),
     livereload = require('laravel-elixir-livereload'),
+    sprite = require('laravel-elixir-svg-symbols'),
     bw = '../../../public/bower/';
 
 
@@ -24,6 +25,10 @@ elixir(function(mix) {
         search: '**/**/*.jade',
         src: '/assets/jade/'
     });
+});
+
+elixir(function(mix) {
+    mix.svgSprite();
 });
 
 elixir(function(mix) {

@@ -8,6 +8,13 @@
         width: rem(100px)
         height: rem(100px)
         border-radius: 50%
+        overflow: hidden
+        &:hover
+            cursor: url(../img/glasses.png), auto
+            .img
+                transform: rotateZ(-367deg)
+        .img
+            transition: all 0.3s ease
     .name
         animation: up-in 0.8s 1s forwards ease
         +opacity(0)

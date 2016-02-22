@@ -8,6 +8,7 @@ html(lang="en")
             title NerdoDesigns
         link(rel="stylesheet", href="{{ asset('css/handsome.css') }}")
 body
+    include ../../../../public/svg/sprite.svg
     .wrapper
         block topbar
         block profile
@@ -15,5 +16,6 @@ body
         block shots
         block single
         block footer
+        block modals
         block scripts
     

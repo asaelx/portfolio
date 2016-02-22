@@ -1,6 +1,6 @@
 
 <div class="profile col-12">
-  <div style="background: url(http://realnerdo.com/img/profile.png) no-repeat center center; background-size: cover;" class="photo"></div>
+  <div class="photo"><img src="http://realnerdo.com/img/profile.png" width="100" height="100" alt="asaelx" class="img"/></div>
   <div class="name"><a href="#" class="link">Asael Jaimes</a></div>
-  <button data-modal="contact" class="btn green">Contáctame</button>
+  <button data-target="contact" class="btn green trigger-modal">Contáctame</button>
 </div>

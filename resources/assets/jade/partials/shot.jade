@@ -1,14 +1,24 @@
+include mixins
 .shot.col-12
     .top.row
         .back.col-6
-            a.link(href="#") Regresar a todos los trabajos
-        .made-with.col-6 Hecho con <img src="http://realnerdo.com/img/uploads/1436413932_icon.png", alt="sketch">
+            a.link(href="{{ url('/') }}")
+                +icon('left')
+                |  Regresar a todos los trabajos
+        .made-with.col-6
+            span.text  Hecho con
+            +icon('sketch')
+            +icon('laravel')
+            +icon('jquery')
         
     article.article.row
         .col-12
-            .cover(style="background: url(http://realnerdo.com/img/uploads/1455398421_big.png) no-repeat center center; background-size: cover;")
+            .cover
+                img.img(src="http://realnerdo.com/img/uploads/1455398421_big.png", width="800")
         .col-12
-            a.link(href="#") Demo
+            a.btn.green(href="#", target="_blank")
+                | Demo 
+                +icon('right')
         .col-12
             h1.title Selz Widget - Prueba de Interfaz de Usuario
         .col-12

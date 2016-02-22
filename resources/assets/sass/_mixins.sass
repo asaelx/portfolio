@@ -13,6 +13,10 @@
     font-family: $name, Helvetica, Arial, sans-serif
 
 =opacity($opacity)
+    @if $opacity == 0
+        visibility: hidden
+    @else
+        visibility: visible
     opacity: $opacity
     $opacity-ie: $opacity * 100
     filter: alpha(opacity=$opacity-ie)

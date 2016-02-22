@@ -1,5 +1,6 @@
 .profile.col-12
-    .photo(style="background: url(http://realnerdo.com/img/profile.png) no-repeat center center; background-size: cover;")
+    .photo
+        img.img(src="http://realnerdo.com/img/profile.png", width="100", height="100", alt="asaelx")
     .name
         a.link(href="#") Asael Jaimes
-    button.btn.green(data-modal="contact") Contáctame
+    button.btn.green.trigger-modal(data-target="contact") Contáctame

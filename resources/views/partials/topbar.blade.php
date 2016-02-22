@@ -9,6 +9,6 @@
     <div class="lang">Español</div>
   </div>
   <div class="about col-6">
-    <button data-modal="about" class="btn green">Acerca de mí</button>
+    <button data-target="about" class="btn green trigger-modal">Acerca de mí</button>
   </div>
 </div>
