@@ -1,0 +1,67 @@
+=font-face($name, $file)
+    @font-face
+        font-family: #{$name}
+        src: url('../fonts/#{$file}.eot?#iefix') format('embedded-opentype'),  url('../fonts/#{$file}.otf')  format('opentype'), url('../fonts/#{$file}.woff') format('woff'), url('../fonts/#{$file}.ttf')  format('truetype'), url('../fonts/#{$file}.svg##{$file}') format('svg')
+        font-weight: normal
+        font-style: normal
+
+=font-size($size)
+    font-size: $size
+    font-size: rem($size)
+
+=sans($name)
+    font-family: $name, Helvetica, Arial, sans-serif
+
+=opacity($opacity)
+    opacity: $opacity
+    $opacity-ie: $opacity * 100
+    filter: alpha(opacity=$opacity-ie)
+
+=clear
+    content: " "
+    display: table
+    clear: both
+
+=shadow
+    box-shadow: 0 0 6px 3px rgba($black, 0.15)
+
+=link
+    color: $blue
+    display: inline-block
+    position: relative
+    transition: all 0.3s ease
+    &:hover, &.active
+        color: darken($blue, 10)
+        letter-spacing: normal
+    &:before, &:after
+        content: ""
+        background: $blue
+        width: 100%
+        height: 1px
+        position: absolute
+        left: 0
+        +opacity(0)
+        transition: all 0.3s ease
+    &:before
+        bottom: rem(-1px)
+        transform: translateY(0.5rem)
+    &:after
+        top: rem(-3px)
+        transform: translateY(-0.5rem)
+    &:hover, &.active
+        &:before, &:after
+            transform: translateX(0)
+            +opacity(1)
+            transition: all 0.3s ease
+
+=heading-size($size, $step-size-heading: 0.3333, $amplifier-heading: 1.2)
+    font-size: $size * $step-size-heading * $amplifier-heading + rem
+
+=headings
+    @for $i from 1 through 6
+        h#{$i}
+            +heading-size(7 - $i)
+            margin: 1.8em 0 0.5em 0
+            line-height: 1.3em
+            color: darken($gray, 15)
+            font-family: 'Montserrat', Helvetica, Arial, sans-serif

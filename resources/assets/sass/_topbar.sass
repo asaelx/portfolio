@@ -1,0 +1,59 @@
+.topbar
+    +clear
+    width: 100%
+    transform: rotateZ(0)
+    animation: up-in 0.8s forwards ease
+    .languages
+        +clear
+        float: left
+        .lang
+            float: left
+            padding-top: 0.1rem
+            text-transform: uppercase
+        .switch
+            float: left
+            margin: 0 0.5rem
+            #lang_switch
+                display: none
+            label
+                background: $clouds
+                display: inline-block
+                border-radius: rem(10px)
+                text-indent: -99999px
+                height: rem(20px)
+                width: rem(35px)
+                position: relative
+                &:hover
+                    cursor: pointer
+                &:before
+                    background: $green
+                    border-radius: 50%
+                    position: absolute
+                    content: ""
+                    top: rem(2px)
+                    height: rem(16px)
+                    width: rem(16px)
+                &.en:before
+                    left: rem(2px)
+                &.sp:before
+                    right: rem(2px)
+        +breakpoint($xsmall)
+            width: 100%
+            float: none
+            text-align: center
+            .lang
+                padding-top: 0
+                position: relative
+                top: -0.3rem
+            .lang, .switch
+                float: none
+                display: inline-block
+
+    .about
+        .btn
+            float: right
+        +breakpoint($xsmall)
+            width: 100%
+            text-align: center
+            .btn
+                float: none

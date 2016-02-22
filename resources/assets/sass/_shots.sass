@@ -1,0 +1,33 @@
+.shots
+    padding-top: 0
+    padding-bottom: 0
+    transform: rotateZ(0)
+    display: none
+    .list
+        +clear
+        +breakpoint($large)
+            float: none
+            margin: 0 auto
+            width: $medium-size
+        +breakpoint($medium)
+            width: $small-size
+        +breakpoint($small)
+            width: 100%
+        .item
+            float: left
+            text-align: center
+            +breakpoint($large)
+                width: calc(100% / 3)
+            +breakpoint($medium)
+                width: calc(100% / 2)
+            +breakpoint($small)
+                width: 100%
+            @for $i from 1 through 20
+                &:nth-child(#{$i})
+                    animation: zoom-in 0.8s #{$i*0.4}s forwards ease
+                    +opacity(0)
+            .link
+                display: inline-block
+                width: rem(250px)
+                height: rem(180px)
+                border-radius: rem(3px)

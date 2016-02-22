@@ -1,0 +1,15 @@
+.btn
+    display: inline-block
+    border: none
+    border-radius: rem(3px)
+    padding: 0.5em 0.8em
+    +sans('Varela Round')
+    +font-size(16px)
+    &:hover
+        cursor: pointer
+        transition: all 0.3s ease
+    &.green
+        background: $green
+        color: $white
+        &:hover
+            background: lighten($green, 5)
