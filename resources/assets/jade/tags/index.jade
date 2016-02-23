@@ -1,0 +1,53 @@
+extend ../layout/admin
+
+block title
+    title Etiquetas
+    
+block content
+    include ../partials/flash
+    .content
+        h1.title Etiquetas
+        
+        include ../mixins/blade
+        //- Tags
+        ul.list.active#tags
+            +if('!$tags->isEmpty()')
+                +foreach('$tags as $tag')    
+                    li.item
+                        a.title(href!="{{ url('admin/tags/' . $tag->slug . '/edit') }}") {{ $tag->name }}
+                        .details
+                            +if('$tag->articles->count() > 1')
+                                | <a href="{{ url('admin/articles/tagged', $tag->slug) }}">Hay {{ $tag->articles->count() }} artículos archivados en esta etiqueta</a>
+                                +elseif('$tag->articles->count() == 1')
+                                    | <a href="{{ url('admin/articles/tagged', $tag->slug) }}">Hay 1 artículo archivado en esta etiqueta</a>
+                                    +else
+                                        | No hay artículos archivados en esta etiqueta
+                                    
+                        ul.options
+                            +if('!$tag->articles->count()')
+                                li.option
+                                    | {!! Form::open(['url' => url('admin/tags', $tag->slug), 'method' => 'DELETE']) !!}
+                                    button.link.delete(type="submit")
+                                        | Eliminar
+                                    | {!! Form::close() !!}
+                            li.option
+                                a.link.edit(href!="{{ url('admin/tags/' . $tag->slug . '/edit') }}")
+                                    | Editar
+                                //- +else
+                                //-     li.option
+                                //-         | {!! Form::open(['url' => url('admin/tags', $tag->name), 'method' => 'DELETE', 'class' => 'form']) !!}
+                                //-         | {!! Form::label('nav', 'Menú ', ['class' => 'label nav-label']) !!}
+                                //-         | {!! Form::checkbox('nav', 1, null, ['class' => 'onoffswitch', 'id' => 'nav-' . $tag->id]) !!}
+                                //-         | {!! Form::close() !!}
+                .list-footer
+                    +if('$tags->total() > 1')
+                        .count Hay {{ $tags->total() }} etiquetas en total
+                        +else
+                            .count Solo hay {{ $tags->total() }} etiqueta
+                    | {!! $tags->render() !!}
+                +else
+                    .empty
+                        i.twa.twa-persevere
+                        h4.legend Aún no hay etiquetas
+                        a.btn.blue(href="{{ url('admin/articles/create') }}") Escribe un artículo
+            

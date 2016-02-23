@@ -1,8 +1,8 @@
 .DS_Store
 /vendor
 /node_modules
-/public/storage
-/public/bower
+public/bower
+public/uploads/*
 Homestead.yaml
 Homestead.json
 .env

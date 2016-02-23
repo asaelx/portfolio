@@ -1,0 +1,49 @@
+.editor
+    .title
+        .options
+            .btn.blue.publish.drop-trigger(data-drop="article-settings")
+                | {{ $submitButtonText }}
+                span.typcn.typcn-arrow-sorted-down
+            #article-settings.settings.drop
+                .group
+                    | {!! Form::label('cover', 'Imagen de portada', ['class' => 'label']) !!}
+                    | {!! Form::file('cover', ['class' => 'file img']) !!}
+                    include ../mixins/blade
+                    +if("!is_null($article->cover())")
+                        .preview.wide(style!="background: url({{ url($article->cover()->url) }}) no-repeat center center; background-size: cover;")
+                .group
+                    | {!! Form::label('excerpt', 'Extracto', ['class' => 'label']) !!}
+                    | {!! Form::text('excerpt', null, ['class' => 'input']) !!}
+                .group
+                    | {!! Form::label('tags', 'Etiquetas', ['class' => 'label']) !!}
+                    | {!! Form::select('tag_list[]', $tags, null, ['multiple', 'class' => 'select2']) !!}
+                .group
+                    | {!! Form::label('published_at', 'Fecha de publicación', ['class' => 'label']) !!}
+                    | {!! Form::text('published_at', \Carbon\Carbon::now()->tz('America/Mexico_City')->format('Y-m-d'), ['class' => 'datepicker input']) !!}
+                +if('$hasTwitter')
+                    .group
+                        | {!! Form::label('twitter', 'Publicar en twitter', ['class' => 'label']) !!}
+                        | {!! Form::checkbox('twitter', 1, null, ['class' => 'onoffswitch']) !!}
+                .group
+                    | {!! Form::submit($submitButtonText, ['class' => 'btn blue']) !!}
+        | {!! Form::text('title', null, ['placeholder' => 'El título de tu artículo', 'id' => 'input-title']) !!}
+    .body
+        .editorwrap
+            // Markdown Editor
+            section.entry-markdown
+                header.floatingheader
+                    small Markdown
+                    a.markdown-help(href='#')
+                        span.hidden What is Markdown?
+                section.entry-markdown-content
+                    | {!! Form::textarea('body', null, ['id' => 'entry-markdown']) !!}
+            // Markdown Editor END
+            // Markdown Preview
+            section.entry-preview.active
+                header.floatingheader
+                    small.pull-left Vista previa
+                    small.pull-right
+                        span.entry-word-count.js-entry-word-count 0 palabras
+                section.entry-preview-content
+                    .rendered-markdown
+            // Markdown Preview END

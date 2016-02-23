@@ -1,0 +1,104 @@
+.content
+    .list
+        .empty
+            padding: 4rem 0
+            text-align: center
+            color: $silver
+            .legend
+                +font-size(28px)
+                margin-bottom: 0.5em
+            .twa
+                +font-size(50px)
+                margin-bottom: 1rem
+        .item
+            position: relative
+            border-bottom: 1px solid $clouds
+            padding: 1em 0
+            transition: all 0.3s ease
+            &:hover
+                padding-left: 0.3em
+                transition: all 0.3s ease
+                .options
+                    +opacity(1)
+                    padding-right: 0.5em
+                    transition: all 0.3s ease
+            .date
+                +font-size(12px)
+                color: $gray
+            .title
+                display: inline-block
+                +font-size(18px)
+                color: $dark
+                margin: 0.5em 0
+            .details
+                font-family: 'Lato'
+                font-style: italic
+                color: $gray
+                a
+                    color: $light
+            .options
+                +opacity(0)
+                +clearfix
+                position: absolute
+                top: 50%
+                right: 0
+                transform: translateY(-50%)
+                transition: all 0.3s ease
+                .option
+                    float: left
+                    margin-left: 1em
+                    .link
+                        color: $light
+                        +font-size(14px)
+                        text-transform: uppercase
+                        &.delete
+                            appearance: none
+                            border: none
+                            background: none
+                            margin: 0
+                            padding: 0
+                            font-family: 'Varela Round', Helvetica, Arial, sans-serif
+                            color: $red
+                            &:hover
+                                cursor: pointer
+                    .nav-label
+                        margin-right: 0.5rem
+    .list-footer
+        +clearfix
+        margin: 2rem 0
+        width: 100%
+        .count
+            float: left
+            +font-size(14px)
+            font-family: 'Lato'
+            font-style: italic
+            color: $gray
+            text-align: center
+        .pagination
+            float: right
+            padding: 0 1rem 1rem 1rem
+            li
+                float: left
+                border-radius: rem(3px)
+                margin: 0 0.1em
+                span, a
+                    display: block
+                    padding: 0.2em 0.5em
+                    +font-size(14px)
+                    color: $dark
+                &:hover
+                    background: $blue
+                    transition: all 0.3s ease
+                    span, a
+                        color: $white
+            .disabled
+                span
+                    color: $silver
+                &:hover
+                    background: none
+                    span
+                        color: $silver
+            .active
+                background: $blue
+                span
+                    color: $white

@@ -1,0 +1,152 @@
+.modal
+    display: block
+    +opacity(0)
+    // transform: translateZ(0)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 100
+    width: rem(800px)
+    border-radius: rem(4px)
+    overflow: hidden
+    background: $clouds
+    & > .title
+        background: $green
+        color: $white
+        padding: 1rem
+        text-align: center
+        +font-size(18px)
+        position: relative
+        .close-icon
+            width: rem(18px)
+            height: rem(18px)
+            position: absolute
+            top: 50%
+            right: 1rem
+            transform: translateY(-50%)
+            &:hover
+                cursor: pointer
+    .content
+        padding: 2rem
+        .photo
+            float: left
+            margin-right: 1rem
+            position: relative
+            border-radius: rem(3px)
+            overflow: hidden
+            +breakpoint($xsmall)
+                margin-bottom: 1rem
+                margin-right: 0
+                width: 100%
+                .img
+                    width: 100%
+            .img
+                border-radius: rem(3px)
+            .data
+                background: linear-gradient(rgba($white, 0), rgba($black, 0.6))
+                position: absolute
+                left: 0
+                bottom: 0
+                right: 0
+                color: $white
+                height: 50%
+                padding: 1rem
+                padding-top: 4rem
+                +sans('Lato')
+                +font-size(15px)
+                font-style: italic
+        p
+            +font-size(17px)
+            line-height: 1.3em
+            margin-bottom: 0.7em
+            &:last-child
+                margin-bottom: 0
+        ul
+            list-style: url('../../../img/check.png')
+            +sans('Lato')
+            font-style: italic
+            padding-left: 2rem
+            margin-bottom: 0.7em
+            li
+                margin: 0.5rem 0
+                +font-size(18px)
+        .info
+            padding-top: rem(24px)
+            padding-left: rem(200px)
+            +breakpoint($small)
+                padding-bottom: 1rem
+            +breakpoint($xsmall)
+                padding-left: 0
+            .title
+                +font-size(30px)
+                margin-bottom: 0.5rem
+            .phone
+                color: $green
+                .phone-icon
+                    position: relative
+                    top: 0.3rem
+                    margin-right: 0.5rem
+                    width: rem(20px)
+                    height: rem(20px)
+            .email
+                .link
+                    color: $green
+                .email-icon
+                    position: relative
+                    top: 0.2rem
+                    margin-right: 0.5rem
+                    width: rem(20px)
+                    height: rem(16px)
+            .photo
+                position: absolute
+                left: 0
+                bottom: 0
+                +breakpoint($xsmall)
+                    display: none
+        .cv
+            position: absolute
+            right: 2rem
+            bottom: 2rem
+            +font-size(16px)
+            [class$="-icon"]
+                width: rem(13px)
+                height: rem(10px)
+                position: relative
+                transition: all 0.3s ease
+            &:hover
+                [class$="-icon"]
+                    left: 0.2em
+                    transform: translateX(0.05em)
+            +breakpoint($small)
+                position: relative
+                right: auto
+                bottom: auto
+                margin-left: rem(200px)
+            +breakpoint($xsmall)
+                margin-left: 0
+    &.visible
+        display: block
+        animation: modal-in 0.3s forwards ease
+        +breakpoint($medium)
+            animation: modal-in-small 0.3s forwards ease
+            width: 95%
+            top: 1rem
+            transform: translate(-50%, 0)
+        +breakpoint($xsmall)
+            width: 90%
+
+.layer
+    animation: fade-out 0.3s forwards ease
+    +opacity(0)
+    background: $white
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 99
+    transition: all 0.3s ease
+    &.visible
+        display: block
+        animation: fade-in 0.3s forwards ease

@@ -1,0 +1,22 @@
+extend ../layout/admin
+
+block title
+    title Instalación
+    
+block content
+    include ../partials/errors
+    | {!! Form::open(['url' => url('auth/login'), 'class' => 'form sign-form']) !!}
+    fieldset.fieldset
+        legend.legend Iniciar sesión
+        .group
+            | {!! Form::label('email', 'Correo electrónico', ['class' => 'label']) !!}
+            | {!! Form::text('email', old('email'), ['class' => 'input']) !!}
+        .group
+            | {!! Form::label('password', 'Contraseña', ['class' => 'label']) !!}
+            | {!! Form::password('password', ['class' => 'input']) !!}
+        .group
+            | {!! Form::label('remember', 'Recordarme', ['class' => 'label']) !!}
+            | {!! Form::checkbox('remember', null, null, ['class' => 'onoffswitch']) !!}
+    .group
+        | {!! Form::submit('Entrar', ['class' => 'btn blue submit-right']) !!}
+    | {!! Form::close() !!}

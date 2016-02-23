@@ -1,0 +1,6891 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Lato:400italic);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic);
+html {
+  font-family: 'Varela Round', Helvetica, Arial, sans-serif;
+  font-size: 14px; }
+
+/* Reset */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  width: 100%; }
+
+img {
+  vertical-align: bottom; }
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+input, textarea, select {
+  font-size: 100%; }
+
+/* Reset HTML5 Search Input in Webkit */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  background-color: transparent; }
+  a:active, a:hover {
+    outline: 0; }
+  a:hover {
+    cursor: pointer; }
+
+.btn {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  color: white;
+  border: 0;
+  border-radius: 0.2142857143em;
+  font-size: 15px;
+  font-size: 1.0714285714rem;
+  position: relative; }
+  .btn:hover {
+    cursor: pointer;
+    transition: all 0.3s ease; }
+  .btn.blue {
+    background: #3498DB; }
+    .btn.blue:hover {
+      background: #5faee3; }
+    .btn.blue:active {
+      background: #1d6fa5; }
+  .btn.green {
+    background: #1ABC9C; }
+    .btn.green:hover {
+      background: #28e1bd; }
+    .btn.green:active {
+      background: #117964; }
+
+@-webkit-keyframes drop-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(-1rem);
+    transform: translateY(-1rem); }
+  to {
+    visibility: visible;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes drop-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(-1rem);
+    transform: translateY(-1rem); }
+  to {
+    visibility: visible;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@-webkit-keyframes sign-in {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(2rem) scale(0.95);
+    transform: translateY(2rem) scale(0.95); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1); } }
+
+@keyframes sign-in {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(2rem) scale(0.95);
+    transform: translateY(2rem) scale(0.95); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1); } }
+
+@-webkit-keyframes right-in {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(3rem);
+    transform: translateX(3rem); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes right-in {
+  from {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(3rem);
+    transform: translateX(3rem); }
+  to {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@-webkit-keyframes notification-away {
+  from {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  to {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); } }
+
+@keyframes notification-away {
+  from {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  to {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); } }
+
+.sidebar {
+  width: 17.1428571429em;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .sidebar .profile {
+    content: " ";
+    display: table;
+    clear: both;
+    width: 100%;
+    padding-left: 2em;
+    padding-bottom: 1em; }
+    .sidebar .profile .details {
+      border-bottom: 1px solid #ECF0F1;
+      position: relative;
+      padding-top: 2em;
+      padding-bottom: 2em; }
+      .sidebar .profile .details .photo {
+        float: left;
+        height: 2.5714285714rem;
+        width: 2.5714285714rem;
+        overflow: hidden;
+        border-radius: 0.2142857143rem;
+        margin-right: 1em; }
+      .sidebar .profile .details .typcn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: 20px;
+        font-size: 1.4285714286rem;
+        color: #6A8AAA; }
+        .sidebar .profile .details .typcn:hover {
+          cursor: pointer;
+          color: #3498DB; }
+      .sidebar .profile .details .settings {
+        position: absolute;
+        top: 66%;
+        left: 90%;
+        width: 12.8571428571rem; }
+        .sidebar .profile .details .settings .options .option {
+          border-bottom: 1px solid #ECF0F1; }
+          .sidebar .profile .details .settings .options .option:last-child {
+            border-bottom: none; }
+          .sidebar .profile .details .settings .options .option .link {
+            display: block;
+            font-size: 14px;
+            font-size: 1rem;
+            color: #34495E;
+            padding: 1em 1.5em; }
+            .sidebar .profile .details .settings .options .option .link:hover {
+              background: #3498DB;
+              color: #FFFFFF;
+              transition: all 0.3s ease; }
+      .sidebar .profile .details .title {
+        font-size: 14px;
+        font-size: 1rem;
+        color: #34495E;
+        margin-bottom: 0.3em; }
+      .sidebar .profile .details .name {
+        font-size: 13px;
+        font-size: 0.9285714286rem;
+        color: #6A8AAA; }
+  .sidebar .nav .options .option {
+    margin: 0.5em 0; }
+    .sidebar .nav .options .option .link {
+      display: block;
+      color: #34495E;
+      font-size: 14px;
+      font-size: 1rem;
+      padding: 0.5em 1em 0.5em 2.5em;
+      border-radius: 0 3px 3px 0;
+      transition: all 0.3s ease; }
+      .sidebar .nav .options .option .link:hover, .sidebar .nav .options .option .link.active {
+        background: #3498DB;
+        color: white;
+        transition: all 0.3s ease;
+        padding-left: 2.8em; }
+        .sidebar .nav .options .option .link:hover .typcn, .sidebar .nav .options .option .link.active .typcn {
+          color: white;
+          transition: all 0.3s ease; }
+      .sidebar .nav .options .option .link .typcn {
+        color: #6A8AAA;
+        font-size: 20px;
+        font-size: 1.4285714286rem;
+        margin-right: 0.5em; }
+
+.notifications {
+  position: fixed;
+  top: 6rem;
+  right: 1rem;
+  z-index: 10; }
+  .notifications .notification {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    text-align: right;
+    margin-bottom: 1rem; }
+    .notifications .notification:nth-child(1) {
+      -webkit-animation: right-in 0.8s 0.1s forwards ease;
+      animation: right-in 0.8s 0.1s forwards ease; }
+    .notifications .notification:nth-child(2) {
+      -webkit-animation: right-in 0.8s 0.2s forwards ease;
+      animation: right-in 0.8s 0.2s forwards ease; }
+    .notifications .notification:nth-child(3) {
+      -webkit-animation: right-in 0.8s 0.3s forwards ease;
+      animation: right-in 0.8s 0.3s forwards ease; }
+    .notifications .notification:nth-child(4) {
+      -webkit-animation: right-in 0.8s 0.4s forwards ease;
+      animation: right-in 0.8s 0.4s forwards ease; }
+    .notifications .notification:nth-child(5) {
+      -webkit-animation: right-in 0.8s 0.5s forwards ease;
+      animation: right-in 0.8s 0.5s forwards ease; }
+    .notifications .notification:nth-child(6) {
+      -webkit-animation: right-in 0.8s 0.6s forwards ease;
+      animation: right-in 0.8s 0.6s forwards ease; }
+    .notifications .notification:nth-child(7) {
+      -webkit-animation: right-in 0.8s 0.7s forwards ease;
+      animation: right-in 0.8s 0.7s forwards ease; }
+    .notifications .notification:nth-child(8) {
+      -webkit-animation: right-in 0.8s 0.8s forwards ease;
+      animation: right-in 0.8s 0.8s forwards ease; }
+    .notifications .notification:nth-child(9) {
+      -webkit-animation: right-in 0.8s 0.9s forwards ease;
+      animation: right-in 0.8s 0.9s forwards ease; }
+    .notifications .notification:nth-child(10) {
+      -webkit-animation: right-in 0.8s 1s forwards ease;
+      animation: right-in 0.8s 1s forwards ease; }
+    .notifications .notification .message {
+      display: inline-block;
+      padding: 1rem;
+      border-radius: 0.2142857143rem;
+      box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.2); }
+      .notifications .notification .message .typcn {
+        font-size: 20px;
+        font-size: 1.4285714286rem; }
+    .notifications .notification.go-away {
+      -webkit-animation: notification-away 0.8s forwards ease;
+      animation: notification-away 0.8s forwards ease; }
+    .notifications .notification.error .message {
+      background: rgba(231, 76, 60, 0.95);
+      color: #FFFFFF; }
+    .notifications .notification.success .message {
+      background: rgba(26, 188, 156, 0.95);
+      color: #FFFFFF; }
+
+.content {
+  height: 100%;
+  margin-left: 17.1428571429em;
+  padding: 2em; }
+  .content > .title {
+    font-size: 24px;
+    font-size: 1.7142857143rem;
+    color: #34495E;
+    margin-bottom: 1em; }
+    .content > .title .link {
+      color: #6A8AAA; }
+
+.drop {
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  background: #FFFFFF;
+  border-radius: 0.2142857143rem;
+  box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 10; }
+  .drop.visible {
+    -webkit-animation: drop-in 0.3s forwards ease;
+    animation: drop-in 0.3s forwards ease; }
+
+.form .fieldset {
+  border: none;
+  border-top: 1px solid #ECF0F1;
+  padding: 1rem 0rem 2rem 1rem; }
+  .form .fieldset .legend {
+    font-size: 16px;
+    font-size: 1.1428571429rem;
+    text-transform: uppercase;
+    color: #6A8AAA;
+    letter-spacing: 0.1em;
+    background: #FFFFFF;
+    padding: 0 0.5em; }
+
+.form .group {
+  margin-bottom: 1.5em;
+  content: " ";
+  display: table;
+  clear: both;
+  width: 100%; }
+  .form .group:last-child {
+    margin-bottom: 0; }
+  .form .group.half {
+    float: left;
+    width: 50%;
+    clear: none;
+    display: block; }
+
+.form .label {
+  font-size: 13px;
+  font-size: 0.9285714286rem;
+  color: #34495E;
+  text-transform: uppercase; }
+
+.form .input {
+  border: 2px solid #C2CFD0;
+  border-radius: 0.2142857143rem;
+  padding: 0.5em 0.8em;
+  width: 100%;
+  font-size: 16px;
+  font-size: 1.1428571429rem;
+  resize: none; }
+  .form .input:focus {
+    border: 2px solid #3498DB;
+    transition: all 0.3s ease; }
+
+.form .file {
+  margin-top: 0.5em; }
+
+.form .preview {
+  overflow: hidden;
+  position: relative;
+  margin-top: 1rem;
+  border-radius: 0.2142857143rem;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  height: 9.1428571429rem;
+  width: 9.1428571429rem; }
+
+.form .onoffswitch-styled {
+  float: right;
+  position: relative;
+  width: 2.5rem; }
+  .form .onoffswitch-styled .onoffswitch {
+    display: none; }
+    .form .onoffswitch-styled .onoffswitch:checked + .onoffswitch-label {
+      background-color: #1ABC9C; }
+    .form .onoffswitch-styled .onoffswitch:checked + .onoffswitch-label, .form .onoffswitch-styled .onoffswitch:checked + .onoffswitch-label:before {
+      border-color: #1ABC9C; }
+    .form .onoffswitch-styled .onoffswitch:checked + .onoffswitch-label:before {
+      right: 0; }
+  .form .onoffswitch-styled .onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 1.4285714286rem;
+    padding: 0;
+    line-height: 1.4285714286rem;
+    border: 2px solid #C2CFD0;
+    border-radius: 1.4285714286rem;
+    background: #C2CFD0;
+    transition: background-color 0.1s ease-in; }
+    .form .onoffswitch-styled .onoffswitch-label:before {
+      content: "";
+      display: block;
+      width: 1.4285714286rem;
+      margin: 0;
+      background: white;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 1.0714285714rem;
+      border: 2px solid #C2CFD0;
+      border-radius: 1.4285714286rem;
+      transition: all 0.1s ease-in 0s; }
+
+.form .select-styled {
+  position: relative; }
+  .form .select-styled .typcn {
+    position: absolute;
+    top: 50%;
+    right: 0.3em;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-size: 1.2857142857rem;
+    color: #6A8AAA;
+    pointer-events: none; }
+  .form .select-styled .select {
+    background: transparent;
+    background-image: url(../img/select-down.png) no-repeat right;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 16px;
+    font-size: 1.1428571429rem;
+    line-height: 1;
+    border: 2px solid #C2CFD0;
+    border-radius: 0.2142857143rem;
+    height: 2.4285714286rem;
+    -webkit-appearance: none; }
+
+.form .submit-right {
+  float: right; }
+
+.select2-container {
+  width: 100%; }
+  .select2-container.select2-container--default .select2-selection--multiple {
+    border: 2px solid #C2CFD0; }
+    .select2-container.select2-container--default .select2-selection--multiple .select2-selection__choice {
+      border: 1px solid #C2CFD0;
+      background-color: #ECF0F1;
+      color: #34495E;
+      padding: 0.3em; }
+      .select2-container.select2-container--default .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove {
+        color: #E74C3C; }
+  .select2-container.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: 2px solid #3498DB; }
+
+.sign-form {
+  -webkit-animation: sign-in 0.8s forwards ease;
+  animation: sign-in 0.8s forwards ease;
+  margin: 2rem auto 0 auto;
+  width: 28.5714285714rem;
+  background: #fbfcfc;
+  border-radius: 0.2142857143rem;
+  padding: 2rem; }
+  .sign-form .fieldset .legend {
+    background: #fbfcfc; }
+
+.settings-form {
+  margin: 2rem 0 0 1rem;
+  width: 28.5714285714rem; }
+
+.content .tools {
+  content: " ";
+  display: table;
+  clear: both;
+  border-bottom: 1px solid #ECF0F1;
+  width: 100%;
+  margin-bottom: 1em; }
+  .content .tools .tabs {
+    content: " ";
+    display: table;
+    clear: both;
+    float: left; }
+    .content .tools .tabs .tab {
+      float: left; }
+      .content .tools .tabs .tab .link {
+        display: block;
+        padding: 0 1em 0.5em 1em;
+        color: #34495E; }
+        .content .tools .tabs .tab .link.active {
+          color: #3498DB;
+          border-bottom: 3px solid #3498DB; }
+  .content .tools .search {
+    float: right;
+    padding: 0 1em;
+    border-bottom: 3px solid #ECF0F1; }
+    .content .tools .search .typcn {
+      color: #6A8AAA;
+      font-size: 20px;
+      font-size: 1.4285714286rem; }
+    .content .tools .search input {
+      border: 0;
+      color: #6A8AAA; }
+
+.content .tabbed {
+  display: none; }
+  .content .tabbed.active {
+    display: block; }
+
+.content .list .empty {
+  padding: 4rem 0;
+  text-align: center;
+  color: #C2CFD0; }
+  .content .list .empty .legend {
+    font-size: 28px;
+    font-size: 2rem;
+    margin-bottom: 0.5em; }
+  .content .list .empty .twa {
+    font-size: 50px;
+    font-size: 3.5714285714rem;
+    margin-bottom: 1rem; }
+
+.content .list .item {
+  position: relative;
+  border-bottom: 1px solid #ECF0F1;
+  padding: 1em 0;
+  transition: all 0.3s ease; }
+  .content .list .item:hover {
+    padding-left: 0.3em;
+    transition: all 0.3s ease; }
+    .content .list .item:hover .options {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      padding-right: 0.5em;
+      transition: all 0.3s ease; }
+  .content .list .item .date {
+    font-size: 12px;
+    font-size: 0.8571428571rem;
+    color: #95A5A6; }
+  .content .list .item .title {
+    display: inline-block;
+    font-size: 18px;
+    font-size: 1.2857142857rem;
+    color: #34495E;
+    margin: 0.5em 0; }
+  .content .list .item .details {
+    font-family: 'Lato';
+    font-style: italic;
+    color: #95A5A6; }
+    .content .list .item .details a {
+      color: #6A8AAA; }
+  .content .list .item .options {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    content: " ";
+    display: table;
+    clear: both;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: all 0.3s ease; }
+    .content .list .item .options .option {
+      float: left;
+      margin-left: 1em; }
+      .content .list .item .options .option .link {
+        color: #6A8AAA;
+        font-size: 14px;
+        font-size: 1rem;
+        text-transform: uppercase; }
+        .content .list .item .options .option .link.delete {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border: none;
+          background: none;
+          margin: 0;
+          padding: 0;
+          font-family: 'Varela Round', Helvetica, Arial, sans-serif;
+          color: #E74C3C; }
+          .content .list .item .options .option .link.delete:hover {
+            cursor: pointer; }
+      .content .list .item .options .option .nav-label {
+        margin-right: 0.5rem; }
+
+.content .list-footer {
+  content: " ";
+  display: table;
+  clear: both;
+  margin: 2rem 0;
+  width: 100%; }
+  .content .list-footer .count {
+    float: left;
+    font-size: 14px;
+    font-size: 1rem;
+    font-family: 'Lato';
+    font-style: italic;
+    color: #95A5A6;
+    text-align: center; }
+  .content .list-footer .pagination {
+    float: right;
+    padding: 0 1rem 1rem 1rem; }
+    .content .list-footer .pagination li {
+      float: left;
+      border-radius: 0.2142857143rem;
+      margin: 0 0.1em; }
+      .content .list-footer .pagination li span, .content .list-footer .pagination li a {
+        display: block;
+        padding: 0.2em 0.5em;
+        font-size: 14px;
+        font-size: 1rem;
+        color: #34495E; }
+      .content .list-footer .pagination li:hover {
+        background: #3498DB;
+        transition: all 0.3s ease; }
+        .content .list-footer .pagination li:hover span, .content .list-footer .pagination li:hover a {
+          color: #FFFFFF; }
+    .content .list-footer .pagination .disabled span {
+      color: #C2CFD0; }
+    .content .list-footer .pagination .disabled:hover {
+      background: none; }
+      .content .list-footer .pagination .disabled:hover span {
+        color: #C2CFD0; }
+    .content .list-footer .pagination .active {
+      background: #3498DB; }
+      .content .list-footer .pagination .active span {
+        color: #FFFFFF; }
+
+.editor {
+  height: 100%;
+  padding: 2em; }
+  .editor .title {
+    border-bottom: 1px solid #ECF0F1; }
+    .editor .title .options {
+      position: fixed;
+      top: 2rem;
+      right: 4rem;
+      z-index: 500; }
+      .editor .title .options .publish .typcn {
+        pointer-events: none; }
+      .editor .title .options .settings {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding: 2rem; }
+        .editor .title .options .settings .preview {
+          width: 100%; }
+        .editor .title .options .settings .btn {
+          float: right; }
+    .editor .title #input-title {
+      border: 0;
+      font-size: 24px;
+      font-size: 1.7142857143rem;
+      color: #34495E;
+      width: 100%;
+      padding-bottom: 0.5em;
+      font-family: 'Varela Round', Helvetica, Arial, sans-serif; }
+  .editor .body {
+    padding-top: 2em; }
+    .editor .body .editorwrap {
+      position: relative;
+      content: " ";
+      display: table;
+      clear: both;
+      width: 100%; }
+      .editor .body .editorwrap .entry-markdown {
+        float: left;
+        width: 50%; }
+        .editor .body .editorwrap .entry-markdown .entry-markdown-content .CodeMirror {
+          color: #34495E; }
+        .editor .body .editorwrap .entry-markdown .entry-markdown-content .cm-string, .editor .body .editorwrap .entry-markdown .entry-markdown-content .cm-link, .editor .body .editorwrap .entry-markdown .entry-markdown-content .cm-tag {
+          color: #34495E; }
+      .editor .body .editorwrap .entry-preview {
+        float: left;
+        width: 50%;
+        padding: 2rem;
+        padding-top: 0;
+        position: relative; }
+        .editor .body .editorwrap .entry-preview .floatingheader {
+          padding-left: 2rem; }
+        .editor .body .editorwrap .entry-preview .entry-preview-content {
+          font-family: 'Merriweather', Georgia, serif;
+          color: #34495E;
+          line-height: 2.2857142857rem;
+          padding: 1.5rem 0 2rem 0; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content h1 {
+            font-size: 2.39976rem;
+            margin: 1.8em 0 0.5em 0;
+            line-height: 1.3;
+            color: #000000; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content h2 {
+            font-size: 1.9998rem;
+            margin: 1.8em 0 0.5em 0;
+            line-height: 1.3;
+            color: #000000; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content h3 {
+            font-size: 1.59984rem;
+            margin: 1.8em 0 0.5em 0;
+            line-height: 1.3;
+            color: #000000; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content h4 {
+            font-size: 1.19988rem;
+            margin: 1.8em 0 0.5em 0;
+            line-height: 1.3;
+            color: #000000; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content h5 {
+            font-size: 0.79992rem;
+            margin: 1.8em 0 0.5em 0;
+            line-height: 1.3;
+            color: #000000; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content h6 {
+            font-size: 0.39996rem;
+            margin: 1.8em 0 0.5em 0;
+            line-height: 1.3;
+            color: #000000; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content blockquote {
+            color: #6A8AAA;
+            padding-left: 1rem;
+            border-left: 3px solid #ECF0F1;
+            font-style: italic; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content a {
+            color: #3498DB; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content ol, .editor .body .editorwrap .entry-preview .entry-preview-content ul {
+            padding-left: 1.2em; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content ol {
+            list-style: decimal; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content ul {
+            list-style: disc; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content p {
+            color: #34495E;
+            line-height: 2.5714285714rem;
+            margin: 1.5rem auto 1.5rem auto; }
+            .editor .body .editorwrap .entry-preview .entry-preview-content p span[style] {
+              font-size: inherit !important;
+              line-height: inherit !important; }
+            .editor .body .editorwrap .entry-preview .entry-preview-content p strong {
+              font-weight: bold; }
+            .editor .body .editorwrap .entry-preview .entry-preview-content p em {
+              font-style: italic; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content .img {
+            border-radius: 0.2142857143rem; }
+          .editor .body .editorwrap .entry-preview .entry-preview-content pre code {
+            display: block;
+            overflow-x: auto;
+            background: #272822;
+            color: #ddd;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 0.85em;
+            padding: 1rem 1.5rem;
+            border-radius: 0.2142857143rem;
+            white-space: pre-wrap; }
+    .editor .body .editable {
+      border: 0;
+      width: 100%;
+      resize: none;
+      color: #34495E;
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 20px;
+      font-size: 1.4285714286rem;
+      line-height: 2.5714285714rem; }
+      .editor .body .editable h1 {
+        font-size: 2.39976rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3;
+        color: #000000; }
+      .editor .body .editable h2 {
+        font-size: 1.9998rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3;
+        color: #000000; }
+      .editor .body .editable h3 {
+        font-size: 1.59984rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3;
+        color: #000000; }
+      .editor .body .editable h4 {
+        font-size: 1.19988rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3;
+        color: #000000; }
+      .editor .body .editable h5 {
+        font-size: 0.79992rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3;
+        color: #000000; }
+      .editor .body .editable h6 {
+        font-size: 0.39996rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3;
+        color: #000000; }
+      .editor .body .editable blockquote {
+        color: #6A8AAA;
+        padding-left: 1rem;
+        border-left: 3px solid #ECF0F1;
+        font-style: italic; }
+      .editor .body .editable a {
+        color: #3498DB; }
+      .editor .body .editable ol, .editor .body .editable ul {
+        padding-left: 1em; }
+      .editor .body .editable ol {
+        list-style: decimal; }
+      .editor .body .editable ul {
+        list-style: disc; }
+      .editor .body .editable p {
+        color: #34495E;
+        line-height: 2.5714285714rem;
+        margin: 1.5rem auto 1.5rem auto; }
+        .editor .body .editable p span[style] {
+          font-size: inherit !important;
+          line-height: inherit !important; }
+      .editor .body .editable figure img {
+        max-width: 100%;
+        border-radius: 0.2142857143rem; }
+      .editor .body .editable figure figcaption {
+        font-style: italic;
+        font-size: 14px;
+        font-size: 1rem;
+        color: #6A8AAA;
+        text-align: center; }
+      .editor .body .editable .medium-insert-buttons a {
+        color: #6A8AAA;
+        font-family: 'Lato', sans-serif; }
+        .editor .body .editable .medium-insert-buttons a:hover {
+          color: #3498DB; }
+        .editor .body .editable .medium-insert-buttons a:active {
+          color: #34495E; }
+        .editor .body .editable .medium-insert-buttons a span {
+          font-size: 20px;
+          font-size: 1.4285714286rem; }
+      .editor .body .editable:hover {
+        cursor: text; }
+
+@charset "UTF-8";
+/* @FONT-FACE loads font into browser */
+@font-face {
+  font-family: 'typicons';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../bower/typicons.font/src/font/typicons.eot");
+  src: url("../bower/typicons.font/src/font/typicons.eot?#iefix") format("embedded-opentype"), url("../bower/typicons.font/src/font/typicons.woff") format("woff"), url("../bower/typicons.font/src/font/typicons.ttf") format("truetype"), url("../bower/typicons.font/src/font/typicons.svg#typicons") format("svg"); }
+
+/* :before psuedo-selector inserts and styles icon */
+.typcn:before {
+  font-family: 'typicons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+/* Code for individual icons */
+.typcn-adjust-brightness:before {
+  content: '\e000';
+  /* '' */ }
+
+.typcn-adjust-contrast:before {
+  content: '\e001';
+  /* '' */ }
+
+.typcn-anchor-outline:before {
+  content: '\e002';
+  /* '' */ }
+
+.typcn-anchor:before {
+  content: '\e003';
+  /* '' */ }
+
+.typcn-archive:before {
+  content: '\e004';
+  /* '' */ }
+
+.typcn-arrow-back-outline:before {
+  content: '\e005';
+  /* '' */ }
+
+.typcn-arrow-back:before {
+  content: '\e006';
+  /* '' */ }
+
+.typcn-arrow-down-outline:before {
+  content: '\e007';
+  /* '' */ }
+
+.typcn-arrow-down-thick:before {
+  content: '\e008';
+  /* '' */ }
+
+.typcn-arrow-down:before {
+  content: '\e009';
+  /* '' */ }
+
+.typcn-arrow-forward-outline:before {
+  content: '\e00a';
+  /* '' */ }
+
+.typcn-arrow-forward:before {
+  content: '\e00b';
+  /* '' */ }
+
+.typcn-arrow-left-outline:before {
+  content: '\e00c';
+  /* '' */ }
+
+.typcn-arrow-left-thick:before {
+  content: '\e00d';
+  /* '' */ }
+
+.typcn-arrow-left:before {
+  content: '\e00e';
+  /* '' */ }
+
+.typcn-arrow-loop-outline:before {
+  content: '\e00f';
+  /* '' */ }
+
+.typcn-arrow-loop:before {
+  content: '\e010';
+  /* '' */ }
+
+.typcn-arrow-maximise-outline:before {
+  content: '\e011';
+  /* '' */ }
+
+.typcn-arrow-maximise:before {
+  content: '\e012';
+  /* '' */ }
+
+.typcn-arrow-minimise-outline:before {
+  content: '\e013';
+  /* '' */ }
+
+.typcn-arrow-minimise:before {
+  content: '\e014';
+  /* '' */ }
+
+.typcn-arrow-move-outline:before {
+  content: '\e015';
+  /* '' */ }
+
+.typcn-arrow-move:before {
+  content: '\e016';
+  /* '' */ }
+
+.typcn-arrow-repeat-outline:before {
+  content: '\e017';
+  /* '' */ }
+
+.typcn-arrow-repeat:before {
+  content: '\e018';
+  /* '' */ }
+
+.typcn-arrow-right-outline:before {
+  content: '\e019';
+  /* '' */ }
+
+.typcn-arrow-right-thick:before {
+  content: '\e01a';
+  /* '' */ }
+
+.typcn-arrow-right:before {
+  content: '\e01b';
+  /* '' */ }
+
+.typcn-arrow-shuffle:before {
+  content: '\e01c';
+  /* '' */ }
+
+.typcn-arrow-sorted-down:before {
+  content: '\e01d';
+  /* '' */ }
+
+.typcn-arrow-sorted-up:before {
+  content: '\e01e';
+  /* '' */ }
+
+.typcn-arrow-sync-outline:before {
+  content: '\e01f';
+  /* '' */ }
+
+.typcn-arrow-sync:before {
+  content: '\e020';
+  /* '' */ }
+
+.typcn-arrow-unsorted:before {
+  content: '\e021';
+  /* '' */ }
+
+.typcn-arrow-up-outline:before {
+  content: '\e022';
+  /* '' */ }
+
+.typcn-arrow-up-thick:before {
+  content: '\e023';
+  /* '' */ }
+
+.typcn-arrow-up:before {
+  content: '\e024';
+  /* '' */ }
+
+.typcn-at:before {
+  content: '\e025';
+  /* '' */ }
+
+.typcn-attachment-outline:before {
+  content: '\e026';
+  /* '' */ }
+
+.typcn-attachment:before {
+  content: '\e027';
+  /* '' */ }
+
+.typcn-backspace-outline:before {
+  content: '\e028';
+  /* '' */ }
+
+.typcn-backspace:before {
+  content: '\e029';
+  /* '' */ }
+
+.typcn-battery-charge:before {
+  content: '\e02a';
+  /* '' */ }
+
+.typcn-battery-full:before {
+  content: '\e02b';
+  /* '' */ }
+
+.typcn-battery-high:before {
+  content: '\e02c';
+  /* '' */ }
+
+.typcn-battery-low:before {
+  content: '\e02d';
+  /* '' */ }
+
+.typcn-battery-mid:before {
+  content: '\e02e';
+  /* '' */ }
+
+.typcn-beaker:before {
+  content: '\e02f';
+  /* '' */ }
+
+.typcn-beer:before {
+  content: '\e030';
+  /* '' */ }
+
+.typcn-bell:before {
+  content: '\e031';
+  /* '' */ }
+
+.typcn-book:before {
+  content: '\e032';
+  /* '' */ }
+
+.typcn-bookmark:before {
+  content: '\e033';
+  /* '' */ }
+
+.typcn-briefcase:before {
+  content: '\e034';
+  /* '' */ }
+
+.typcn-brush:before {
+  content: '\e035';
+  /* '' */ }
+
+.typcn-business-card:before {
+  content: '\e036';
+  /* '' */ }
+
+.typcn-calculator:before {
+  content: '\e037';
+  /* '' */ }
+
+.typcn-calendar-outline:before {
+  content: '\e038';
+  /* '' */ }
+
+.typcn-calendar:before {
+  content: '\e039';
+  /* '' */ }
+
+.typcn-camera-outline:before {
+  content: '\e03a';
+  /* '' */ }
+
+.typcn-camera:before {
+  content: '\e03b';
+  /* '' */ }
+
+.typcn-cancel-outline:before {
+  content: '\e03c';
+  /* '' */ }
+
+.typcn-cancel:before {
+  content: '\e03d';
+  /* '' */ }
+
+.typcn-chart-area-outline:before {
+  content: '\e03e';
+  /* '' */ }
+
+.typcn-chart-area:before {
+  content: '\e03f';
+  /* '' */ }
+
+.typcn-chart-bar-outline:before {
+  content: '\e040';
+  /* '' */ }
+
+.typcn-chart-bar:before {
+  content: '\e041';
+  /* '' */ }
+
+.typcn-chart-line-outline:before {
+  content: '\e042';
+  /* '' */ }
+
+.typcn-chart-line:before {
+  content: '\e043';
+  /* '' */ }
+
+.typcn-chart-pie-outline:before {
+  content: '\e044';
+  /* '' */ }
+
+.typcn-chart-pie:before {
+  content: '\e045';
+  /* '' */ }
+
+.typcn-chevron-left-outline:before {
+  content: '\e046';
+  /* '' */ }
+
+.typcn-chevron-left:before {
+  content: '\e047';
+  /* '' */ }
+
+.typcn-chevron-right-outline:before {
+  content: '\e048';
+  /* '' */ }
+
+.typcn-chevron-right:before {
+  content: '\e049';
+  /* '' */ }
+
+.typcn-clipboard:before {
+  content: '\e04a';
+  /* '' */ }
+
+.typcn-cloud-storage:before {
+  content: '\e04b';
+  /* '' */ }
+
+.typcn-cloud-storage-outline:before {
+  content: '\e054';
+  /* '' */ }
+
+.typcn-code-outline:before {
+  content: '\e04c';
+  /* '' */ }
+
+.typcn-code:before {
+  content: '\e04d';
+  /* '' */ }
+
+.typcn-coffee:before {
+  content: '\e04e';
+  /* '' */ }
+
+.typcn-cog-outline:before {
+  content: '\e04f';
+  /* '' */ }
+
+.typcn-cog:before {
+  content: '\e050';
+  /* '' */ }
+
+.typcn-compass:before {
+  content: '\e051';
+  /* '' */ }
+
+.typcn-contacts:before {
+  content: '\e052';
+  /* '' */ }
+
+.typcn-credit-card:before {
+  content: '\e053';
+  /* '' */ }
+
+.typcn-css3:before {
+  content: '\e055';
+  /* '' */ }
+
+.typcn-database:before {
+  content: '\e056';
+  /* '' */ }
+
+.typcn-delete-outline:before {
+  content: '\e057';
+  /* '' */ }
+
+.typcn-delete:before {
+  content: '\e058';
+  /* '' */ }
+
+.typcn-device-desktop:before {
+  content: '\e059';
+  /* '' */ }
+
+.typcn-device-laptop:before {
+  content: '\e05a';
+  /* '' */ }
+
+.typcn-device-phone:before {
+  content: '\e05b';
+  /* '' */ }
+
+.typcn-device-tablet:before {
+  content: '\e05c';
+  /* '' */ }
+
+.typcn-directions:before {
+  content: '\e05d';
+  /* '' */ }
+
+.typcn-divide-outline:before {
+  content: '\e05e';
+  /* '' */ }
+
+.typcn-divide:before {
+  content: '\e05f';
+  /* '' */ }
+
+.typcn-document-add:before {
+  content: '\e060';
+  /* '' */ }
+
+.typcn-document-delete:before {
+  content: '\e061';
+  /* '' */ }
+
+.typcn-document-text:before {
+  content: '\e062';
+  /* '' */ }
+
+.typcn-document:before {
+  content: '\e063';
+  /* '' */ }
+
+.typcn-download-outline:before {
+  content: '\e064';
+  /* '' */ }
+
+.typcn-download:before {
+  content: '\e065';
+  /* '' */ }
+
+.typcn-dropbox:before {
+  content: '\e066';
+  /* '' */ }
+
+.typcn-edit:before {
+  content: '\e067';
+  /* '' */ }
+
+.typcn-eject-outline:before {
+  content: '\e068';
+  /* '' */ }
+
+.typcn-eject:before {
+  content: '\e069';
+  /* '' */ }
+
+.typcn-equals-outline:before {
+  content: '\e06a';
+  /* '' */ }
+
+.typcn-equals:before {
+  content: '\e06b';
+  /* '' */ }
+
+.typcn-export-outline:before {
+  content: '\e06c';
+  /* '' */ }
+
+.typcn-export:before {
+  content: '\e06d';
+  /* '' */ }
+
+.typcn-eye-outline:before {
+  content: '\e06e';
+  /* '' */ }
+
+.typcn-eye:before {
+  content: '\e06f';
+  /* '' */ }
+
+.typcn-feather:before {
+  content: '\e070';
+  /* '' */ }
+
+.typcn-film:before {
+  content: '\e071';
+  /* '' */ }
+
+.typcn-filter:before {
+  content: '\e072';
+  /* '' */ }
+
+.typcn-flag-outline:before {
+  content: '\e073';
+  /* '' */ }
+
+.typcn-flag:before {
+  content: '\e074';
+  /* '' */ }
+
+.typcn-flash-outline:before {
+  content: '\e075';
+  /* '' */ }
+
+.typcn-flash:before {
+  content: '\e076';
+  /* '' */ }
+
+.typcn-flow-children:before {
+  content: '\e077';
+  /* '' */ }
+
+.typcn-flow-merge:before {
+  content: '\e078';
+  /* '' */ }
+
+.typcn-flow-parallel:before {
+  content: '\e079';
+  /* '' */ }
+
+.typcn-flow-switch:before {
+  content: '\e07a';
+  /* '' */ }
+
+.typcn-folder-add:before {
+  content: '\e07b';
+  /* '' */ }
+
+.typcn-folder-delete:before {
+  content: '\e07c';
+  /* '' */ }
+
+.typcn-folder-open:before {
+  content: '\e07d';
+  /* '' */ }
+
+.typcn-folder:before {
+  content: '\e07e';
+  /* '' */ }
+
+.typcn-gift:before {
+  content: '\e07f';
+  /* '' */ }
+
+.typcn-globe-outline:before {
+  content: '\e080';
+  /* '' */ }
+
+.typcn-globe:before {
+  content: '\e081';
+  /* '' */ }
+
+.typcn-group-outline:before {
+  content: '\e082';
+  /* '' */ }
+
+.typcn-group:before {
+  content: '\e083';
+  /* '' */ }
+
+.typcn-headphones:before {
+  content: '\e084';
+  /* '' */ }
+
+.typcn-heart-full-outline:before {
+  content: '\e085';
+  /* '' */ }
+
+.typcn-heart-half-outline:before {
+  content: '\e086';
+  /* '' */ }
+
+.typcn-heart-outline:before {
+  content: '\e087';
+  /* '' */ }
+
+.typcn-heart:before {
+  content: '\e088';
+  /* '' */ }
+
+.typcn-home-outline:before {
+  content: '\e089';
+  /* '' */ }
+
+.typcn-home:before {
+  content: '\e08a';
+  /* '' */ }
+
+.typcn-html5:before {
+  content: '\e08b';
+  /* '' */ }
+
+.typcn-image-outline:before {
+  content: '\e08c';
+  /* '' */ }
+
+.typcn-image:before {
+  content: '\e08d';
+  /* '' */ }
+
+.typcn-infinity-outline:before {
+  content: '\e08e';
+  /* '' */ }
+
+.typcn-infinity:before {
+  content: '\e08f';
+  /* '' */ }
+
+.typcn-info-large-outline:before {
+  content: '\e090';
+  /* '' */ }
+
+.typcn-info-large:before {
+  content: '\e091';
+  /* '' */ }
+
+.typcn-info-outline:before {
+  content: '\e092';
+  /* '' */ }
+
+.typcn-info:before {
+  content: '\e093';
+  /* '' */ }
+
+.typcn-input-checked-outline:before {
+  content: '\e094';
+  /* '' */ }
+
+.typcn-input-checked:before {
+  content: '\e095';
+  /* '' */ }
+
+.typcn-key-outline:before {
+  content: '\e096';
+  /* '' */ }
+
+.typcn-key:before {
+  content: '\e097';
+  /* '' */ }
+
+.typcn-keyboard:before {
+  content: '\e098';
+  /* '' */ }
+
+.typcn-leaf:before {
+  content: '\e099';
+  /* '' */ }
+
+.typcn-lightbulb:before {
+  content: '\e09a';
+  /* '' */ }
+
+.typcn-link-outline:before {
+  content: '\e09b';
+  /* '' */ }
+
+.typcn-link:before {
+  content: '\e09c';
+  /* '' */ }
+
+.typcn-location-arrow-outline:before {
+  content: '\e09d';
+  /* '' */ }
+
+.typcn-location-arrow:before {
+  content: '\e09e';
+  /* '' */ }
+
+.typcn-location-outline:before {
+  content: '\e09f';
+  /* '' */ }
+
+.typcn-location:before {
+  content: '\e0a0';
+  /* '' */ }
+
+.typcn-lock-closed-outline:before {
+  content: '\e0a1';
+  /* '' */ }
+
+.typcn-lock-closed:before {
+  content: '\e0a2';
+  /* '' */ }
+
+.typcn-lock-open-outline:before {
+  content: '\e0a3';
+  /* '' */ }
+
+.typcn-lock-open:before {
+  content: '\e0a4';
+  /* '' */ }
+
+.typcn-mail:before {
+  content: '\e0a5';
+  /* '' */ }
+
+.typcn-map:before {
+  content: '\e0a6';
+  /* '' */ }
+
+.typcn-media-eject-outline:before {
+  content: '\e0a7';
+  /* '' */ }
+
+.typcn-media-eject:before {
+  content: '\e0a8';
+  /* '' */ }
+
+.typcn-media-fast-forward-outline:before {
+  content: '\e0a9';
+  /* '' */ }
+
+.typcn-media-fast-forward:before {
+  content: '\e0aa';
+  /* '' */ }
+
+.typcn-media-pause-outline:before {
+  content: '\e0ab';
+  /* '' */ }
+
+.typcn-media-pause:before {
+  content: '\e0ac';
+  /* '' */ }
+
+.typcn-media-play-outline:before {
+  content: '\e0ad';
+  /* '' */ }
+
+.typcn-media-play-reverse-outline:before {
+  content: '\e0ae';
+  /* '' */ }
+
+.typcn-media-play-reverse:before {
+  content: '\e0af';
+  /* '' */ }
+
+.typcn-media-play:before {
+  content: '\e0b0';
+  /* '' */ }
+
+.typcn-media-record-outline:before {
+  content: '\e0b1';
+  /* '' */ }
+
+.typcn-media-record:before {
+  content: '\e0b2';
+  /* '' */ }
+
+.typcn-media-rewind-outline:before {
+  content: '\e0b3';
+  /* '' */ }
+
+.typcn-media-rewind:before {
+  content: '\e0b4';
+  /* '' */ }
+
+.typcn-media-stop-outline:before {
+  content: '\e0b5';
+  /* '' */ }
+
+.typcn-media-stop:before {
+  content: '\e0b6';
+  /* '' */ }
+
+.typcn-message-typing:before {
+  content: '\e0b7';
+  /* '' */ }
+
+.typcn-message:before {
+  content: '\e0b8';
+  /* '' */ }
+
+.typcn-messages:before {
+  content: '\e0b9';
+  /* '' */ }
+
+.typcn-microphone-outline:before {
+  content: '\e0ba';
+  /* '' */ }
+
+.typcn-microphone:before {
+  content: '\e0bb';
+  /* '' */ }
+
+.typcn-minus-outline:before {
+  content: '\e0bc';
+  /* '' */ }
+
+.typcn-minus:before {
+  content: '\e0bd';
+  /* '' */ }
+
+.typcn-mortar-board:before {
+  content: '\e0be';
+  /* '' */ }
+
+.typcn-news:before {
+  content: '\e0bf';
+  /* '' */ }
+
+.typcn-notes-outline:before {
+  content: '\e0c0';
+  /* '' */ }
+
+.typcn-notes:before {
+  content: '\e0c1';
+  /* '' */ }
+
+.typcn-pen:before {
+  content: '\e0c2';
+  /* '' */ }
+
+.typcn-pencil:before {
+  content: '\e0c3';
+  /* '' */ }
+
+.typcn-phone-outline:before {
+  content: '\e0c4';
+  /* '' */ }
+
+.typcn-phone:before {
+  content: '\e0c5';
+  /* '' */ }
+
+.typcn-pi-outline:before {
+  content: '\e0c6';
+  /* '' */ }
+
+.typcn-pi:before {
+  content: '\e0c7';
+  /* '' */ }
+
+.typcn-pin-outline:before {
+  content: '\e0c8';
+  /* '' */ }
+
+.typcn-pin:before {
+  content: '\e0c9';
+  /* '' */ }
+
+.typcn-pipette:before {
+  content: '\e0ca';
+  /* '' */ }
+
+.typcn-plane-outline:before {
+  content: '\e0cb';
+  /* '' */ }
+
+.typcn-plane:before {
+  content: '\e0cc';
+  /* '' */ }
+
+.typcn-plug:before {
+  content: '\e0cd';
+  /* '' */ }
+
+.typcn-plus-outline:before {
+  content: '\e0ce';
+  /* '' */ }
+
+.typcn-plus:before {
+  content: '\e0cf';
+  /* '' */ }
+
+.typcn-point-of-interest-outline:before {
+  content: '\e0d0';
+  /* '' */ }
+
+.typcn-point-of-interest:before {
+  content: '\e0d1';
+  /* '' */ }
+
+.typcn-power-outline:before {
+  content: '\e0d2';
+  /* '' */ }
+
+.typcn-power:before {
+  content: '\e0d3';
+  /* '' */ }
+
+.typcn-printer:before {
+  content: '\e0d4';
+  /* '' */ }
+
+.typcn-puzzle-outline:before {
+  content: '\e0d5';
+  /* '' */ }
+
+.typcn-puzzle:before {
+  content: '\e0d6';
+  /* '' */ }
+
+.typcn-radar-outline:before {
+  content: '\e0d7';
+  /* '' */ }
+
+.typcn-radar:before {
+  content: '\e0d8';
+  /* '' */ }
+
+.typcn-refresh-outline:before {
+  content: '\e0d9';
+  /* '' */ }
+
+.typcn-refresh:before {
+  content: '\e0da';
+  /* '' */ }
+
+.typcn-rss-outline:before {
+  content: '\e0db';
+  /* '' */ }
+
+.typcn-rss:before {
+  content: '\e0dc';
+  /* '' */ }
+
+.typcn-scissors-outline:before {
+  content: '\e0dd';
+  /* '' */ }
+
+.typcn-scissors:before {
+  content: '\e0de';
+  /* '' */ }
+
+.typcn-shopping-bag:before {
+  content: '\e0df';
+  /* '' */ }
+
+.typcn-shopping-cart:before {
+  content: '\e0e0';
+  /* '' */ }
+
+.typcn-social-at-circular:before {
+  content: '\e0e1';
+  /* '' */ }
+
+.typcn-social-dribbble-circular:before {
+  content: '\e0e2';
+  /* '' */ }
+
+.typcn-social-dribbble:before {
+  content: '\e0e3';
+  /* '' */ }
+
+.typcn-social-facebook-circular:before {
+  content: '\e0e4';
+  /* '' */ }
+
+.typcn-social-facebook:before {
+  content: '\e0e5';
+  /* '' */ }
+
+.typcn-social-flickr-circular:before {
+  content: '\e0e6';
+  /* '' */ }
+
+.typcn-social-flickr:before {
+  content: '\e0e7';
+  /* '' */ }
+
+.typcn-social-github-circular:before {
+  content: '\e0e8';
+  /* '' */ }
+
+.typcn-social-github:before {
+  content: '\e0e9';
+  /* '' */ }
+
+.typcn-social-google-plus-circular:before {
+  content: '\e0ea';
+  /* '' */ }
+
+.typcn-social-google-plus:before {
+  content: '\e0eb';
+  /* '' */ }
+
+.typcn-social-instagram-circular:before {
+  content: '\e0ec';
+  /* '' */ }
+
+.typcn-social-instagram:before {
+  content: '\e0ed';
+  /* '' */ }
+
+.typcn-social-last-fm-circular:before {
+  content: '\e0ee';
+  /* '' */ }
+
+.typcn-social-last-fm:before {
+  content: '\e0ef';
+  /* '' */ }
+
+.typcn-social-linkedin-circular:before {
+  content: '\e0f0';
+  /* '' */ }
+
+.typcn-social-linkedin:before {
+  content: '\e0f1';
+  /* '' */ }
+
+.typcn-social-pinterest-circular:before {
+  content: '\e0f2';
+  /* '' */ }
+
+.typcn-social-pinterest:before {
+  content: '\e0f3';
+  /* '' */ }
+
+.typcn-social-skype-outline:before {
+  content: '\e0f4';
+  /* '' */ }
+
+.typcn-social-skype:before {
+  content: '\e0f5';
+  /* '' */ }
+
+.typcn-social-tumbler-circular:before {
+  content: '\e0f6';
+  /* '' */ }
+
+.typcn-social-tumbler:before {
+  content: '\e0f7';
+  /* '' */ }
+
+.typcn-social-twitter-circular:before {
+  content: '\e0f8';
+  /* '' */ }
+
+.typcn-social-twitter:before {
+  content: '\e0f9';
+  /* '' */ }
+
+.typcn-social-vimeo-circular:before {
+  content: '\e0fa';
+  /* '' */ }
+
+.typcn-social-vimeo:before {
+  content: '\e0fb';
+  /* '' */ }
+
+.typcn-social-youtube-circular:before {
+  content: '\e0fc';
+  /* '' */ }
+
+.typcn-social-youtube:before {
+  content: '\e0fd';
+  /* '' */ }
+
+.typcn-sort-alphabetically-outline:before {
+  content: '\e0fe';
+  /* '' */ }
+
+.typcn-sort-alphabetically:before {
+  content: '\e0ff';
+  /* '' */ }
+
+.typcn-sort-numerically-outline:before {
+  content: '\e100';
+  /* '' */ }
+
+.typcn-sort-numerically:before {
+  content: '\e101';
+  /* '' */ }
+
+.typcn-spanner-outline:before {
+  content: '\e102';
+  /* '' */ }
+
+.typcn-spanner:before {
+  content: '\e103';
+  /* '' */ }
+
+.typcn-spiral:before {
+  content: '\e104';
+  /* '' */ }
+
+.typcn-star-full-outline:before {
+  content: '\e105';
+  /* '' */ }
+
+.typcn-star-half-outline:before {
+  content: '\e106';
+  /* '' */ }
+
+.typcn-star-half:before {
+  content: '\e107';
+  /* '' */ }
+
+.typcn-star-outline:before {
+  content: '\e108';
+  /* '' */ }
+
+.typcn-star:before {
+  content: '\e109';
+  /* '' */ }
+
+.typcn-starburst-outline:before {
+  content: '\e10a';
+  /* '' */ }
+
+.typcn-starburst:before {
+  content: '\e10b';
+  /* '' */ }
+
+.typcn-stopwatch:before {
+  content: '\e10c';
+  /* '' */ }
+
+.typcn-support:before {
+  content: '\e10d';
+  /* '' */ }
+
+.typcn-tabs-outline:before {
+  content: '\e10e';
+  /* '' */ }
+
+.typcn-tag:before {
+  content: '\e10f';
+  /* '' */ }
+
+.typcn-tags:before {
+  content: '\e110';
+  /* '' */ }
+
+.typcn-th-large-outline:before {
+  content: '\e111';
+  /* '' */ }
+
+.typcn-th-large:before {
+  content: '\e112';
+  /* '' */ }
+
+.typcn-th-list-outline:before {
+  content: '\e113';
+  /* '' */ }
+
+.typcn-th-list:before {
+  content: '\e114';
+  /* '' */ }
+
+.typcn-th-menu-outline:before {
+  content: '\e115';
+  /* '' */ }
+
+.typcn-th-menu:before {
+  content: '\e116';
+  /* '' */ }
+
+.typcn-th-small-outline:before {
+  content: '\e117';
+  /* '' */ }
+
+.typcn-th-small:before {
+  content: '\e118';
+  /* '' */ }
+
+.typcn-thermometer:before {
+  content: '\e119';
+  /* '' */ }
+
+.typcn-thumbs-down:before {
+  content: '\e11a';
+  /* '' */ }
+
+.typcn-thumbs-ok:before {
+  content: '\e11b';
+  /* '' */ }
+
+.typcn-thumbs-up:before {
+  content: '\e11c';
+  /* '' */ }
+
+.typcn-tick-outline:before {
+  content: '\e11d';
+  /* '' */ }
+
+.typcn-tick:before {
+  content: '\e11e';
+  /* '' */ }
+
+.typcn-ticket:before {
+  content: '\e11f';
+  /* '' */ }
+
+.typcn-time:before {
+  content: '\e120';
+  /* '' */ }
+
+.typcn-times-outline:before {
+  content: '\e121';
+  /* '' */ }
+
+.typcn-times:before {
+  content: '\e122';
+  /* '' */ }
+
+.typcn-trash:before {
+  content: '\e123';
+  /* '' */ }
+
+.typcn-tree:before {
+  content: '\e124';
+  /* '' */ }
+
+.typcn-upload-outline:before {
+  content: '\e125';
+  /* '' */ }
+
+.typcn-upload:before {
+  content: '\e126';
+  /* '' */ }
+
+.typcn-user-add-outline:before {
+  content: '\e127';
+  /* '' */ }
+
+.typcn-user-add:before {
+  content: '\e128';
+  /* '' */ }
+
+.typcn-user-delete-outline:before {
+  content: '\e129';
+  /* '' */ }
+
+.typcn-user-delete:before {
+  content: '\e12a';
+  /* '' */ }
+
+.typcn-user-outline:before {
+  content: '\e12b';
+  /* '' */ }
+
+.typcn-user:before {
+  content: '\e12c';
+  /* '' */ }
+
+.typcn-vendor-android:before {
+  content: '\e12d';
+  /* '' */ }
+
+.typcn-vendor-apple:before {
+  content: '\e12e';
+  /* '' */ }
+
+.typcn-vendor-microsoft:before {
+  content: '\e12f';
+  /* '' */ }
+
+.typcn-video-outline:before {
+  content: '\e130';
+  /* '' */ }
+
+.typcn-video:before {
+  content: '\e131';
+  /* '' */ }
+
+.typcn-volume-down:before {
+  content: '\e132';
+  /* '' */ }
+
+.typcn-volume-mute:before {
+  content: '\e133';
+  /* '' */ }
+
+.typcn-volume-up:before {
+  content: '\e134';
+  /* '' */ }
+
+.typcn-volume:before {
+  content: '\e135';
+  /* '' */ }
+
+.typcn-warning-outline:before {
+  content: '\e136';
+  /* '' */ }
+
+.typcn-warning:before {
+  content: '\e137';
+  /* '' */ }
+
+.typcn-watch:before {
+  content: '\e138';
+  /* '' */ }
+
+.typcn-waves-outline:before {
+  content: '\e139';
+  /* '' */ }
+
+.typcn-waves:before {
+  content: '\e13a';
+  /* '' */ }
+
+.typcn-weather-cloudy:before {
+  content: '\e13b';
+  /* '' */ }
+
+.typcn-weather-downpour:before {
+  content: '\e13c';
+  /* '' */ }
+
+.typcn-weather-night:before {
+  content: '\e13d';
+  /* '' */ }
+
+.typcn-weather-partly-sunny:before {
+  content: '\e13e';
+  /* '' */ }
+
+.typcn-weather-shower:before {
+  content: '\e13f';
+  /* '' */ }
+
+.typcn-weather-snow:before {
+  content: '\e140';
+  /* '' */ }
+
+.typcn-weather-stormy:before {
+  content: '\e141';
+  /* '' */ }
+
+.typcn-weather-sunny:before {
+  content: '\e142';
+  /* '' */ }
+
+.typcn-weather-windy-cloudy:before {
+  content: '\e143';
+  /* '' */ }
+
+.typcn-weather-windy:before {
+  content: '\e144';
+  /* '' */ }
+
+.typcn-wi-fi-outline:before {
+  content: '\e145';
+  /* '' */ }
+
+.typcn-wi-fi:before {
+  content: '\e146';
+  /* '' */ }
+
+.typcn-wine:before {
+  content: '\e147';
+  /* '' */ }
+
+.typcn-world-outline:before {
+  content: '\e148';
+  /* '' */ }
+
+.typcn-world:before {
+  content: '\e149';
+  /* '' */ }
+
+.typcn-zoom-in-outline:before {
+  content: '\e14a';
+  /* '' */ }
+
+.typcn-zoom-in:before {
+  content: '\e14b';
+  /* '' */ }
+
+.typcn-zoom-out-outline:before {
+  content: '\e14c';
+  /* '' */ }
+
+.typcn-zoom-out:before {
+  content: '\e14d';
+  /* '' */ }
+
+.typcn-zoom-outline:before {
+  content: '\e14e';
+  /* '' */ }
+
+.typcn-zoom:before {
+  content: '\e14f';
+  /* '' */ }
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent; }
+
+.dropup,
+.dropdown {
+  position: relative; }
+
+.dropdown-toggle:focus {
+  outline: 0; }
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box; }
+
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto; }
+
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5; }
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap; }
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5; }
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #337ab7; }
+
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  color: #777777; }
+
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed; }
+
+.open > .dropdown-menu {
+  display: block; }
+
+.open > a {
+  outline: 0; }
+
+.dropdown-menu-right {
+  left: auto;
+  right: 0; }
+
+.dropdown-menu-left {
+  left: 0;
+  right: auto; }
+
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #777777;
+  white-space: nowrap; }
+
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990; }
+
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto; }
+
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px dashed;
+  border-bottom: 4px solid \9;
+  content: ""; }
+
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px; }
+
+@media (min-width: 768px) {
+  .navbar-right .dropdown-menu {
+    left: auto;
+    right: 0; }
+  .navbar-right .dropdown-menu-left {
+    left: 0;
+    right: auto; } }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.pull-right {
+  float: right !important; }
+
+.pull-left {
+  float: left !important; }
+
+.hide {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+.invisible {
+  visibility: hidden; }
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+.hidden {
+  display: none !important; }
+
+.affix {
+  position: fixed; }
+
+/*!
+ * Datepicker for Bootstrap v1.5.1 (https://github.com/eternicode/bootstrap-datepicker)
+ *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Andrew Rowls
+ * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+ */
+.datepicker {
+  border-radius: 4px;
+  direction: ltr; }
+
+.datepicker-inline {
+  width: 220px; }
+
+.datepicker.datepicker-rtl {
+  direction: rtl; }
+
+.datepicker.datepicker-rtl table tr td span {
+  float: right; }
+
+.datepicker-dropdown {
+  top: 0;
+  left: 0;
+  padding: 4px; }
+
+.datepicker-dropdown:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid rgba(0, 0, 0, 0.15);
+  border-top: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute; }
+
+.datepicker-dropdown:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-top: 0;
+  position: absolute; }
+
+.datepicker-dropdown.datepicker-orient-left:before {
+  left: 6px; }
+
+.datepicker-dropdown.datepicker-orient-left:after {
+  left: 7px; }
+
+.datepicker-dropdown.datepicker-orient-right:before {
+  right: 6px; }
+
+.datepicker-dropdown.datepicker-orient-right:after {
+  right: 7px; }
+
+.datepicker-dropdown.datepicker-orient-bottom:before {
+  top: -7px; }
+
+.datepicker-dropdown.datepicker-orient-bottom:after {
+  top: -6px; }
+
+.datepicker-dropdown.datepicker-orient-top:before {
+  bottom: -7px;
+  border-bottom: 0;
+  border-top: 7px solid rgba(0, 0, 0, 0.15); }
+
+.datepicker-dropdown.datepicker-orient-top:after {
+  bottom: -6px;
+  border-bottom: 0;
+  border-top: 6px solid #ffffff; }
+
+.datepicker > div {
+  display: none; }
+
+.datepicker table {
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.datepicker table tr td,
+.datepicker table tr th {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: none; }
+
+.table-striped .datepicker table tr td,
+.table-striped .datepicker table tr th {
+  background-color: transparent; }
+
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  color: #999999; }
+
+.datepicker table tr td.day:hover,
+.datepicker table tr td.focused {
+  background: #eeeeee;
+  cursor: pointer; }
+
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+  background: none;
+  color: #999999;
+  cursor: default; }
+
+.datepicker table tr td.highlighted {
+  color: #000000;
+  background-color: #d9edf7;
+  border-color: #85c5e5;
+  border-radius: 0; }
+
+.datepicker table tr td.highlighted:focus,
+.datepicker table tr td.highlighted.focus {
+  color: #000000;
+  background-color: #afd9ee;
+  border-color: #298fc2; }
+
+.datepicker table tr td.highlighted:hover {
+  color: #000000;
+  background-color: #afd9ee;
+  border-color: #52addb; }
+
+.datepicker table tr td.highlighted:active,
+.datepicker table tr td.highlighted.active,
+.open > .dropdown-toggle.datepicker table tr td.highlighted {
+  color: #000000;
+  background-color: #afd9ee;
+  border-color: #52addb; }
+
+.datepicker table tr td.highlighted:active:hover,
+.datepicker table tr td.highlighted.active:hover,
+.open > .dropdown-toggle.datepicker table tr td.highlighted:hover,
+.datepicker table tr td.highlighted:active:focus,
+.datepicker table tr td.highlighted.active:focus,
+.open > .dropdown-toggle.datepicker table tr td.highlighted:focus,
+.datepicker table tr td.highlighted:active.focus,
+.datepicker table tr td.highlighted.active.focus,
+.open > .dropdown-toggle.datepicker table tr td.highlighted.focus {
+  color: #000000;
+  background-color: #91cbe8;
+  border-color: #298fc2; }
+
+.datepicker table tr td.highlighted:active,
+.datepicker table tr td.highlighted.active,
+.open > .dropdown-toggle.datepicker table tr td.highlighted {
+  background-image: none; }
+
+.datepicker table tr td.highlighted.disabled:hover,
+.datepicker table tr td.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.highlighted:hover,
+.datepicker table tr td.highlighted.disabled:focus,
+.datepicker table tr td.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.highlighted:focus,
+.datepicker table tr td.highlighted.disabled.focus,
+.datepicker table tr td.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.highlighted.focus {
+  background-color: #d9edf7;
+  border-color: #85c5e5; }
+
+.datepicker table tr td.highlighted.focused {
+  background: #afd9ee; }
+
+.datepicker table tr td.highlighted.disabled,
+.datepicker table tr td.highlighted.disabled:active {
+  background: #d9edf7;
+  color: #999999; }
+
+.datepicker table tr td.today {
+  color: #000000;
+  background-color: #ffdb99;
+  border-color: #ffb733; }
+
+.datepicker table tr td.today:focus,
+.datepicker table tr td.today.focus {
+  color: #000000;
+  background-color: #ffc966;
+  border-color: #b37400; }
+
+.datepicker table tr td.today:hover {
+  color: #000000;
+  background-color: #ffc966;
+  border-color: #f59e00; }
+
+.datepicker table tr td.today:active,
+.datepicker table tr td.today.active,
+.open > .dropdown-toggle.datepicker table tr td.today {
+  color: #000000;
+  background-color: #ffc966;
+  border-color: #f59e00; }
+
+.datepicker table tr td.today:active:hover,
+.datepicker table tr td.today.active:hover,
+.open > .dropdown-toggle.datepicker table tr td.today:hover,
+.datepicker table tr td.today:active:focus,
+.datepicker table tr td.today.active:focus,
+.open > .dropdown-toggle.datepicker table tr td.today:focus,
+.datepicker table tr td.today:active.focus,
+.datepicker table tr td.today.active.focus,
+.open > .dropdown-toggle.datepicker table tr td.today.focus {
+  color: #000000;
+  background-color: #ffbc42;
+  border-color: #b37400; }
+
+.datepicker table tr td.today:active,
+.datepicker table tr td.today.active,
+.open > .dropdown-toggle.datepicker table tr td.today {
+  background-image: none; }
+
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled:focus,
+.datepicker table tr td.today[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.today:focus,
+.datepicker table tr td.today.disabled.focus,
+.datepicker table tr td.today[disabled].focus,
+fieldset[disabled] .datepicker table tr td.today.focus {
+  background-color: #ffdb99;
+  border-color: #ffb733; }
+
+.datepicker table tr td.today.focused {
+  background: #ffc966; }
+
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:active {
+  background: #ffdb99;
+  color: #999999; }
+
+.datepicker table tr td.range {
+  color: #000000;
+  background-color: #eeeeee;
+  border-color: #bbbbbb;
+  border-radius: 0; }
+
+.datepicker table tr td.range:focus,
+.datepicker table tr td.range.focus {
+  color: #000000;
+  background-color: #d5d5d5;
+  border-color: #7c7c7c; }
+
+.datepicker table tr td.range:hover {
+  color: #000000;
+  background-color: #d5d5d5;
+  border-color: #9d9d9d; }
+
+.datepicker table tr td.range:active,
+.datepicker table tr td.range.active,
+.open > .dropdown-toggle.datepicker table tr td.range {
+  color: #000000;
+  background-color: #d5d5d5;
+  border-color: #9d9d9d; }
+
+.datepicker table tr td.range:active:hover,
+.datepicker table tr td.range.active:hover,
+.open > .dropdown-toggle.datepicker table tr td.range:hover,
+.datepicker table tr td.range:active:focus,
+.datepicker table tr td.range.active:focus,
+.open > .dropdown-toggle.datepicker table tr td.range:focus,
+.datepicker table tr td.range:active.focus,
+.datepicker table tr td.range.active.focus,
+.open > .dropdown-toggle.datepicker table tr td.range.focus {
+  color: #000000;
+  background-color: #c3c3c3;
+  border-color: #7c7c7c; }
+
+.datepicker table tr td.range:active,
+.datepicker table tr td.range.active,
+.open > .dropdown-toggle.datepicker table tr td.range {
+  background-image: none; }
+
+.datepicker table tr td.range.disabled:hover,
+.datepicker table tr td.range[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.range:hover,
+.datepicker table tr td.range.disabled:focus,
+.datepicker table tr td.range[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.range:focus,
+.datepicker table tr td.range.disabled.focus,
+.datepicker table tr td.range[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.focus {
+  background-color: #eeeeee;
+  border-color: #bbbbbb; }
+
+.datepicker table tr td.range.focused {
+  background: #d5d5d5; }
+
+.datepicker table tr td.range.disabled,
+.datepicker table tr td.range.disabled:active {
+  background: #eeeeee;
+  color: #999999; }
+
+.datepicker table tr td.range.highlighted {
+  color: #000000;
+  background-color: #e4eef3;
+  border-color: #9dc1d3; }
+
+.datepicker table tr td.range.highlighted:focus,
+.datepicker table tr td.range.highlighted.focus {
+  color: #000000;
+  background-color: #c1d7e3;
+  border-color: #4b88a6; }
+
+.datepicker table tr td.range.highlighted:hover {
+  color: #000000;
+  background-color: #c1d7e3;
+  border-color: #73a6c0; }
+
+.datepicker table tr td.range.highlighted:active,
+.datepicker table tr td.range.highlighted.active,
+.open > .dropdown-toggle.datepicker table tr td.range.highlighted {
+  color: #000000;
+  background-color: #c1d7e3;
+  border-color: #73a6c0; }
+
+.datepicker table tr td.range.highlighted:active:hover,
+.datepicker table tr td.range.highlighted.active:hover,
+.open > .dropdown-toggle.datepicker table tr td.range.highlighted:hover,
+.datepicker table tr td.range.highlighted:active:focus,
+.datepicker table tr td.range.highlighted.active:focus,
+.open > .dropdown-toggle.datepicker table tr td.range.highlighted:focus,
+.datepicker table tr td.range.highlighted:active.focus,
+.datepicker table tr td.range.highlighted.active.focus,
+.open > .dropdown-toggle.datepicker table tr td.range.highlighted.focus {
+  color: #000000;
+  background-color: #a8c8d8;
+  border-color: #4b88a6; }
+
+.datepicker table tr td.range.highlighted:active,
+.datepicker table tr td.range.highlighted.active,
+.open > .dropdown-toggle.datepicker table tr td.range.highlighted {
+  background-image: none; }
+
+.datepicker table tr td.range.highlighted.disabled:hover,
+.datepicker table tr td.range.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.range.highlighted:hover,
+.datepicker table tr td.range.highlighted.disabled:focus,
+.datepicker table tr td.range.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.range.highlighted:focus,
+.datepicker table tr td.range.highlighted.disabled.focus,
+.datepicker table tr td.range.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.highlighted.focus {
+  background-color: #e4eef3;
+  border-color: #9dc1d3; }
+
+.datepicker table tr td.range.highlighted.focused {
+  background: #c1d7e3; }
+
+.datepicker table tr td.range.highlighted.disabled,
+.datepicker table tr td.range.highlighted.disabled:active {
+  background: #e4eef3;
+  color: #999999; }
+
+.datepicker table tr td.range.today {
+  color: #000000;
+  background-color: #f7ca77;
+  border-color: #f1a417; }
+
+.datepicker table tr td.range.today:focus,
+.datepicker table tr td.range.today.focus {
+  color: #000000;
+  background-color: #f4b747;
+  border-color: #815608; }
+
+.datepicker table tr td.range.today:hover {
+  color: #000000;
+  background-color: #f4b747;
+  border-color: #bf800c; }
+
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today.active,
+.open > .dropdown-toggle.datepicker table tr td.range.today {
+  color: #000000;
+  background-color: #f4b747;
+  border-color: #bf800c; }
+
+.datepicker table tr td.range.today:active:hover,
+.datepicker table tr td.range.today.active:hover,
+.open > .dropdown-toggle.datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today:active:focus,
+.datepicker table tr td.range.today.active:focus,
+.open > .dropdown-toggle.datepicker table tr td.range.today:focus,
+.datepicker table tr td.range.today:active.focus,
+.datepicker table tr td.range.today.active.focus,
+.open > .dropdown-toggle.datepicker table tr td.range.today.focus {
+  color: #000000;
+  background-color: #f2aa25;
+  border-color: #815608; }
+
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today.active,
+.open > .dropdown-toggle.datepicker table tr td.range.today {
+  background-image: none; }
+
+.datepicker table tr td.range.today.disabled:hover,
+.datepicker table tr td.range.today[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today.disabled:focus,
+.datepicker table tr td.range.today[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.range.today:focus,
+.datepicker table tr td.range.today.disabled.focus,
+.datepicker table tr td.range.today[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.today.focus {
+  background-color: #f7ca77;
+  border-color: #f1a417; }
+
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today.disabled:active {
+  background: #f7ca77;
+  color: #999999; }
+
+.datepicker table tr td.selected,
+.datepicker table tr td.selected.highlighted {
+  color: #ffffff;
+  background-color: #999999;
+  border-color: #555555;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+.datepicker table tr td.selected:focus,
+.datepicker table tr td.selected.highlighted:focus,
+.datepicker table tr td.selected.focus,
+.datepicker table tr td.selected.highlighted.focus {
+  color: #ffffff;
+  background-color: #808080;
+  border-color: #161616; }
+
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected.highlighted:hover {
+  color: #ffffff;
+  background-color: #808080;
+  border-color: #373737; }
+
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected.highlighted:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected.highlighted.active,
+.open > .dropdown-toggle.datepicker table tr td.selected,
+.open > .dropdown-toggle.datepicker table tr td.selected.highlighted {
+  color: #ffffff;
+  background-color: #808080;
+  border-color: #373737; }
+
+.datepicker table tr td.selected:active:hover,
+.datepicker table tr td.selected.highlighted:active:hover,
+.datepicker table tr td.selected.active:hover,
+.datepicker table tr td.selected.highlighted.active:hover,
+.open > .dropdown-toggle.datepicker table tr td.selected:hover,
+.open > .dropdown-toggle.datepicker table tr td.selected.highlighted:hover,
+.datepicker table tr td.selected:active:focus,
+.datepicker table tr td.selected.highlighted:active:focus,
+.datepicker table tr td.selected.active:focus,
+.datepicker table tr td.selected.highlighted.active:focus,
+.open > .dropdown-toggle.datepicker table tr td.selected:focus,
+.open > .dropdown-toggle.datepicker table tr td.selected.highlighted:focus,
+.datepicker table tr td.selected:active.focus,
+.datepicker table tr td.selected.highlighted:active.focus,
+.datepicker table tr td.selected.active.focus,
+.datepicker table tr td.selected.highlighted.active.focus,
+.open > .dropdown-toggle.datepicker table tr td.selected.focus,
+.open > .dropdown-toggle.datepicker table tr td.selected.highlighted.focus {
+  color: #ffffff;
+  background-color: #6e6e6e;
+  border-color: #161616; }
+
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected.highlighted:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected.highlighted.active,
+.open > .dropdown-toggle.datepicker table tr td.selected,
+.open > .dropdown-toggle.datepicker table tr td.selected.highlighted {
+  background-image: none; }
+
+.datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.selected.highlighted.disabled:hover,
+.datepicker table tr td.selected[disabled]:hover,
+.datepicker table tr td.selected.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.selected:hover,
+fieldset[disabled] .datepicker table tr td.selected.highlighted:hover,
+.datepicker table tr td.selected.disabled:focus,
+.datepicker table tr td.selected.highlighted.disabled:focus,
+.datepicker table tr td.selected[disabled]:focus,
+.datepicker table tr td.selected.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.selected:focus,
+fieldset[disabled] .datepicker table tr td.selected.highlighted:focus,
+.datepicker table tr td.selected.disabled.focus,
+.datepicker table tr td.selected.highlighted.disabled.focus,
+.datepicker table tr td.selected[disabled].focus,
+.datepicker table tr td.selected.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.selected.focus,
+fieldset[disabled] .datepicker table tr td.selected.highlighted.focus {
+  background-color: #999999;
+  border-color: #555555; }
+
+.datepicker table tr td.active,
+.datepicker table tr td.active.highlighted {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+.datepicker table tr td.active:focus,
+.datepicker table tr td.active.highlighted:focus,
+.datepicker table tr td.active.focus,
+.datepicker table tr td.active.highlighted.focus {
+  color: #ffffff;
+  background-color: #3071a9;
+  border-color: #193c5a; }
+
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.highlighted:hover {
+  color: #ffffff;
+  background-color: #3071a9;
+  border-color: #285e8e; }
+
+.datepicker table tr td.active:active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active,
+.open > .dropdown-toggle.datepicker table tr td.active,
+.open > .dropdown-toggle.datepicker table tr td.active.highlighted {
+  color: #ffffff;
+  background-color: #3071a9;
+  border-color: #285e8e; }
+
+.datepicker table tr td.active:active:hover,
+.datepicker table tr td.active.highlighted:active:hover,
+.datepicker table tr td.active.active:hover,
+.datepicker table tr td.active.highlighted.active:hover,
+.open > .dropdown-toggle.datepicker table tr td.active:hover,
+.open > .dropdown-toggle.datepicker table tr td.active.highlighted:hover,
+.datepicker table tr td.active:active:focus,
+.datepicker table tr td.active.highlighted:active:focus,
+.datepicker table tr td.active.active:focus,
+.datepicker table tr td.active.highlighted.active:focus,
+.open > .dropdown-toggle.datepicker table tr td.active:focus,
+.open > .dropdown-toggle.datepicker table tr td.active.highlighted:focus,
+.datepicker table tr td.active:active.focus,
+.datepicker table tr td.active.highlighted:active.focus,
+.datepicker table tr td.active.active.focus,
+.datepicker table tr td.active.highlighted.active.focus,
+.open > .dropdown-toggle.datepicker table tr td.active.focus,
+.open > .dropdown-toggle.datepicker table tr td.active.highlighted.focus {
+  color: #ffffff;
+  background-color: #285e8e;
+  border-color: #193c5a; }
+
+.datepicker table tr td.active:active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active,
+.open > .dropdown-toggle.datepicker table tr td.active,
+.open > .dropdown-toggle.datepicker table tr td.active.highlighted {
+  background-image: none; }
+
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.highlighted.disabled:hover,
+.datepicker table tr td.active[disabled]:hover,
+.datepicker table tr td.active.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.active:hover,
+fieldset[disabled] .datepicker table tr td.active.highlighted:hover,
+.datepicker table tr td.active.disabled:focus,
+.datepicker table tr td.active.highlighted.disabled:focus,
+.datepicker table tr td.active[disabled]:focus,
+.datepicker table tr td.active.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.active:focus,
+fieldset[disabled] .datepicker table tr td.active.highlighted:focus,
+.datepicker table tr td.active.disabled.focus,
+.datepicker table tr td.active.highlighted.disabled.focus,
+.datepicker table tr td.active[disabled].focus,
+.datepicker table tr td.active.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.active.focus,
+fieldset[disabled] .datepicker table tr td.active.highlighted.focus {
+  background-color: #428bca;
+  border-color: #357ebd; }
+
+.datepicker table tr td span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px; }
+
+.datepicker table tr td span:hover {
+  background: #eeeeee; }
+
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover {
+  background: none;
+  color: #999999;
+  cursor: default; }
+
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+.datepicker table tr td span.active:focus,
+.datepicker table tr td span.active:hover:focus,
+.datepicker table tr td span.active.disabled:focus,
+.datepicker table tr td span.active.disabled:hover:focus,
+.datepicker table tr td span.active.focus,
+.datepicker table tr td span.active:hover.focus,
+.datepicker table tr td span.active.disabled.focus,
+.datepicker table tr td span.active.disabled:hover.focus {
+  color: #ffffff;
+  background-color: #3071a9;
+  border-color: #193c5a; }
+
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active:hover:hover,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:hover:hover {
+  color: #ffffff;
+  background-color: #3071a9;
+  border-color: #285e8e; }
+
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active,
+.open > .dropdown-toggle.datepicker table tr td span.active,
+.open > .dropdown-toggle.datepicker table tr td span.active:hover,
+.open > .dropdown-toggle.datepicker table tr td span.active.disabled,
+.open > .dropdown-toggle.datepicker table tr td span.active.disabled:hover {
+  color: #ffffff;
+  background-color: #3071a9;
+  border-color: #285e8e; }
+
+.datepicker table tr td span.active:active:hover,
+.datepicker table tr td span.active:hover:active:hover,
+.datepicker table tr td span.active.disabled:active:hover,
+.datepicker table tr td span.active.disabled:hover:active:hover,
+.datepicker table tr td span.active.active:hover,
+.datepicker table tr td span.active:hover.active:hover,
+.datepicker table tr td span.active.disabled.active:hover,
+.datepicker table tr td span.active.disabled:hover.active:hover,
+.open > .dropdown-toggle.datepicker table tr td span.active:hover,
+.open > .dropdown-toggle.datepicker table tr td span.active:hover:hover,
+.open > .dropdown-toggle.datepicker table tr td span.active.disabled:hover,
+.open > .dropdown-toggle.datepicker table tr td span.active.disabled:hover:hover,
+.datepicker table tr td span.active:active:focus,
+.datepicker table tr td span.active:hover:active:focus,
+.datepicker table tr td span.active.disabled:active:focus,
+.datepicker table tr td span.active.disabled:hover:active:focus,
+.datepicker table tr td span.active.active:focus,
+.datepicker table tr td span.active:hover.active:focus,
+.datepicker table tr td span.active.disabled.active:focus,
+.datepicker table tr td span.active.disabled:hover.active:focus,
+.open > .dropdown-toggle.datepicker table tr td span.active:focus,
+.open > .dropdown-toggle.datepicker table tr td span.active:hover:focus,
+.open > .dropdown-toggle.datepicker table tr td span.active.disabled:focus,
+.open > .dropdown-toggle.datepicker table tr td span.active.disabled:hover:focus,
+.datepicker table tr td span.active:active.focus,
+.datepicker table tr td span.active:hover:active.focus,
+.datepicker table tr td span.active.disabled:active.focus,
+.datepicker table tr td span.active.disabled:hover:active.focus,
+.datepicker table tr td span.active.active.focus,
+.datepicker table tr td span.active:hover.active.focus,
+.datepicker table tr td span.active.disabled.active.focus,
+.datepicker table tr td span.active.disabled:hover.active.focus,
+.open > .dropdown-toggle.datepicker table tr td span.active.focus,
+.open > .dropdown-toggle.datepicker table tr td span.active:hover.focus,
+.open > .dropdown-toggle.datepicker table tr td span.active.disabled.focus,
+.open > .dropdown-toggle.datepicker table tr td span.active.disabled:hover.focus {
+  color: #ffffff;
+  background-color: #285e8e;
+  border-color: #193c5a; }
+
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active,
+.open > .dropdown-toggle.datepicker table tr td span.active,
+.open > .dropdown-toggle.datepicker table tr td span.active:hover,
+.open > .dropdown-toggle.datepicker table tr td span.active.disabled,
+.open > .dropdown-toggle.datepicker table tr td span.active.disabled:hover {
+  background-image: none; }
+
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active:hover.disabled:hover,
+.datepicker table tr td span.active.disabled.disabled:hover,
+.datepicker table tr td span.active.disabled:hover.disabled:hover,
+.datepicker table tr td span.active[disabled]:hover,
+.datepicker table tr td span.active:hover[disabled]:hover,
+.datepicker table tr td span.active.disabled[disabled]:hover,
+.datepicker table tr td span.active.disabled:hover[disabled]:hover,
+fieldset[disabled] .datepicker table tr td span.active:hover,
+fieldset[disabled] .datepicker table tr td span.active:hover:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:hover,
+.datepicker table tr td span.active.disabled:focus,
+.datepicker table tr td span.active:hover.disabled:focus,
+.datepicker table tr td span.active.disabled.disabled:focus,
+.datepicker table tr td span.active.disabled:hover.disabled:focus,
+.datepicker table tr td span.active[disabled]:focus,
+.datepicker table tr td span.active:hover[disabled]:focus,
+.datepicker table tr td span.active.disabled[disabled]:focus,
+.datepicker table tr td span.active.disabled:hover[disabled]:focus,
+fieldset[disabled] .datepicker table tr td span.active:focus,
+fieldset[disabled] .datepicker table tr td span.active:hover:focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:focus,
+.datepicker table tr td span.active.disabled.focus,
+.datepicker table tr td span.active:hover.disabled.focus,
+.datepicker table tr td span.active.disabled.disabled.focus,
+.datepicker table tr td span.active.disabled:hover.disabled.focus,
+.datepicker table tr td span.active[disabled].focus,
+.datepicker table tr td span.active:hover[disabled].focus,
+.datepicker table tr td span.active.disabled[disabled].focus,
+.datepicker table tr td span.active.disabled:hover[disabled].focus,
+fieldset[disabled] .datepicker table tr td span.active.focus,
+fieldset[disabled] .datepicker table tr td span.active:hover.focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled.focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
+  background-color: #428bca;
+  border-color: #357ebd; }
+
+.datepicker table tr td span.old,
+.datepicker table tr td span.new {
+  color: #999999; }
+
+.datepicker .datepicker-switch {
+  width: 145px; }
+
+.datepicker .datepicker-switch,
+.datepicker .prev,
+.datepicker .next,
+.datepicker tfoot tr th {
+  cursor: pointer; }
+
+.datepicker .datepicker-switch:hover,
+.datepicker .prev:hover,
+.datepicker .next:hover,
+.datepicker tfoot tr th:hover {
+  background: #eeeeee; }
+
+.datepicker .cw {
+  font-size: 10px;
+  width: 12px;
+  padding: 0 2px 0 5px;
+  vertical-align: middle; }
+
+.input-group.date .input-group-addon {
+  cursor: pointer; }
+
+.input-daterange {
+  width: 100%; }
+
+.input-daterange input {
+  text-align: center; }
+
+.input-daterange input:first-child {
+  border-radius: 3px 0 0 3px; }
+
+.input-daterange input:last-child {
+  border-radius: 0 3px 3px 0; }
+
+.input-daterange .input-group-addon {
+  width: auto;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  vertical-align: middle;
+  background-color: #eeeeee;
+  border: solid #cccccc;
+  border-width: 1px 0;
+  margin-left: -5px;
+  margin-right: -5px; }
+
+.select2-container {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  vertical-align: middle; }
+  .select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none; }
+    .select2-container .select2-selection--single .select2-selection__rendered {
+      display: block;
+      padding-left: 8px;
+      padding-right: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .select2-container .select2-selection--single .select2-selection__clear {
+      position: relative; }
+  .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+    padding-right: 8px;
+    padding-left: 20px; }
+  .select2-container .select2-selection--multiple {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    min-height: 32px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none; }
+    .select2-container .select2-selection--multiple .select2-selection__rendered {
+      display: inline-block;
+      overflow: hidden;
+      padding-left: 8px;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+  .select2-container .select2-search--inline {
+    float: left; }
+    .select2-container .select2-search--inline .select2-search__field {
+      box-sizing: border-box;
+      border: none;
+      font-size: 100%;
+      margin-top: 5px;
+      padding: 0; }
+      .select2-container .select2-search--inline .select2-search__field::-webkit-search-cancel-button {
+        -webkit-appearance: none; }
+
+.select2-dropdown {
+  background-color: white;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  left: -100000px;
+  width: 100%;
+  z-index: 1051; }
+
+.select2-results {
+  display: block; }
+
+.select2-results__options {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.select2-results__option {
+  padding: 6px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none; }
+  .select2-results__option[aria-selected] {
+    cursor: pointer; }
+
+.select2-container--open .select2-dropdown {
+  left: 0; }
+
+.select2-container--open .select2-dropdown--above {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.select2-container--open .select2-dropdown--below {
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+
+.select2-search--dropdown {
+  display: block;
+  padding: 4px; }
+  .select2-search--dropdown .select2-search__field {
+    padding: 4px;
+    width: 100%;
+    box-sizing: border-box; }
+    .select2-search--dropdown .select2-search__field::-webkit-search-cancel-button {
+      -webkit-appearance: none; }
+  .select2-search--dropdown.select2-search--hide {
+    display: none; }
+
+.select2-close-mask {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  opacity: 0;
+  z-index: 99;
+  background-color: #fff;
+  filter: alpha(opacity=0); }
+
+.select2-hidden-accessible {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important; }
+
+.select2-container--default .select2-selection--single {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 4px; }
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 28px; }
+  .select2-container--default .select2-selection--single .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold; }
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #999; }
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 26px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 20px; }
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+      border-color: #888 transparent transparent transparent;
+      border-style: solid;
+      border-width: 5px 4px 0 4px;
+      height: 0;
+      left: 50%;
+      margin-left: -4px;
+      margin-top: -2px;
+      position: absolute;
+      top: 50%;
+      width: 0; }
+
+.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__clear {
+  float: left; }
+
+.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+  left: 1px;
+  right: auto; }
+
+.select2-container--default.select2-container--disabled .select2-selection--single {
+  background-color: #eee;
+  cursor: default; }
+  .select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__clear {
+    display: none; }
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent #888 transparent;
+  border-width: 0 4px 5px 4px; }
+
+.select2-container--default .select2-selection--multiple {
+  background-color: white;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: text; }
+  .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
+    width: 100%; }
+  .select2-container--default .select2-selection--multiple .select2-selection__placeholder {
+    color: #999;
+    margin-top: 5px;
+    float: left; }
+  .select2-container--default .select2-selection--multiple .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-right: 10px; }
+  .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #e4e4e4;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0 5px; }
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #999;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px; }
+    .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+      color: #333; }
+
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline {
+  float: right; }
+
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+  margin-left: 5px;
+  margin-right: auto; }
+
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
+  margin-left: 2px;
+  margin-right: auto; }
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border: solid black 1px;
+  outline: 0; }
+
+.select2-container--default.select2-container--disabled .select2-selection--multiple {
+  background-color: #eee;
+  cursor: default; }
+
+.select2-container--default.select2-container--disabled .select2-selection__choice__remove {
+  display: none; }
+
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid #aaa; }
+
+.select2-container--default .select2-search--inline .select2-search__field {
+  background: transparent;
+  border: none;
+  outline: 0;
+  box-shadow: none;
+  -webkit-appearance: textfield; }
+
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: 200px;
+  overflow-y: auto; }
+
+.select2-container--default .select2-results__option[role=group] {
+  padding: 0; }
+
+.select2-container--default .select2-results__option[aria-disabled=true] {
+  color: #999; }
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: #ddd; }
+
+.select2-container--default .select2-results__option .select2-results__option {
+  padding-left: 1em; }
+  .select2-container--default .select2-results__option .select2-results__option .select2-results__group {
+    padding-left: 0; }
+  .select2-container--default .select2-results__option .select2-results__option .select2-results__option {
+    margin-left: -1em;
+    padding-left: 2em; }
+    .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+      margin-left: -2em;
+      padding-left: 3em; }
+      .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+        margin-left: -3em;
+        padding-left: 4em; }
+        .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+          margin-left: -4em;
+          padding-left: 5em; }
+          .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+            margin-left: -5em;
+            padding-left: 6em; }
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #5897fb;
+  color: white; }
+
+.select2-container--default .select2-results__group {
+  cursor: default;
+  display: block;
+  padding: 6px; }
+
+.select2-container--classic .select2-selection--single {
+  background-color: #f7f7f7;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  outline: 0;
+  background-image: linear-gradient(to bottom, white 50%, #eeeeee 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0); }
+  .select2-container--classic .select2-selection--single:focus {
+    border: 1px solid #5897fb; }
+  .select2-container--classic .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 28px; }
+  .select2-container--classic .select2-selection--single .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    margin-right: 10px; }
+  .select2-container--classic .select2-selection--single .select2-selection__placeholder {
+    color: #999; }
+  .select2-container--classic .select2-selection--single .select2-selection__arrow {
+    background-color: #ddd;
+    border: none;
+    border-left: 1px solid #aaa;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 26px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 20px;
+    background-image: linear-gradient(to bottom, #eeeeee 50%, #cccccc 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC', GradientType=0); }
+    .select2-container--classic .select2-selection--single .select2-selection__arrow b {
+      border-color: #888 transparent transparent transparent;
+      border-style: solid;
+      border-width: 5px 4px 0 4px;
+      height: 0;
+      left: 50%;
+      margin-left: -4px;
+      margin-top: -2px;
+      position: absolute;
+      top: 50%;
+      width: 0; }
+
+.select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__clear {
+  float: left; }
+
+.select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+  border: none;
+  border-right: 1px solid #aaa;
+  border-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  left: 1px;
+  right: auto; }
+
+.select2-container--classic.select2-container--open .select2-selection--single {
+  border: 1px solid #5897fb; }
+  .select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow {
+    background: transparent;
+    border: none; }
+    .select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b {
+      border-color: transparent transparent #888 transparent;
+      border-width: 0 4px 5px 4px; }
+
+.select2-container--classic.select2-container--open.select2-container--above .select2-selection--single {
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-image: linear-gradient(to bottom, white 0%, #eeeeee 50%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0); }
+
+.select2-container--classic.select2-container--open.select2-container--below .select2-selection--single {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-image: linear-gradient(to bottom, #eeeeee 50%, white 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF', GradientType=0); }
+
+.select2-container--classic .select2-selection--multiple {
+  background-color: white;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: text;
+  outline: 0; }
+  .select2-container--classic .select2-selection--multiple:focus {
+    border: 1px solid #5897fb; }
+  .select2-container--classic .select2-selection--multiple .select2-selection__rendered {
+    list-style: none;
+    margin: 0;
+    padding: 0 5px; }
+  .select2-container--classic .select2-selection--multiple .select2-selection__clear {
+    display: none; }
+  .select2-container--classic .select2-selection--multiple .select2-selection__choice {
+    background-color: #e4e4e4;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0 5px; }
+  .select2-container--classic .select2-selection--multiple .select2-selection__choice__remove {
+    color: #888;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px; }
+    .select2-container--classic .select2-selection--multiple .select2-selection__choice__remove:hover {
+      color: #555; }
+
+.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+  float: right; }
+
+.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+  margin-left: 5px;
+  margin-right: auto; }
+
+.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
+  margin-left: 2px;
+  margin-right: auto; }
+
+.select2-container--classic.select2-container--open .select2-selection--multiple {
+  border: 1px solid #5897fb; }
+
+.select2-container--classic.select2-container--open.select2-container--above .select2-selection--multiple {
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+
+.select2-container--classic.select2-container--open.select2-container--below .select2-selection--multiple {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.select2-container--classic .select2-search--dropdown .select2-search__field {
+  border: 1px solid #aaa;
+  outline: 0; }
+
+.select2-container--classic .select2-search--inline .select2-search__field {
+  outline: 0;
+  box-shadow: none; }
+
+.select2-container--classic .select2-dropdown {
+  background-color: white;
+  border: 1px solid transparent; }
+
+.select2-container--classic .select2-dropdown--above {
+  border-bottom: none; }
+
+.select2-container--classic .select2-dropdown--below {
+  border-top: none; }
+
+.select2-container--classic .select2-results > .select2-results__options {
+  max-height: 200px;
+  overflow-y: auto; }
+
+.select2-container--classic .select2-results__option[role=group] {
+  padding: 0; }
+
+.select2-container--classic .select2-results__option[aria-disabled=true] {
+  color: grey; }
+
+.select2-container--classic .select2-results__option--highlighted[aria-selected] {
+  background-color: #3875d7;
+  color: white; }
+
+.select2-container--classic .select2-results__group {
+  cursor: default;
+  display: block;
+  padding: 6px; }
+
+.select2-container--classic.select2-container--open .select2-dropdown {
+  border-color: #5897fb; }
+
+.twa {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1em 1em; }
+
+.twa-lg {
+  height: 1.33em;
+  width: 1.33em;
+  margin: 0 0.0665em 0 0.133em;
+  vertical-align: -0.133em;
+  background-size: 1.33em 1.33em; }
+
+.twa-2x {
+  height: 2em;
+  width: 2em;
+  margin: 0 0.1em 0 0.2em;
+  vertical-align: -0.2em;
+  background-size: 2em 2em; }
+
+.twa-3x {
+  height: 3em;
+  width: 3em;
+  margin: 0 0.15em 0 0.3em;
+  vertical-align: -0.3em;
+  background-size: 3em 3em; }
+
+.twa-4x {
+  height: 4em;
+  width: 4em;
+  margin: 0 0.2em 0 0.4em;
+  vertical-align: -0.4em;
+  background-size: 4em 4em; }
+
+.twa-5x {
+  height: 5em;
+  width: 5em;
+  margin: 0 0.25em 0 0.5em;
+  vertical-align: -0.5em;
+  background-size: 5em 5em; }
+
+.twa-smile {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f604.svg"); }
+
+.twa-laughing {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f606.svg"); }
+
+.twa-blush {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f60a.svg"); }
+
+.twa-smiley {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f603.svg"); }
+
+.twa-relaxed {
+  background-image: url("https://twemoji.maxcdn.com/svg/263a.svg"); }
+
+.twa-smirk {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f60f.svg"); }
+
+.twa-heart-eyes {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f60d.svg"); }
+
+.twa-kissing-heart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f618.svg"); }
+
+.twa-kissing-closed-eyes {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f61a.svg"); }
+
+.twa-flushed {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f633.svg"); }
+
+.twa-relieved {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f625.svg"); }
+
+.twa-satisfied {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f60c.svg"); }
+
+.twa-grin {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f601.svg"); }
+
+.twa-wink {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f609.svg"); }
+
+.twa-stuck-out-tongue-winking-eye {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f61c.svg"); }
+
+.twa-stuck-out-tongue-closed-eyes {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f61d.svg"); }
+
+.twa-grinning {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f600.svg"); }
+
+.twa-kissing {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f617.svg"); }
+
+.twa-kissing-smiling-eyes {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f619.svg"); }
+
+.twa-stuck-out-tongue {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f61b.svg"); }
+
+.twa-sleeping {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f634.svg"); }
+
+.twa-worried {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f61f.svg"); }
+
+.twa-frowning {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f626.svg"); }
+
+.twa-anguished {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f627.svg"); }
+
+.twa-open-mouth {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f62e.svg"); }
+
+.twa-grimacing {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f62c.svg"); }
+
+.twa-confused {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f615.svg"); }
+
+.twa-hushed {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f62f.svg"); }
+
+.twa-expressionless {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f611.svg"); }
+
+.twa-unamused {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f612.svg"); }
+
+.twa-sweat-smile {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f605.svg"); }
+
+.twa-sweat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f613.svg"); }
+
+.twa-weary {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f629.svg"); }
+
+.twa-pensive {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f614.svg"); }
+
+.twa-disappointed {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f61e.svg"); }
+
+.twa-confounded {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f616.svg"); }
+
+.twa-fearful {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f628.svg"); }
+
+.twa-cold-sweat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f630.svg"); }
+
+.twa-persevere {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f623.svg"); }
+
+.twa-cry {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f622.svg"); }
+
+.twa-sob {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f62d.svg"); }
+
+.twa-joy {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f602.svg"); }
+
+.twa-astonished {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f632.svg"); }
+
+.twa-scream {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f631.svg"); }
+
+.twa-tired-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f62b.svg"); }
+
+.twa-angry {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f620.svg"); }
+
+.twa-rage {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f621.svg"); }
+
+.twa-triumph {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f624.svg"); }
+
+.twa-sleepy {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f62a.svg"); }
+
+.twa-yum {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f60b.svg"); }
+
+.twa-mask {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f637.svg"); }
+
+.twa-sunglasses {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f60e.svg"); }
+
+.twa-dizzy-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f635.svg"); }
+
+.twa-imp {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f47f.svg"); }
+
+.twa-smiling-imp {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f608.svg"); }
+
+.twa-neutral-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f610.svg"); }
+
+.twa-no-mouth {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f636.svg"); }
+
+.twa-innocent {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f607.svg"); }
+
+.twa-alien {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f47d.svg"); }
+
+.twa-yellow-heart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f49b.svg"); }
+
+.twa-blue-heart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f499.svg"); }
+
+.twa-purple-heart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f49c.svg"); }
+
+.twa-heart {
+  background-image: url("https://twemoji.maxcdn.com/svg/2764.svg"); }
+
+.twa-green-heart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f49a.svg"); }
+
+.twa-broken-heart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f494.svg"); }
+
+.twa-heartbeat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f493.svg"); }
+
+.twa-heartpulse {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f497.svg"); }
+
+.twa-two-hearts {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f495.svg"); }
+
+.twa-revolving-hearts {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f49e.svg"); }
+
+.twa-cupid {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f498.svg"); }
+
+.twa-sparkling-heart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f496.svg"); }
+
+.twa-sparkles {
+  background-image: url("https://twemoji.maxcdn.com/svg/2728.svg"); }
+
+.twa-star {
+  background-image: url("https://twemoji.maxcdn.com/svg/2b50.svg"); }
+
+.twa-star2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f31f.svg"); }
+
+.twa-dizzy {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ab.svg"); }
+
+.twa-boom {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4a5.svg"); }
+
+.twa-anger {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4a2.svg"); }
+
+.twa-exclamation {
+  background-image: url("https://twemoji.maxcdn.com/svg/2757.svg"); }
+
+.twa-question {
+  background-image: url("https://twemoji.maxcdn.com/svg/2753.svg"); }
+
+.twa-grey-exclamation {
+  background-image: url("https://twemoji.maxcdn.com/svg/2755.svg"); }
+
+.twa-grey-question {
+  background-image: url("https://twemoji.maxcdn.com/svg/2754.svg"); }
+
+.twa-zzz {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4a4.svg"); }
+
+.twa-dash {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4a8.svg"); }
+
+.twa-sweat-drops {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4a6.svg"); }
+
+.twa-notes {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3b6.svg"); }
+
+.twa-musical-note {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3b5.svg"); }
+
+.twa-fire {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f525.svg"); }
+
+.twa-poop {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4a9.svg"); }
+
+.twa-thumbsup {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f44d.svg"); }
+
+.twa-thumbsdown {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f44e.svg"); }
+
+.twa-ok-hand {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f44c.svg"); }
+
+.twa-punch {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f44a.svg"); }
+
+.twa-fist {
+  background-image: url("https://twemoji.maxcdn.com/svg/270a.svg"); }
+
+.twa-v {
+  background-image: url("https://twemoji.maxcdn.com/svg/270c.svg"); }
+
+.twa-wave {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f44b.svg"); }
+
+.twa-hand {
+  background-image: url("https://twemoji.maxcdn.com/svg/270b.svg"); }
+
+.twa-open-hands {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f450.svg"); }
+
+.twa-point-up {
+  background-image: url("https://twemoji.maxcdn.com/svg/261d.svg"); }
+
+.twa-point-down {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f447.svg"); }
+
+.twa-point-left {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f448.svg"); }
+
+.twa-point-right {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f449.svg"); }
+
+.twa-raised-hands {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f64c.svg"); }
+
+.twa-pray {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f64f.svg"); }
+
+.twa-point-up-2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f446.svg"); }
+
+.twa-clap {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f44f.svg"); }
+
+.twa-muscle {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4aa.svg"); }
+
+.twa-walking {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6b6.svg"); }
+
+.twa-runner {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3c3.svg"); }
+
+.twa-couple {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f46b.svg"); }
+
+.twa-family {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f46a.svg"); }
+
+.twa-two-men-holding-hands {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f46c.svg"); }
+
+.twa-two-women-holding-hands {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f46d.svg"); }
+
+.twa-dancer {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f483.svg"); }
+
+.twa-dancers {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f46f.svg"); }
+
+.twa-ok-woman {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f646.svg"); }
+
+.twa-no-good {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f645.svg"); }
+
+.twa-information-desk-person {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f481.svg"); }
+
+.twa-raised-hand {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f64b.svg"); }
+
+.twa-bride-with-veil {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f470.svg"); }
+
+.twa-person-with-pouting-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f64e.svg"); }
+
+.twa-person-frowning {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f64d.svg"); }
+
+.twa-bow {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f647.svg"); }
+
+.twa-couplekiss {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f48f.svg"); }
+
+.twa-couple-with-heart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f491.svg"); }
+
+.twa-massage {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f486.svg"); }
+
+.twa-haircut {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f487.svg"); }
+
+.twa-nail-care {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f485.svg"); }
+
+.twa-boy {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f466.svg"); }
+
+.twa-girl {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f467.svg"); }
+
+.twa-woman {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f469.svg"); }
+
+.twa-man {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f468.svg"); }
+
+.twa-baby {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f476.svg"); }
+
+.twa-older-woman {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f475.svg"); }
+
+.twa-older-man {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f474.svg"); }
+
+.twa-person-with-blond-hair {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f471.svg"); }
+
+.twa-man-with-gua-pi-mao {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f472.svg"); }
+
+.twa-man-with-turban {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f473.svg"); }
+
+.twa-construction-worker {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f477.svg"); }
+
+.twa-cop {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f46e.svg"); }
+
+.twa-angel {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f47c.svg"); }
+
+.twa-princess {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f478.svg"); }
+
+.twa-smiley-cat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f63a.svg"); }
+
+.twa-smile-cat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f638.svg"); }
+
+.twa-heart-eyes-cat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f63b.svg"); }
+
+.twa-kissing-cat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f63d.svg"); }
+
+.twa-smirk-cat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f63c.svg"); }
+
+.twa-scream-cat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f640.svg"); }
+
+.twa-crying-cat-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f63f.svg"); }
+
+.twa-joy-cat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f639.svg"); }
+
+.twa-pouting-cat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f63e.svg"); }
+
+.twa-japanese-ogre {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f479.svg"); }
+
+.twa-japanese-goblin {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f47a.svg"); }
+
+.twa-see-no-evil {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f648.svg"); }
+
+.twa-hear-no-evil {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f649.svg"); }
+
+.twa-speak-no-evil {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f64a.svg"); }
+
+.twa-guardsman {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f482.svg"); }
+
+.twa-skull {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f480.svg"); }
+
+.twa-feet {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f463.svg"); }
+
+.twa-lips {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f444.svg"); }
+
+.twa-kiss {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f48b.svg"); }
+
+.twa-droplet {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4a7.svg"); }
+
+.twa-ear {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f442.svg"); }
+
+.twa-eyes {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f440.svg"); }
+
+.twa-nose {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f443.svg"); }
+
+.twa-tongue {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f445.svg"); }
+
+.twa-love-letter {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f48c.svg"); }
+
+.twa-bust-in-silhouette {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f464.svg"); }
+
+.twa-busts-in-silhouette {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f465.svg"); }
+
+.twa-speech-balloon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ac.svg"); }
+
+.twa-thought-balloon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ad.svg"); }
+
+.twa-sunny {
+  background-image: url("https://twemoji.maxcdn.com/svg/2600.svg"); }
+
+.twa-umbrella {
+  background-image: url("https://twemoji.maxcdn.com/svg/2614.svg"); }
+
+.twa-cloud {
+  background-image: url("https://twemoji.maxcdn.com/svg/2601.svg"); }
+
+.twa-snowflake {
+  background-image: url("https://twemoji.maxcdn.com/svg/2744.svg"); }
+
+.twa-snowman {
+  background-image: url("https://twemoji.maxcdn.com/svg/26c4.svg"); }
+
+.twa-zap {
+  background-image: url("https://twemoji.maxcdn.com/svg/26a1.svg"); }
+
+.twa-cyclone {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f300.svg"); }
+
+.twa-foggy {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f301.svg"); }
+
+.twa-ocean {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f30a.svg"); }
+
+.twa-cat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f431.svg"); }
+
+.twa-dog {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f436.svg"); }
+
+.twa-mouse {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f42d.svg"); }
+
+.twa-hamster {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f439.svg"); }
+
+.twa-rabbit {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f430.svg"); }
+
+.twa-wolf {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f43a.svg"); }
+
+.twa-frog {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f438.svg"); }
+
+.twa-tiger {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f42f.svg"); }
+
+.twa-koala {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f428.svg"); }
+
+.twa-bear {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f43b.svg"); }
+
+.twa-pig {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f437.svg"); }
+
+.twa-pig-nose {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f43d.svg"); }
+
+.twa-cow {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f42e.svg"); }
+
+.twa-boar {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f417.svg"); }
+
+.twa-monkey-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f435.svg"); }
+
+.twa-monkey {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f412.svg"); }
+
+.twa-horse {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f434.svg"); }
+
+.twa-racehorse {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f40e.svg"); }
+
+.twa-camel {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f42b.svg"); }
+
+.twa-sheep {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f411.svg"); }
+
+.twa-elephant {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f418.svg"); }
+
+.twa-panda-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f43c.svg"); }
+
+.twa-snake {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f40d.svg"); }
+
+.twa-bird {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f426.svg"); }
+
+.twa-baby-chick {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f424.svg"); }
+
+.twa-hatched-chick {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f425.svg"); }
+
+.twa-hatching-chick {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f423.svg"); }
+
+.twa-chicken {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f414.svg"); }
+
+.twa-penguin {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f427.svg"); }
+
+.twa-turtle {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f422.svg"); }
+
+.twa-bug {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f41b.svg"); }
+
+.twa-honeybee {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f41d.svg"); }
+
+.twa-ant {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f41c.svg"); }
+
+.twa-beetle {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f41e.svg"); }
+
+.twa-snail {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f40c.svg"); }
+
+.twa-octopus {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f419.svg"); }
+
+.twa-tropical-fish {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f420.svg"); }
+
+.twa-fish {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f41f.svg"); }
+
+.twa-whale {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f433.svg"); }
+
+.twa-whale2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f40b.svg"); }
+
+.twa-dolphin {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f42c.svg"); }
+
+.twa-cow2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f404.svg"); }
+
+.twa-ram {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f40f.svg"); }
+
+.twa-rat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f400.svg"); }
+
+.twa-water-buffalo {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f403.svg"); }
+
+.twa-tiger2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f405.svg"); }
+
+.twa-rabbit2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f407.svg"); }
+
+.twa-dragon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f409.svg"); }
+
+.twa-goat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f410.svg"); }
+
+.twa-rooster {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f413.svg"); }
+
+.twa-dog2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f415.svg"); }
+
+.twa-pig2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f416.svg"); }
+
+.twa-mouse2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f401.svg"); }
+
+.twa-ox {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f402.svg"); }
+
+.twa-dragon-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f432.svg"); }
+
+.twa-blowfish {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f421.svg"); }
+
+.twa-crocodile {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f40a.svg"); }
+
+.twa-dromedary-camel {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f42a.svg"); }
+
+.twa-leopard {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f406.svg"); }
+
+.twa-cat2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f408.svg"); }
+
+.twa-poodle {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f429.svg"); }
+
+.twa-paw-prints {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f43e.svg"); }
+
+.twa-bouquet {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f490.svg"); }
+
+.twa-cherry-blossom {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f338.svg"); }
+
+.twa-tulip {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f337.svg"); }
+
+.twa-four-leaf-clover {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f340.svg"); }
+
+.twa-rose {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f339.svg"); }
+
+.twa-sunflower {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f33b.svg"); }
+
+.twa-hibiscus {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f33a.svg"); }
+
+.twa-maple-leaf {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f341.svg"); }
+
+.twa-leaves {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f343.svg"); }
+
+.twa-fallen-leaf {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f342.svg"); }
+
+.twa-herb {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f33f.svg"); }
+
+.twa-mushroom {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f344.svg"); }
+
+.twa-cactus {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f335.svg"); }
+
+.twa-palm-tree {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f334.svg"); }
+
+.twa-evergreen-tree {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f332.svg"); }
+
+.twa-deciduous-tree {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f333.svg"); }
+
+.twa-chestnut {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f330.svg"); }
+
+.twa-seedling {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f331.svg"); }
+
+.twa-blossom {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f33c.svg"); }
+
+.twa-ear-of-rice {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f33e.svg"); }
+
+.twa-shell {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f41a.svg"); }
+
+.twa-globe-with-meridians {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f310.svg"); }
+
+.twa-sun-with-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f31e.svg"); }
+
+.twa-full-moon-with-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f31d.svg"); }
+
+.twa-new-moon-with-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f31a.svg"); }
+
+.twa-new-moon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f311.svg"); }
+
+.twa-waxing-crescent-moon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f312.svg"); }
+
+.twa-first-quarter-moon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f313.svg"); }
+
+.twa-waxing-gibbous-moon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f314.svg"); }
+
+.twa-full-moon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f315.svg"); }
+
+.twa-waning-gibbous-moon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f316.svg"); }
+
+.twa-last-quarter-moon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f317.svg"); }
+
+.twa-waning-crescent-moon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f318.svg"); }
+
+.twa-last-quarter-moon-with-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f31c.svg"); }
+
+.twa-first-quarter-moon-with-face {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f31b.svg"); }
+
+.twa-moon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f319.svg"); }
+
+.twa-earth-africa {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f30d.svg"); }
+
+.twa-earth-americas {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f30e.svg"); }
+
+.twa-earth-asia {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f30f.svg"); }
+
+.twa-volcano {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f30b.svg"); }
+
+.twa-milky-way {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f30c.svg"); }
+
+.twa-partly-sunny {
+  background-image: url("https://twemoji.maxcdn.com/svg/26c5.svg"); }
+
+.twa-bamboo {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f38d.svg"); }
+
+.twa-gift-heart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f49d.svg"); }
+
+.twa-dolls {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f38e.svg"); }
+
+.twa-school-satchel {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f392.svg"); }
+
+.twa-mortar-board {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f393.svg"); }
+
+.twa-flags {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f38f.svg"); }
+
+.twa-fireworks {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f386.svg"); }
+
+.twa-sparkler {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f387.svg"); }
+
+.twa-wind-chime {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f390.svg"); }
+
+.twa-rice-scene {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f391.svg"); }
+
+.twa-jack-o-lantern {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f383.svg"); }
+
+.twa-ghost {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f47b.svg"); }
+
+.twa-santa {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f385.svg"); }
+
+.twa-8ball {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3b1.svg"); }
+
+.twa-alarm-clock {
+  background-image: url("https://twemoji.maxcdn.com/svg/23f0.svg"); }
+
+.twa-apple {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f34e.svg"); }
+
+.twa-art {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3a8.svg"); }
+
+.twa-baby-bottle {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f37c.svg"); }
+
+.twa-balloon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f388.svg"); }
+
+.twa-banana {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f34c.svg"); }
+
+.twa-bar-chart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ca.svg"); }
+
+.twa-baseball {
+  background-image: url("https://twemoji.maxcdn.com/svg/26be.svg"); }
+
+.twa-basketball {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3c0.svg"); }
+
+.twa-bath {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6c0.svg"); }
+
+.twa-bathtub {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6c1.svg"); }
+
+.twa-battery {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f50b.svg"); }
+
+.twa-beer {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f37a.svg"); }
+
+.twa-beers {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f37b.svg"); }
+
+.twa-bell {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f514.svg"); }
+
+.twa-bento {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f371.svg"); }
+
+.twa-bicyclist {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6b4.svg"); }
+
+.twa-bikini {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f459.svg"); }
+
+.twa-birthday {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f382.svg"); }
+
+.twa-black-joker {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f0cf.svg"); }
+
+.twa-black-nib {
+  background-image: url("https://twemoji.maxcdn.com/svg/2712.svg"); }
+
+.twa-blue-book {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4d8.svg"); }
+
+.twa-bomb {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4a3.svg"); }
+
+.twa-bookmark {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f516.svg"); }
+
+.twa-bookmark-tabs {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4d1.svg"); }
+
+.twa-books {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4da.svg"); }
+
+.twa-boot {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f462.svg"); }
+
+.twa-bowling {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3b3.svg"); }
+
+.twa-bread {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f35e.svg"); }
+
+.twa-briefcase {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4bc.svg"); }
+
+.twa-bulb {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4a1.svg"); }
+
+.twa-cake {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f370.svg"); }
+
+.twa-calendar {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4c6.svg"); }
+
+.twa-calling {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4f2.svg"); }
+
+.twa-camera {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4f7.svg"); }
+
+.twa-candy {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f36c.svg"); }
+
+.twa-card-index {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4c7.svg"); }
+
+.twa-cd {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4bf.svg"); }
+
+.twa-chart-with-downwards-trend {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4c9.svg"); }
+
+.twa-chart-with-upwards-trend {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4c8.svg"); }
+
+.twa-cherries {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f352.svg"); }
+
+.twa-chocolate-bar {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f36b.svg"); }
+
+.twa-christmas-tree {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f384.svg"); }
+
+.twa-clapper {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3ac.svg"); }
+
+.twa-clipboard {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4cb.svg"); }
+
+.twa-closed-book {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4d5.svg"); }
+
+.twa-closed-lock-with-key {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f510.svg"); }
+
+.twa-closed-umbrella {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f302.svg"); }
+
+.twa-clubs {
+  background-image: url("https://twemoji.maxcdn.com/svg/2663.svg"); }
+
+.twa-cocktail {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f378.svg"); }
+
+.twa-coffee {
+  background-image: url("https://twemoji.maxcdn.com/svg/2615.svg"); }
+
+.twa-computer {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4bb.svg"); }
+
+.twa-confetti-ball {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f38a.svg"); }
+
+.twa-cookie {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f36a.svg"); }
+
+.twa-corn {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f33d.svg"); }
+
+.twa-credit-card {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4b3.svg"); }
+
+.twa-crown {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f451.svg"); }
+
+.twa-crystal-ball {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f52e.svg"); }
+
+.twa-curry {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f35b.svg"); }
+
+.twa-custard {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f36e.svg"); }
+
+.twa-dango {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f361.svg"); }
+
+.twa-dart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3af.svg"); }
+
+.twa-date {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4c5.svg"); }
+
+.twa-diamonds {
+  background-image: url("https://twemoji.maxcdn.com/svg/2666.svg"); }
+
+.twa-dollar {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4b5.svg"); }
+
+.twa-door {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6aa.svg"); }
+
+.twa-doughnut {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f369.svg"); }
+
+.twa-dress {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f457.svg"); }
+
+.twa-dvd {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4c0.svg"); }
+
+.twa-e-mail {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4e7.svg"); }
+
+.twa-egg {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f373.svg"); }
+
+.twa-eggplant {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f346.svg"); }
+
+.twa-electric-plug {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f50c.svg"); }
+
+.twa-email {
+  background-image: url("https://twemoji.maxcdn.com/svg/2709.svg"); }
+
+.twa-euro {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4b6.svg"); }
+
+.twa-eyeglasses {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f453.svg"); }
+
+.twa-fax {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4e0.svg"); }
+
+.twa-file-folder {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4c1.svg"); }
+
+.twa-fish-cake {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f365.svg"); }
+
+.twa-fishing-pole-and-fish {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3a3.svg"); }
+
+.twa-flashlight {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f526.svg"); }
+
+.twa-floppy-disk {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4be.svg"); }
+
+.twa-flower-playing-cards {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3b4.svg"); }
+
+.twa-football {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3c8.svg"); }
+
+.twa-fork-and-knife {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f374.svg"); }
+
+.twa-fried-shrimp {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f364.svg"); }
+
+.twa-fries {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f35f.svg"); }
+
+.twa-game-die {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3b2.svg"); }
+
+.twa-gem {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f48e.svg"); }
+
+.twa-gift {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f381.svg"); }
+
+.twa-golf {
+  background-image: url("https://twemoji.maxcdn.com/svg/26f3.svg"); }
+
+.twa-grapes {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f347.svg"); }
+
+.twa-green-apple {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f34f.svg"); }
+
+.twa-green-book {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4d7.svg"); }
+
+.twa-guitar {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3b8.svg"); }
+
+.twa-gun {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f52b.svg"); }
+
+.twa-hamburger {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f354.svg"); }
+
+.twa-hammer {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f528.svg"); }
+
+.twa-handbag {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f45c.svg"); }
+
+.twa-headphones {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3a7.svg"); }
+
+.twa-hearts {
+  background-image: url("https://twemoji.maxcdn.com/svg/2665.svg"); }
+
+.twa-high-brightness {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f506.svg"); }
+
+.twa-high-heel {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f460.svg"); }
+
+.twa-hocho {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f52a.svg"); }
+
+.twa-honey-pot {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f36f.svg"); }
+
+.twa-horse-racing {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3c7.svg"); }
+
+.twa-hourglass {
+  background-image: url("https://twemoji.maxcdn.com/svg/231b.svg"); }
+
+.twa-hourglass-flowing-sand {
+  background-image: url("https://twemoji.maxcdn.com/svg/23f3.svg"); }
+
+.twa-ice-cream {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f368.svg"); }
+
+.twa-icecream {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f366.svg"); }
+
+.twa-inbox-tray {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4e5.svg"); }
+
+.twa-incoming-envelope {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4e8.svg"); }
+
+.twa-iphone {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4f1.svg"); }
+
+.twa-jeans {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f456.svg"); }
+
+.twa-key {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f511.svg"); }
+
+.twa-kimono {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f458.svg"); }
+
+.twa-ledger {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4d2.svg"); }
+
+.twa-lemon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f34b.svg"); }
+
+.twa-lipstick {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f484.svg"); }
+
+.twa-lock {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f512.svg"); }
+
+.twa-lock-with-ink-pen {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f50f.svg"); }
+
+.twa-lollipop {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f36d.svg"); }
+
+.twa-loop {
+  background-image: url("https://twemoji.maxcdn.com/svg/27bf.svg"); }
+
+.twa-loudspeaker {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4e2.svg"); }
+
+.twa-low-brightness {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f505.svg"); }
+
+.twa-mag {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f50d.svg"); }
+
+.twa-mag-right {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f50e.svg"); }
+
+.twa-mahjong {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f004.svg"); }
+
+.twa-mailbox {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4eb.svg"); }
+
+.twa-mailbox-closed {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ea.svg"); }
+
+.twa-mailbox-with-mail {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ec.svg"); }
+
+.twa-mailbox-with-no-mail {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ed.svg"); }
+
+.twa-mans-shoe {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f45e.svg"); }
+
+.twa-meat-on-bone {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f356.svg"); }
+
+.twa-mega {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4e3.svg"); }
+
+.twa-melon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f348.svg"); }
+
+.twa-memo {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4dd.svg"); }
+
+.twa-microphone {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3a4.svg"); }
+
+.twa-microscope {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f52c.svg"); }
+
+.twa-minidisc {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4bd.svg"); }
+
+.twa-money-with-wings {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4b8.svg"); }
+
+.twa-moneybag {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4b0.svg"); }
+
+.twa-mountain-bicyclist {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6b5.svg"); }
+
+.twa-movie-camera {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3a5.svg"); }
+
+.twa-musical-keyboard {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3b9.svg"); }
+
+.twa-musical-score {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3bc.svg"); }
+
+.twa-mute {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f507.svg"); }
+
+.twa-name-badge {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4db.svg"); }
+
+.twa-necktie {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f454.svg"); }
+
+.twa-newspaper {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4f0.svg"); }
+
+.twa-no-bell {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f515.svg"); }
+
+.twa-notebook {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4d3.svg"); }
+
+.twa-notebook-with-decorative-cover {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4d4.svg"); }
+
+.twa-nut-and-bolt {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f529.svg"); }
+
+.twa-oden {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f362.svg"); }
+
+.twa-open-file-folder {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4c2.svg"); }
+
+.twa-orange-book {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4d9.svg"); }
+
+.twa-outbox-tray {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4e4.svg"); }
+
+.twa-page-facing-up {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4c4.svg"); }
+
+.twa-page-with-curl {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4c3.svg"); }
+
+.twa-pager {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4df.svg"); }
+
+.twa-paperclip {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ce.svg"); }
+
+.twa-peach {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f351.svg"); }
+
+.twa-pear {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f350.svg"); }
+
+.twa-pencil2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/270f.svg"); }
+
+.twa-phone {
+  background-image: url("https://twemoji.maxcdn.com/svg/260e.svg"); }
+
+.twa-pill {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f48a.svg"); }
+
+.twa-pineapple {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f34d.svg"); }
+
+.twa-pizza {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f355.svg"); }
+
+.twa-postal-horn {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ef.svg"); }
+
+.twa-postbox {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ee.svg"); }
+
+.twa-pouch {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f45d.svg"); }
+
+.twa-poultry-leg {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f357.svg"); }
+
+.twa-pound {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4b7.svg"); }
+
+.twa-purse {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f45b.svg"); }
+
+.twa-pushpin {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4cc.svg"); }
+
+.twa-radio {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4fb.svg"); }
+
+.twa-ramen {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f35c.svg"); }
+
+.twa-ribbon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f380.svg"); }
+
+.twa-rice {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f35a.svg"); }
+
+.twa-rice-ball {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f359.svg"); }
+
+.twa-rice-cracker {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f358.svg"); }
+
+.twa-ring {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f48d.svg"); }
+
+.twa-rugby-football {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3c9.svg"); }
+
+.twa-running-shirt-with-sash {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3bd.svg"); }
+
+.twa-sake {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f376.svg"); }
+
+.twa-sandal {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f461.svg"); }
+
+.twa-satellite {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4e1.svg"); }
+
+.twa-saxophone {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3b7.svg"); }
+
+.twa-scissors {
+  background-image: url("https://twemoji.maxcdn.com/svg/2702.svg"); }
+
+.twa-scroll {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4dc.svg"); }
+
+.twa-seat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ba.svg"); }
+
+.twa-shaved-ice {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f367.svg"); }
+
+.twa-shirt {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f455.svg"); }
+
+.twa-shower {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6bf.svg"); }
+
+.twa-ski {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3bf.svg"); }
+
+.twa-smoking {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6ac.svg"); }
+
+.twa-snowboarder {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3c2.svg"); }
+
+.twa-soccer {
+  background-image: url("https://twemoji.maxcdn.com/svg/26bd.svg"); }
+
+.twa-sound {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f509.svg"); }
+
+.twa-space-invader {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f47e.svg"); }
+
+.twa-spades {
+  background-image: url("https://twemoji.maxcdn.com/svg/2660.svg"); }
+
+.twa-spaghetti {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f35d.svg"); }
+
+.twa-speaker {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f50a.svg"); }
+
+.twa-stew {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f372.svg"); }
+
+.twa-straight-ruler {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4cf.svg"); }
+
+.twa-strawberry {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f353.svg"); }
+
+.twa-surfer {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3c4.svg"); }
+
+.twa-sushi {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f363.svg"); }
+
+.twa-sweet-potato {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f360.svg"); }
+
+.twa-swimmer {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3ca.svg"); }
+
+.twa-syringe {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f489.svg"); }
+
+.twa-tada {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f389.svg"); }
+
+.twa-tanabata-tree {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f38b.svg"); }
+
+.twa-tangerine {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f34a.svg"); }
+
+.twa-tea {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f375.svg"); }
+
+.twa-telephone-receiver {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4de.svg"); }
+
+.twa-telescope {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f52d.svg"); }
+
+.twa-tennis {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3be.svg"); }
+
+.twa-toilet {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6bd.svg"); }
+
+.twa-tomato {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f345.svg"); }
+
+.twa-tophat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3a9.svg"); }
+
+.twa-triangular-ruler {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4d0.svg"); }
+
+.twa-trophy {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3c6.svg"); }
+
+.twa-tropical-drink {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f379.svg"); }
+
+.twa-trumpet {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3ba.svg"); }
+
+.twa-tv {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4fa.svg"); }
+
+.twa-unlock {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f513.svg"); }
+
+.twa-vhs {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4fc.svg"); }
+
+.twa-video-camera {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4f9.svg"); }
+
+.twa-video-game {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3ae.svg"); }
+
+.twa-violin {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3bb.svg"); }
+
+.twa-watch {
+  background-image: url("https://twemoji.maxcdn.com/svg/231a.svg"); }
+
+.twa-watermelon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f349.svg"); }
+
+.twa-wine-glass {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f377.svg"); }
+
+.twa-womans-clothes {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f45a.svg"); }
+
+.twa-womans-hat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f452.svg"); }
+
+.twa-wrench {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f527.svg"); }
+
+.twa-yen {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4b4.svg"); }
+
+.twa-aerial-tramway {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6a1.svg"); }
+
+.twa-airplane {
+  background-image: url("https://twemoji.maxcdn.com/svg/2708.svg"); }
+
+.twa-ambulance {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f691.svg"); }
+
+.twa-anchor {
+  background-image: url("https://twemoji.maxcdn.com/svg/2693.svg"); }
+
+.twa-articulated-lorry {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f69b.svg"); }
+
+.twa-atm {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3e7.svg"); }
+
+.twa-bank {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3e6.svg"); }
+
+.twa-barber {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f488.svg"); }
+
+.twa-beginner {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f530.svg"); }
+
+.twa-bike {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6b2.svg"); }
+
+.twa-blue-car {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f699.svg"); }
+
+.twa-boat {
+  background-image: url("https://twemoji.maxcdn.com/svg/26f5.svg"); }
+
+.twa-bridge-at-night {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f309.svg"); }
+
+.twa-bullettrain-front {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f685.svg"); }
+
+.twa-bullettrain-side {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f684.svg"); }
+
+.twa-bus {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f68c.svg"); }
+
+.twa-busstop {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f68f.svg"); }
+
+.twa-car {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f697.svg"); }
+
+.twa-carousel-horse {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3a0.svg"); }
+
+.twa-checkered-flag {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3c1.svg"); }
+
+.twa-church {
+  background-image: url("https://twemoji.maxcdn.com/svg/26ea.svg"); }
+
+.twa-circus-tent {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3aa.svg"); }
+
+.twa-city-sunrise {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f307.svg"); }
+
+.twa-city-sunset {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f306.svg"); }
+
+.twa-construction {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6a7.svg"); }
+
+.twa-convenience-store {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3ea.svg"); }
+
+.twa-crossed-flags {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f38c.svg"); }
+
+.twa-department-store {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3ec.svg"); }
+
+.twa-european-castle {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3f0.svg"); }
+
+.twa-european-post-office {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3e4.svg"); }
+
+.twa-factory {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3ed.svg"); }
+
+.twa-ferris-wheel {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3a1.svg"); }
+
+.twa-fire-engine {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f692.svg"); }
+
+.twa-fountain {
+  background-image: url("https://twemoji.maxcdn.com/svg/26f2.svg"); }
+
+.twa-fuelpump {
+  background-image: url("https://twemoji.maxcdn.com/svg/26fd.svg"); }
+
+.twa-helicopter {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f681.svg"); }
+
+.twa-hospital {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3e5.svg"); }
+
+.twa-hotel {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3e8.svg"); }
+
+.twa-hotsprings {
+  background-image: url("https://twemoji.maxcdn.com/svg/2668.svg"); }
+
+.twa-house {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3e0.svg"); }
+
+.twa-house-with-garden {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3e1.svg"); }
+
+.twa-japan {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f5fe.svg"); }
+
+.twa-japanese-castle {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3ef.svg"); }
+
+.twa-light-rail {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f688.svg"); }
+
+.twa-love-hotel {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3e9.svg"); }
+
+.twa-minibus {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f690.svg"); }
+
+.twa-monorail {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f69d.svg"); }
+
+.twa-mount-fuji {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f5fb.svg"); }
+
+.twa-mountain-cableway {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6a0.svg"); }
+
+.twa-mountain-railway {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f69e.svg"); }
+
+.twa-moyai {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f5ff.svg"); }
+
+.twa-office {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3e2.svg"); }
+
+.twa-oncoming-automobile {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f698.svg"); }
+
+.twa-oncoming-bus {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f68d.svg"); }
+
+.twa-oncoming-police-car {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f694.svg"); }
+
+.twa-oncoming-taxi {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f696.svg"); }
+
+.twa-performing-arts {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3ad.svg"); }
+
+.twa-police-car {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f693.svg"); }
+
+.twa-post-office {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3e3.svg"); }
+
+.twa-railway-car {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f683.svg"); }
+
+.twa-rainbow {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f308.svg"); }
+
+.twa-rocket {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f680.svg"); }
+
+.twa-roller-coaster {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3a2.svg"); }
+
+.twa-rotating-light {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6a8.svg"); }
+
+.twa-round-pushpin {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4cd.svg"); }
+
+.twa-rowboat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6a3.svg"); }
+
+.twa-school {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3eb.svg"); }
+
+.twa-ship {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6a2.svg"); }
+
+.twa-slot-machine {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3b0.svg"); }
+
+.twa-speedboat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6a4.svg"); }
+
+.twa-stars {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f303.svg"); }
+
+.twa-station {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f689.svg"); }
+
+.twa-statue-of-liberty {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f5fd.svg"); }
+
+.twa-steam-locomotive {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f682.svg"); }
+
+.twa-sunrise {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f305.svg"); }
+
+.twa-sunrise-over-mountains {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f304.svg"); }
+
+.twa-suspension-railway {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f69f.svg"); }
+
+.twa-taxi {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f695.svg"); }
+
+.twa-tent {
+  background-image: url("https://twemoji.maxcdn.com/svg/26fa.svg"); }
+
+.twa-ticket {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3ab.svg"); }
+
+.twa-tokyo-tower {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f5fc.svg"); }
+
+.twa-tractor {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f69c.svg"); }
+
+.twa-traffic-light {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6a5.svg"); }
+
+.twa-train2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f686.svg"); }
+
+.twa-tram {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f68a.svg"); }
+
+.twa-triangular-flag-on-post {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6a9.svg"); }
+
+.twa-trolleybus {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f68e.svg"); }
+
+.twa-truck {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f69a.svg"); }
+
+.twa-vertical-traffic-light {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6a6.svg"); }
+
+.twa-warning {
+  background-image: url("https://twemoji.maxcdn.com/svg/26a0.svg"); }
+
+.twa-wedding {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f492.svg"); }
+
+.twa-jp {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f1ef-1f1f5.svg"); }
+
+.twa-kr {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f1f0-1f1f7.svg"); }
+
+.twa-cn {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f1e8-1f1f3.svg"); }
+
+.twa-us {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f1fa-1f1f8.svg"); }
+
+.twa-fr {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f1eb-1f1f7.svg"); }
+
+.twa-es {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f1ea-1f1f8.svg"); }
+
+.twa-it {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f1ee-1f1f9.svg"); }
+
+.twa-ru {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f1f7-1f1fa.svg"); }
+
+.twa-gb {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f1ec-1f1e7.svg"); }
+
+.twa-de {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f1e9-1f1ea.svg"); }
+
+.twa-100 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4af.svg"); }
+
+.twa-1234 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f522.svg"); }
+
+.twa-a {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f170.svg"); }
+
+.twa-ab {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f18e.svg"); }
+
+.twa-abc {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f524.svg"); }
+
+.twa-abcd {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f521.svg"); }
+
+.twa-accept {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f251.svg"); }
+
+.twa-aquarius {
+  background-image: url("https://twemoji.maxcdn.com/svg/2652.svg"); }
+
+.twa-aries {
+  background-image: url("https://twemoji.maxcdn.com/svg/2648.svg"); }
+
+.twa-arrow-backward {
+  background-image: url("https://twemoji.maxcdn.com/svg/25c0.svg"); }
+
+.twa-arrow-double-down {
+  background-image: url("https://twemoji.maxcdn.com/svg/23ec.svg"); }
+
+.twa-arrow-double-up {
+  background-image: url("https://twemoji.maxcdn.com/svg/23eb.svg"); }
+
+.twa-arrow-down {
+  background-image: url("https://twemoji.maxcdn.com/svg/2b07.svg"); }
+
+.twa-arrow-down-small {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f53d.svg"); }
+
+.twa-arrow-forward {
+  background-image: url("https://twemoji.maxcdn.com/svg/25b6.svg"); }
+
+.twa-arrow-heading-down {
+  background-image: url("https://twemoji.maxcdn.com/svg/2935.svg"); }
+
+.twa-arrow-heading-up {
+  background-image: url("https://twemoji.maxcdn.com/svg/2934.svg"); }
+
+.twa-arrow-left {
+  background-image: url("https://twemoji.maxcdn.com/svg/2b05.svg"); }
+
+.twa-arrow-lower-left {
+  background-image: url("https://twemoji.maxcdn.com/svg/2199.svg"); }
+
+.twa-arrow-lower-right {
+  background-image: url("https://twemoji.maxcdn.com/svg/2198.svg"); }
+
+.twa-arrow-right {
+  background-image: url("https://twemoji.maxcdn.com/svg/27a1.svg"); }
+
+.twa-arrow-right-hook {
+  background-image: url("https://twemoji.maxcdn.com/svg/21aa.svg"); }
+
+.twa-arrow-up {
+  background-image: url("https://twemoji.maxcdn.com/svg/2b06.svg"); }
+
+.twa-arrow-up-down {
+  background-image: url("https://twemoji.maxcdn.com/svg/2195.svg"); }
+
+.twa-arrow-up-small {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f53c.svg"); }
+
+.twa-arrow-upper-left {
+  background-image: url("https://twemoji.maxcdn.com/svg/2196.svg"); }
+
+.twa-arrow-upper-right {
+  background-image: url("https://twemoji.maxcdn.com/svg/2197.svg"); }
+
+.twa-arrows-clockwise {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f503.svg"); }
+
+.twa-arrows-counterclockwise {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f504.svg"); }
+
+.twa-b {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f171.svg"); }
+
+.twa-baby-symbol {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6bc.svg"); }
+
+.twa-baggage-claim {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6c4.svg"); }
+
+.twa-ballot-box-with-check {
+  background-image: url("https://twemoji.maxcdn.com/svg/2611.svg"); }
+
+.twa-bangbang {
+  background-image: url("https://twemoji.maxcdn.com/svg/203c.svg"); }
+
+.twa-black-circle {
+  background-image: url("https://twemoji.maxcdn.com/svg/26ab.svg"); }
+
+.twa-black-square-button {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f532.svg"); }
+
+.twa-cancer {
+  background-image: url("https://twemoji.maxcdn.com/svg/264b.svg"); }
+
+.twa-capital-abcd {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f520.svg"); }
+
+.twa-capricorn {
+  background-image: url("https://twemoji.maxcdn.com/svg/2651.svg"); }
+
+.twa-chart {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4b9.svg"); }
+
+.twa-children-crossing {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6b8.svg"); }
+
+.twa-cinema {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f3a6.svg"); }
+
+.twa-cl {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f191.svg"); }
+
+.twa-clock1 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f550.svg"); }
+
+.twa-clock10 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f559.svg"); }
+
+.twa-clock1030 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f565.svg"); }
+
+.twa-clock11 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f55a.svg"); }
+
+.twa-clock1130 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f566.svg"); }
+
+.twa-clock12 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f55b.svg"); }
+
+.twa-clock1230 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f567.svg"); }
+
+.twa-clock130 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f55c.svg"); }
+
+.twa-clock2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f551.svg"); }
+
+.twa-clock230 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f55d.svg"); }
+
+.twa-clock3 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f552.svg"); }
+
+.twa-clock330 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f55e.svg"); }
+
+.twa-clock4 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f553.svg"); }
+
+.twa-clock430 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f55f.svg"); }
+
+.twa-clock5 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f554.svg"); }
+
+.twa-clock530 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f560.svg"); }
+
+.twa-clock6 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f555.svg"); }
+
+.twa-clock630 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f561.svg"); }
+
+.twa-clock7 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f556.svg"); }
+
+.twa-clock730 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f562.svg"); }
+
+.twa-clock8 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f557.svg"); }
+
+.twa-clock830 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f563.svg"); }
+
+.twa-clock9 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f558.svg"); }
+
+.twa-clock930 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f564.svg"); }
+
+.twa-congratulations {
+  background-image: url("https://twemoji.maxcdn.com/svg/3297.svg"); }
+
+.twa-cool {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f192.svg"); }
+
+.twa-copyright {
+  background-image: url("https://twemoji.maxcdn.com/svg/a9.svg"); }
+
+.twa-curly-loop {
+  background-image: url("https://twemoji.maxcdn.com/svg/27b0.svg"); }
+
+.twa-currency-exchange {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4b1.svg"); }
+
+.twa-customs {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6c3.svg"); }
+
+.twa-diamond-shape-with-a-dot-inside {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4a0.svg"); }
+
+.twa-do-not-litter {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6af.svg"); }
+
+.twa-eight {
+  background-image: url("https://twemoji.maxcdn.com/svg/38-20e3.svg"); }
+
+.twa-eight-pointed-black-star {
+  background-image: url("https://twemoji.maxcdn.com/svg/2734.svg"); }
+
+.twa-eight-spoked-asterisk {
+  background-image: url("https://twemoji.maxcdn.com/svg/2733.svg"); }
+
+.twa-end {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f51a.svg"); }
+
+.twa-fast-forward {
+  background-image: url("https://twemoji.maxcdn.com/svg/23e9.svg"); }
+
+.twa-five {
+  background-image: url("https://twemoji.maxcdn.com/svg/35-20e3.svg"); }
+
+.twa-four {
+  background-image: url("https://twemoji.maxcdn.com/svg/34-20e3.svg"); }
+
+.twa-free {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f193.svg"); }
+
+.twa-gemini {
+  background-image: url("https://twemoji.maxcdn.com/svg/264a.svg"); }
+
+.twa-hash {
+  background-image: url("https://twemoji.maxcdn.com/svg/23-20e3.svg"); }
+
+.twa-heart-decoration {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f49f.svg"); }
+
+.twa-heavy-check-mark {
+  background-image: url("https://twemoji.maxcdn.com/svg/2714.svg"); }
+
+.twa-heavy-division-sign {
+  background-image: url("https://twemoji.maxcdn.com/svg/2797.svg"); }
+
+.twa-heavy-dollar-sign {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4b2.svg"); }
+
+.twa-heavy-minus-sign {
+  background-image: url("https://twemoji.maxcdn.com/svg/2796.svg"); }
+
+.twa-heavy-multiplication-x {
+  background-image: url("https://twemoji.maxcdn.com/svg/2716.svg"); }
+
+.twa-heavy-plus-sign {
+  background-image: url("https://twemoji.maxcdn.com/svg/2795.svg"); }
+
+.twa-id {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f194.svg"); }
+
+.twa-ideograph-advantage {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f250.svg"); }
+
+.twa-information-source {
+  background-image: url("https://twemoji.maxcdn.com/svg/2139.svg"); }
+
+.twa-interrobang {
+  background-image: url("https://twemoji.maxcdn.com/svg/2049.svg"); }
+
+.twa-keycap-ten {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f51f.svg"); }
+
+.twa-koko {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f201.svg"); }
+
+.twa-large-blue-circle {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f535.svg"); }
+
+.twa-large-blue-diamond {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f537.svg"); }
+
+.twa-large-orange-diamond {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f536.svg"); }
+
+.twa-left-luggage {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6c5.svg"); }
+
+.twa-left-right-arrow {
+  background-image: url("https://twemoji.maxcdn.com/svg/2194.svg"); }
+
+.twa-leftwards-arrow-with-hook {
+  background-image: url("https://twemoji.maxcdn.com/svg/21a9.svg"); }
+
+.twa-leo {
+  background-image: url("https://twemoji.maxcdn.com/svg/264c.svg"); }
+
+.twa-libra {
+  background-image: url("https://twemoji.maxcdn.com/svg/264e.svg"); }
+
+.twa-link {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f517.svg"); }
+
+.twa-m {
+  background-image: url("https://twemoji.maxcdn.com/svg/24c2.svg"); }
+
+.twa-mens {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6b9.svg"); }
+
+.twa-metro {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f687.svg"); }
+
+.twa-mobile-phone-off {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4f4.svg"); }
+
+.twa-negative-squared-cross-mark {
+  background-image: url("https://twemoji.maxcdn.com/svg/274e.svg"); }
+
+.twa-new {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f195.svg"); }
+
+.twa-ng {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f196.svg"); }
+
+.twa-nine {
+  background-image: url("https://twemoji.maxcdn.com/svg/39-20e3.svg"); }
+
+.twa-no-bicycles {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6b3.svg"); }
+
+.twa-no-entry {
+  background-image: url("https://twemoji.maxcdn.com/svg/26d4.svg"); }
+
+.twa-no-entry-sign {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6ab.svg"); }
+
+.twa-no-mobile-phones {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4f5.svg"); }
+
+.twa-no-pedestrians {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6b7.svg"); }
+
+.twa-no-smoking {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6ad.svg"); }
+
+.twa-non-potable-water {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6b1.svg"); }
+
+.twa-o {
+  background-image: url("https://twemoji.maxcdn.com/svg/2b55.svg"); }
+
+.twa-o2 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f17e.svg"); }
+
+.twa-ok {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f197.svg"); }
+
+.twa-on {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f51b.svg"); }
+
+.twa-one {
+  background-image: url("https://twemoji.maxcdn.com/svg/31-20e3.svg"); }
+
+.twa-ophiuchus {
+  background-image: url("https://twemoji.maxcdn.com/svg/26ce.svg"); }
+
+.twa-parking {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f17f.svg"); }
+
+.twa-part-alternation-mark {
+  background-image: url("https://twemoji.maxcdn.com/svg/303d.svg"); }
+
+.twa-passport-control {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6c2.svg"); }
+
+.twa-pisces {
+  background-image: url("https://twemoji.maxcdn.com/svg/2653.svg"); }
+
+.twa-potable-water {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6b0.svg"); }
+
+.twa-put-litter-in-its-place {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6ae.svg"); }
+
+.twa-radio-button {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f518.svg"); }
+
+.twa-recycle {
+  background-image: url("https://twemoji.maxcdn.com/svg/267b.svg"); }
+
+.twa-red-circle {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f534.svg"); }
+
+.twa-registered {
+  background-image: url("https://twemoji.maxcdn.com/svg/ae.svg"); }
+
+.twa-repeat {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f501.svg"); }
+
+.twa-repeat-one {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f502.svg"); }
+
+.twa-restroom {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6bb.svg"); }
+
+.twa-rewind {
+  background-image: url("https://twemoji.maxcdn.com/svg/23ea.svg"); }
+
+.twa-sa {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f202.svg"); }
+
+.twa-sagittarius {
+  background-image: url("https://twemoji.maxcdn.com/svg/2650.svg"); }
+
+.twa-scorpius {
+  background-image: url("https://twemoji.maxcdn.com/svg/264f.svg"); }
+
+.twa-secret {
+  background-image: url("https://twemoji.maxcdn.com/svg/3299.svg"); }
+
+.twa-seven {
+  background-image: url("https://twemoji.maxcdn.com/svg/37-20e3.svg"); }
+
+.twa-signal-strength {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4f6.svg"); }
+
+.twa-six {
+  background-image: url("https://twemoji.maxcdn.com/svg/36-20e3.svg"); }
+
+.twa-six-pointed-star {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f52f.svg"); }
+
+.twa-small-blue-diamond {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f539.svg"); }
+
+.twa-small-orange-diamond {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f538.svg"); }
+
+.twa-small-red-triangle {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f53a.svg"); }
+
+.twa-small-red-triangle-down {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f53b.svg"); }
+
+.twa-soon {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f51c.svg"); }
+
+.twa-sos {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f198.svg"); }
+
+.twa-symbols {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f523.svg"); }
+
+.twa-taurus {
+  background-image: url("https://twemoji.maxcdn.com/svg/2649.svg"); }
+
+.twa-three {
+  background-image: url("https://twemoji.maxcdn.com/svg/33-20e3.svg"); }
+
+.twa-tm {
+  background-image: url("https://twemoji.maxcdn.com/svg/2122.svg"); }
+
+.twa-top {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f51d.svg"); }
+
+.twa-trident {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f531.svg"); }
+
+.twa-twisted-rightwards-arrows {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f500.svg"); }
+
+.twa-two {
+  background-image: url("https://twemoji.maxcdn.com/svg/32-20e3.svg"); }
+
+.twa-u5272 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f239.svg"); }
+
+.twa-u5408 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f234.svg"); }
+
+.twa-u55b6 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f23a.svg"); }
+
+.twa-u6307 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f22f.svg"); }
+
+.twa-u6708 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f237.svg"); }
+
+.twa-u6709 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f236.svg"); }
+
+.twa-u6e80 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f235.svg"); }
+
+.twa-u7121 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f21a.svg"); }
+
+.twa-u7533 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f238.svg"); }
+
+.twa-u7981 {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f232.svg"); }
+
+.twa-u7a7a {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f233.svg"); }
+
+.twa-underage {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f51e.svg"); }
+
+.twa-up {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f199.svg"); }
+
+.twa-vibration-mode {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4f3.svg"); }
+
+.twa-virgo {
+  background-image: url("https://twemoji.maxcdn.com/svg/264d.svg"); }
+
+.twa-vs {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f19a.svg"); }
+
+.twa-wavy-dash {
+  background-image: url("https://twemoji.maxcdn.com/svg/3030.svg"); }
+
+.twa-wc {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6be.svg"); }
+
+.twa-wheelchair {
+  background-image: url("https://twemoji.maxcdn.com/svg/267f.svg"); }
+
+.twa-white-check-mark {
+  background-image: url("https://twemoji.maxcdn.com/svg/2705.svg"); }
+
+.twa-white-circle {
+  background-image: url("https://twemoji.maxcdn.com/svg/26aa.svg"); }
+
+.twa-white-flower {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f4ae.svg"); }
+
+.twa-white-square-button {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f533.svg"); }
+
+.twa-womens {
+  background-image: url("https://twemoji.maxcdn.com/svg/1f6ba.svg"); }
+
+.twa-x {
+  background-image: url("https://twemoji.maxcdn.com/svg/274c.svg"); }
+
+.twa-zero {
+  background-image: url("https://twemoji.maxcdn.com/svg/30-20e3.svg"); }
+
+/* The MIT License */
+.dropzone,
+.dropzone *,
+.dropzone-previews,
+.dropzone-previews * {
+  box-sizing: border-box; }
+
+.dropzone {
+  margin: 1.6em 0;
+  position: relative;
+  overflow: hidden;
+  padding: 55px 60px;
+  border: #edece4 3px dashed;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #aaa9a2;
+  background: #F9F8F5; }
+
+.dropzone.dz-clickable {
+  cursor: pointer; }
+
+.dropzone.dz-clickable .dz-message,
+.dropzone.dz-clickable .dz-message span {
+  cursor: pointer; }
+
+.dropzone.dz-clickable * {
+  cursor: default; }
+
+.dropzone .dz-message {
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+  filter: none; }
+
+.dropzone.dz-drag-hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.04); }
+
+.dropzone.dz-started .dz-message {
+  display: none; }
+
+.dropzone .dz-preview,
+.dropzone-previews .dz-preview {
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+  display: inline-block;
+  margin: 17px;
+  vertical-align: top;
+  border: 1px solid #acacac;
+  padding: 6px 6px 6px 6px; }
+
+.dropzone .dz-preview.dz-file-preview [data-dz-thumbnail],
+.dropzone-previews .dz-preview.dz-file-preview [data-dz-thumbnail] {
+  display: none; }
+
+.dropzone .dz-preview .dz-details,
+.dropzone-previews .dz-preview .dz-details {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background: #ebebeb;
+  padding: 5px;
+  margin-bottom: 22px; }
+
+.dropzone .dz-preview .dz-details .dz-filename,
+.dropzone-previews .dz-preview .dz-details .dz-filename {
+  overflow: hidden;
+  height: 100%; }
+
+.dropzone .dz-preview .dz-details img,
+.dropzone-previews .dz-preview .dz-details img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px; }
+
+.dropzone .dz-preview .dz-details .dz-size,
+.dropzone-previews .dz-preview .dz-details .dz-size {
+  position: absolute;
+  bottom: -28px;
+  left: 3px;
+  height: 28px;
+  line-height: 28px; }
+
+.dropzone .dz-preview.dz-error .dz-error-mark,
+.dropzone-previews .dz-preview.dz-error .dz-error-mark {
+  display: block; }
+
+.dropzone .dz-preview.dz-success .dz-success-mark,
+.dropzone-previews .dz-preview.dz-success .dz-success-mark {
+  display: block; }
+
+.dropzone .dz-preview:hover .dz-details img,
+.dropzone-previews .dz-preview:hover .dz-details img {
+  display: none; }
+
+.dropzone .dz-preview .dz-success-mark,
+.dropzone-previews .dz-preview .dz-success-mark,
+.dropzone .dz-preview .dz-error-mark,
+.dropzone-previews .dz-preview .dz-error-mark {
+  display: none;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
+  right: -10px;
+  top: -10px; }
+
+.dropzone .dz-preview .dz-success-mark,
+.dropzone-previews .dz-preview .dz-success-mark {
+  color: #8cc657; }
+
+.dropzone .dz-preview .dz-error-mark,
+.dropzone-previews .dz-preview .dz-error-mark {
+  color: #ee162d; }
+
+.dropzone .dz-preview .dz-progress,
+.dropzone-previews .dz-preview .dz-progress {
+  position: absolute;
+  top: 100px;
+  left: 6px;
+  right: 6px;
+  height: 6px;
+  background: #d7d7d7;
+  display: none; }
+
+.dropzone .dz-preview .dz-progress .dz-upload,
+.dropzone-previews .dz-preview .dz-progress .dz-upload {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background-color: #8cc657; }
+
+.dropzone .dz-preview.dz-processing .dz-progress,
+.dropzone-previews .dz-preview.dz-processing .dz-progress {
+  display: block; }
+
+.dropzone .dz-preview .dz-error-message,
+.dropzone-previews .dz-preview .dz-error-message {
+  display: none;
+  position: absolute;
+  top: -5px;
+  left: -20px;
+  background: rgba(245, 245, 245, 0.8);
+  padding: 8px 10px;
+  color: #800;
+  min-width: 140px;
+  max-width: 500px;
+  z-index: 500; }
+
+.dropzone .dz-preview:hover.dz-error .dz-error-message,
+.dropzone-previews .dz-preview:hover.dz-error .dz-error-message {
+  display: block; }
+
+.dropzone {
+  min-height: 160px; }
+
+.dropzone .dz-default.dz-message {
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+  filter: none;
+  transition: opacity 0.3s ease-in-out;
+  background-image: url("../images/spritemap.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  width: 428px;
+  height: 123px;
+  margin-left: -214px;
+  margin-top: -61.5px;
+  top: 50%;
+  left: 50%; }
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.4375), (min-resolution: 138dpi), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .dropzone .dz-default.dz-message {
+    background-image: url("../images/spritemap@2x.png");
+    background-size: 428px 406px; } }
+
+.dropzone .dz-default.dz-message span {
+  display: none; }
+
+.dropzone.dz-square .dz-default.dz-message {
+  background-position: 0 -123px;
+  width: 268px;
+  margin-left: -134px;
+  height: 174px;
+  margin-top: -87px; }
+
+.dropzone.dz-drag-hover .dz-message {
+  opacity: 0.15;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
+  filter: alpha(opacity=15); }
+
+.dropzone.dz-started .dz-message {
+  display: block;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0); }
+
+.dropzone .dz-preview,
+.dropzone-previews .dz-preview {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.16);
+  font-size: 14px; }
+
+.dropzone .dz-preview.dz-image-preview:hover .dz-details img,
+.dropzone-previews .dz-preview.dz-image-preview:hover .dz-details img {
+  display: block;
+  opacity: 0.1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=10); }
+
+.dropzone .dz-preview.dz-success .dz-success-mark,
+.dropzone-previews .dz-preview.dz-success .dz-success-mark {
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+  filter: none; }
+
+.dropzone .dz-preview.dz-error .dz-error-mark,
+.dropzone-previews .dz-preview.dz-error .dz-error-mark {
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+  filter: none; }
+
+.dropzone .dz-preview.dz-error .dz-progress .dz-upload,
+.dropzone-previews .dz-preview.dz-error .dz-progress .dz-upload {
+  background: #ee1e2d; }
+
+.dropzone .dz-preview .dz-error-mark,
+.dropzone-previews .dz-preview .dz-error-mark,
+.dropzone .dz-preview .dz-success-mark,
+.dropzone-previews .dz-preview .dz-success-mark {
+  display: block;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  transition: opacity 0.4s ease-in-out;
+  background-image: url("../images/spritemap.png");
+  background-repeat: no-repeat; }
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.4375), (min-resolution: 138dpi), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .dropzone .dz-preview .dz-error-mark,
+  .dropzone-previews .dz-preview .dz-error-mark,
+  .dropzone .dz-preview .dz-success-mark,
+  .dropzone-previews .dz-preview .dz-success-mark {
+    background-image: url("../images/spritemap@2x.png");
+    background-size: 428px 406px; } }
+
+.dropzone .dz-preview .dz-error-mark span,
+.dropzone-previews .dz-preview .dz-error-mark span,
+.dropzone .dz-preview .dz-success-mark span,
+.dropzone-previews .dz-preview .dz-success-mark span {
+  display: none; }
+
+.dropzone .dz-preview .dz-error-mark,
+.dropzone-previews .dz-preview .dz-error-mark {
+  background-position: -268px -123px; }
+
+.dropzone .dz-preview .dz-success-mark,
+.dropzone-previews .dz-preview .dz-success-mark {
+  background-position: -268px -163px; }
+
+.dropzone .dz-preview .dz-progress .dz-upload,
+.dropzone-previews .dz-preview .dz-progress .dz-upload {
+  -webkit-animation: loading 0.4s linear infinite;
+  animation: loading 0.4s linear infinite;
+  transition: width 0.3s ease-in-out;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-image: url("../images/spritemap.png");
+  background-repeat: repeat-x;
+  background-position: 0px -400px; }
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.4375), (min-resolution: 138dpi), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .dropzone .dz-preview .dz-progress .dz-upload,
+  .dropzone-previews .dz-preview .dz-progress .dz-upload {
+    background-image: url("../images/spritemap@2x.png");
+    background-size: 428px 406px; } }
+
+.dropzone .dz-preview.dz-success .dz-progress,
+.dropzone-previews .dz-preview.dz-success .dz-progress {
+  display: block;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  transition: opacity 0.4s ease-in-out; }
+
+.dropzone .dz-preview .dz-error-message,
+.dropzone-previews .dz-preview .dz-error-message {
+  display: block;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  transition: opacity 0.3s ease-in-out; }
+
+.dropzone .dz-preview:hover.dz-error .dz-error-message,
+.dropzone-previews .dz-preview:hover.dz-error .dz-error-message {
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+  filter: none; }
+
+.dropzone a.dz-remove,
+.dropzone-previews a.dz-remove {
+  background-image: linear-gradient(to bottom, #fafafa, #eee);
+  border-radius: 2px;
+  border: 1px solid #eee;
+  text-decoration: none;
+  display: block;
+  padding: 4px 5px;
+  text-align: center;
+  color: #aaa;
+  margin-top: 26px; }
+
+.dropzone a.dz-remove:hover,
+.dropzone-previews a.dz-remove:hover {
+  color: #666; }
+
+@-webkit-keyframes loading {
+  0% {
+    background-position: 0 -400px; }
+  100% {
+    background-position: -7px -400px; } }
+
+@keyframes loading {
+  0% {
+    background-position: 0 -400px; }
+  100% {
+    background-position: -7px -400px; } }
+
+.rendered-markdown img {
+  max-width: 100%; }
+
+code, tt {
+  display: block;
+  overflow-x: auto;
+  background: #272822;
+  color: #ddd;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.85em;
+  padding: 1rem;
+  white-space: pre-wrap; }
+
+/*Code mirror styles started*/
+.CodeMirror-scroll {
+  overflow: auto; }
+
+.CodeMirror-lines {
+  padding: 4px 0; }
+
+.CodeMirror pre {
+  padding: 0 4px; }
+
+.CodeMirror-scrollbar-filler {
+  background-color: white; }
+
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7; }
+
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid black;
+  z-index: 3; }
+
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 1px solid silver; }
+
+.cm-tab {
+  display: inline-block; }
+
+.cm-s-default .cm-keyword {
+  color: #708; }
+
+.cm-s-default .cm-atom {
+  color: #219; }
+
+.cm-s-default .cm-number {
+  color: #164; }
+
+.cm-s-default .cm-def {
+  color: #00f; }
+
+.cm-s-default .cm-variable {
+  color: black; }
+
+.cm-s-default .cm-variable-2 {
+  color: #05a; }
+
+.cm-s-default .cm-variable-3 {
+  color: #085; }
+
+.cm-s-default .cm-property {
+  color: black; }
+
+.cm-s-default .cm-operator {
+  color: black; }
+
+.cm-s-default .cm-comment {
+  color: #a50; }
+
+.cm-s-default .cm-string {
+  color: #a11; }
+
+.cm-s-default .cm-string-2 {
+  color: #f50; }
+
+.cm-s-default .cm-meta {
+  color: #555; }
+
+.cm-s-default .cm-error {
+  color: #f00; }
+
+.cm-s-default .cm-qualifier {
+  color: #555; }
+
+.cm-s-default .cm-builtin {
+  color: #30a; }
+
+.cm-s-default .cm-bracket {
+  color: #997; }
+
+.cm-s-default .cm-tag {
+  color: #170; }
+
+.cm-s-default .cm-attribute {
+  color: #00c; }
+
+.cm-s-default .cm-header {
+  color: blue; }
+
+.cm-s-default .cm-quote {
+  color: #090; }
+
+.cm-s-default .cm-hr {
+  color: #999; }
+
+.cm-s-default .cm-link {
+  color: #00c; }
+
+.cm-negative {
+  color: #d44; }
+
+.cm-positive {
+  color: #292; }
+
+.cm-header, .cm-strong {
+  font-weight: bold; }
+
+.cm-em {
+  font-style: italic; }
+
+.cm-link {
+  text-decoration: underline; }
+
+.cm-invalidchar {
+  color: #f00; }
+
+.CodeMirror {
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  color: black; }
+
+.CodeMirror-scroll {
+  margin-bottom: -30px;
+  margin-right: -30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  height: 100%;
+  outline: none;
+  position: relative; }
+
+.CodeMirror-sizer {
+  position: relative; }
+
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler {
+  position: absolute;
+  z-index: 6;
+  display: none; }
+
+.CodeMirror-vscrollbar {
+  right: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+.CodeMirror-hscrollbar {
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll; }
+
+.CodeMirror-scrollbar-filler {
+  right: 0;
+  bottom: 0;
+  z-index: 6; }
+
+.CodeMirror-gutters {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding-bottom: 30px;
+  z-index: 3; }
+
+.CodeMirror-lines {
+  cursor: text; }
+
+.CodeMirror pre {
+  border-radius: 0;
+  border-width: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  position: relative;
+  overflow: visible; }
+
+.CodeMirror-wrap pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal; }
+
+.CodeMirror-wrap .CodeMirror-scroll {
+  overflow-x: hidden; }
+
+.CodeMirror-measure {
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden; }
+
+.CodeMirror-measure pre {
+  position: static; }
+
+.CodeMirror div.CodeMirror-cursor {
+  position: absolute;
+  visibility: hidden;
+  border-right: none;
+  width: 0; }
+
+.CodeMirror-focused div.CodeMirror-cursor {
+  visibility: visible; }
+
+.CodeMirror-selected {
+  background: #d9d9d9; }
+
+.CodeMirror-focused .CodeMirror-selected {
+  background: #d7d4f0; }
+
+.CodeMirror span {
+  *vertical-align: text-bottom; }
+
+@media print {
+  .CodeMirror div.CodeMirror-cursor {
+    visibility: hidden; } }
+
+.entry-markdown-content .CodeMirror {
+  /*font-family: Inconsolata,monospace;*/
+  font-family: Consolas, Monaco, monospace;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  color: #3c4043; }
+
+.entry-markdown-content .CodeMirror .CodeMirror-focused, .entry-markdown-content .CodeMirror .CodeMirror-selected {
+  color: #242628;
+  background: #b3d5f3;
+  text-shadow: none; }
+
+.entry-markdown-content .CodeMirror ::-moz-selection {
+  color: #242628;
+  background: #b3d5f3;
+  text-shadow: none; }
+
+.entry-markdown-content .CodeMirror ::selection {
+  color: #242628;
+  background: #b3d5f3;
+  text-shadow: none; }
+
+.entry-markdown-content .CodeMirror-lines {
+  padding: 55px 0 25px 0; }
+
+.entry-preview-content {
+  font-size: 1.2em;
+  line-height: 1.4em; }
+
+.entry-markdown-content .cm-header {
+  color: #000;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  font-weight: bold; }
+
+.entry-markdown-content .cm-variable-2, .entry-markdown-content .cm-variable-3, .entry-markdown-content .cm-keyword {
+  color: #3c4043; }
+
+.entry-markdown-content .cm-string, .entry-markdown-content .cm-strong, .entry-markdown-content .cm-link, .entry-markdown-content .cm-comment, .entry-markdown-content .cm-quote, .entry-markdown-content .cm-number, .entry-markdown-content .cm-atom, .entry-markdown-content .cm-tag {
+  color: #000;
+  font-weight: bold; }
+
+/*Floating header style*/
+.floatingheader {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 40px;
+  padding: 0;
+  text-transform: uppercase;
+  color: #aaa9a2;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, #fff 0%, #fff 25%, rgba(255, 255, 255, 0.9) 100%); }
+
+.floatingheader button, .floatingheader .button {
+  display: inline-block;
+  font-size: 10px;
+  min-height: 20px;
+  height: 20px;
+  padding: 3px 4px;
+  vertical-align: top; }
+
+.floatingheader button.button-back, .floatingheader .button.button-back {
+  position: relative;
+  top: -2px;
+  left: 3px;
+  display: none;
+  padding: 0 6px 0 3px; }
+
+.floatingheader button.button-back:active, .floatingheader .button.button-back:active {
+  box-shadow: none; }
+
+.floatingheader button.button-back:before, .floatingheader .button.button-back:before {
+  left: -8px;
+  border-width: 10px 8px 10px 0; }

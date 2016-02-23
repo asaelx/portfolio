@@ -1,0 +1,7 @@
+include ../mixins/blade
++php("$tabs = ['published' => 'Publicados', 'unpublished' => 'Por publicar'];")
+.tools
+    include tabs
+
+include published
+include unpublished

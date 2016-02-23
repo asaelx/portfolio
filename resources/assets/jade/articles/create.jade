@@ -1,0 +1,12 @@
+extend ../layout/admin
+
+block title
+    title Nuevo Artículo
+    
+block content
+    include ../partials/errors
+    .content
+        | {!! Form::model($article = new \App\Article, ['url' => url('admin/articles'), 'class' => 'form', 'files' => true]) !!}
+        include ../mixins/blade
+        +include("partials.form", "['submitButtonText' => 'Publicar']")
+        | {!! Form::close() !!}

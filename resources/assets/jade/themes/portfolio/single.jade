@@ -1,0 +1,25 @@
+extends partials/base
+
+block metas
+    meta(name="description", content="Portafolio de Asael Jaimes")
+
+block title
+    title Shot
+    
+block topbar
+    include partials/topbar
+
+block profile
+    include partials/profile
+    
+block single
+    include partials/shot
+
+block modals
+    include partials/modals
+
+block footer
+    include partials/footer
+    
+block scripts
+    script(src="{{ asset('js/themes/portfolio/magic.js') }}")

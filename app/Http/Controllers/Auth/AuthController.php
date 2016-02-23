@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use App\Setting;
 
 class AuthController extends Controller
 {
@@ -23,12 +24,7 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    /**
-     * Where to redirect users after login / registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/';
+    protected $redirectPath = 'admin/articles';
 
     /**
      * Create a new authentication controller instance.
@@ -37,7 +33,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'logout']);
+        $this->middleware('guest', ['except' => 'getLogout']);
     }
 
     /**
@@ -49,9 +45,11 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
+            'name'           => 'required|max:255',
+            'email'          => 'required|email|max:255|unique:users',
+            'password'       => 'required|confirmed|min:6',
+            'setting.title'       => 'required',
+            'setting.description' => 'required'
         ]);
     }
 
@@ -63,10 +61,32 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
+        $user = User::create([
+            'name'     => $data['name'],
+            'email'    => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        $setting = Setting::create([
+            'title'       => $data['setting']['title'],
+            'description' => $data['setting']['description']
+        ]);
+
+        $setting->users()->sync([$user->id]);
+
+        return $user;
+    }
+
+    /**
+     * Get Registration form to create a new user
+     * Only if there are not settings
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getRegister() {
+        $setting = Setting::latest()->first();
+        if(is_null($setting))
+            return view('auth.register');
+        return redirect('/');
     }
 }

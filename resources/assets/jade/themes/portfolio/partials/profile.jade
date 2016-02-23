@@ -1,0 +1,9 @@
+.profile.col-12
+    .photo
+        img.img(src!="{{ url($admin->photo()->url) }}", width="100", height="100", alt!="{{ $admin->name }}")
+    .name
+        a.link(href="{{ url('/') }}", title!="{{ $admin->name }}") {{ $admin->name }}
+    .bio.col-12 {!! Markdown::convertToHtml($admin->bio) !!}
+    .row
+        button.btn.green.trigger-modal(data-target="contact") Contact me
+        button.btn.green.trigger-modal(data-target="about") About me

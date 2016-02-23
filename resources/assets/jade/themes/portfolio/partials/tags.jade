@@ -1,0 +1,7 @@
+include blade
+nav.tags.col-12
+    ul.list
+        +foreach('$tags as $tag')
+            +if('$tag->navigation')
+                li.item
+                    a.link(href!="{{ url('tagged', $tag->slug) }}") {{ $tag->name }}

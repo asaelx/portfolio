@@ -27,6 +27,24 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot($router);
+
+        // $router->model('articles', 'App\Article');
+
+        $router->bind('articles', function($slug)
+        {
+            return \App\Article::published()->whereSlug($slug)->firstOrFail();
+        });
+
+        $router->bind('tags', function($slug)
+        {
+                return \App\Tag::whereSlug($slug)->firstOrFail();
+        });
+
+        $router->bind('users', function($slug)
+        {
+                return \App\User::whereSlug($slug)->firstOrFail();
+        });
+
     }
 
     /**

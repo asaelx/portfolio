@@ -1,0 +1,23 @@
+.btn
+    display: inline-block
+    padding: 0.4em 0.8em
+    color: white
+    border: 0
+    border-radius: em(3px)
+    +font-size(15px)
+    position: relative
+    &:hover
+        cursor: pointer
+        transition: all 0.3s ease
+    &.blue
+        background: $blue
+        &:hover
+            background: lighten($blue, 10)
+        &:active
+            background: darken($blue, 15)
+    &.green
+        background: $green
+        &:hover
+            background: lighten($green, 10)
+        &:active
+            background: darken($green, 15)

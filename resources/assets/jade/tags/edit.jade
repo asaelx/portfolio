@@ -1,0 +1,20 @@
+extend ../layout/admin
+
+block title
+    title Actualizar Etiqueta - {{ $tag->name }}
+    
+block content
+    .content
+        include ../partials/errors
+        h1.title Editar etiqueta {{ $tag->name }}
+        
+        | {!! Form::model($tag, ['url' => url('admin/tags', $tag->slug), 'method' => 'PATCH', 'class' => 'form settings-form']) !!}
+        .group
+            | {!! Form::label('name', 'Nombre', ['class' => 'label']) !!}
+            | {!! Form::text('name', null, ['class' => 'input']) !!}
+        .group
+            | {!! Form::label('navigation', 'Mostrar en navegación', ['class' => 'label']) !!}
+            | {!! Form::checkbox('navigation', 1, null, ['class' => 'onoffswitch']) !!}
+        .group
+            | {!! Form::submit('Actualizar', ['class' => 'btn blue submit-right']) !!}
+        | {!! Form::close() !!}

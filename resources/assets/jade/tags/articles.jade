@@ -1,0 +1,10 @@
+extend ../layout/admin
+
+block title
+    title Artículos
+    
+block content
+    .content
+        h1.title Artículos archivados en <a href="{{ url('articles/tagged', $tag->slug) }}" class="link">{{ $tag->name }}</a>
+        include ../partials/list
+            

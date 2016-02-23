@@ -1,0 +1,7 @@
+mixin icon(title, parent)
+    if parent
+        svg(role="img", class!="{{ #{parent}->slug }}-icon")
+            use(xlink:href!="#{{ #{parent}->slug }}-icon")
+    else
+        svg(role="img", class=""+title+"-icon")
+            use(xlink:href="#"+title+"-icon")

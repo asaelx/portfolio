@@ -1,0 +1,24 @@
+#networks(class!="tabbed {{ (!is_null($current) && $current == 'networks') ? 'active' : '' }}")
+    | {!! Form::model($user, ['url' => url('admin/networks', $user->slug), 'class' => 'form settings-form', 'method' => 'PATCH','files' => true]) !!}
+    .group
+        //- | {!! Form::label('twitter', 'URL de Twitter', ['class' => 'label']) !!}
+        //- | {!! Form::text('twitter', null, ['class' => 'input']) !!}
+        a.btn.blue(href="{{ url('admin/twitter/login') }}")
+            span.typcn.typcn-social-twitter
+            include ../../mixins/blade
+            +if("$user->twitter != ''")
+                |  Conectar otra vez con twitter
+                +else
+                    |  Conectar con twitter
+    .group
+        | {!! Form::label('facebook', 'Usuario de Facebook', ['class' => 'label']) !!}
+        | {!! Form::text('facebook', null, ['class' => 'input']) !!}
+    .group
+        | {!! Form::label('instagram', 'Usuario de Instagram', ['class' => 'label']) !!}
+        | {!! Form::text('instagram', null, ['class' => 'input']) !!}
+    .group
+        | {!! Form::label('youtube', 'URL de Youtube', ['class' => 'label']) !!}
+        | {!! Form::text('youtube', null, ['class' => 'input']) !!}
+    .group
+        | {!! Form::submit('Guardar', ['class' => 'btn blue submit-right']) !!}
+    | {!! Form::close() !!}

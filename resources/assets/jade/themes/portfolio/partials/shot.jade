@@ -1,0 +1,28 @@
+include mixins
+include blade
+.shot.col-12
+    .top.row
+        .back.col-6
+            a.link(href="{{ url('/') }}")
+                +icon('left')
+                |  Back to all projects
+        .made-with.col-6
+            span.text  Made with
+            +foreach('$article->tags as $tag')
+                +if('!$tag->navigation')
+                    a.link(href!="{{ url('tagged', $tag->slug) }}", title!="{{ $tag->name }}")
+                        +icon('icon', '$tag')
+        
+    article.article.row
+        .col-12
+            .cover
+                img.img(src!="{{ $article->cover()->url }}", width="800")
+        +if('$article->excerpt != ""')
+            .col-12
+                a.btn.green(href!="{{ $article->excerpt }}", target="_blank")
+                    | Demo 
+                    +icon('right')
+        .col-12
+            h1.title {{ $article->title }}
+        .col-12
+            .body {!! Markdown::convertToHtml($article->body) !!}

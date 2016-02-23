@@ -1,0 +1,19 @@
+extend ../layout/admin
+
+block title
+    title Ajustes
+    
+block content
+    include ../partials/errors
+    include ../partials/flash
+    .content
+        h1.title Ajustes
+        
+        +php("$tabs = ['blog' => 'Blog', 'profile' => 'Perfil', 'networks' => 'Redes Sociales'];")
+        .tools
+            include ../partials/tabs
+        
+        include partials/blog
+        include partials/profile
+        include partials/networks
+            
