@@ -85,9 +85,30 @@ class UsersController extends Controller
      */
     private function uploadFile($user, $file, $type)
     {
+        $uploadedFile = $this->s3Upload($file, 'profile', $type);
+
+        $file = File::create([
+            'url' => $uploadedFile['public_url'],
+            'original_name' => $uploadedFile['original_name'],
+            'type' => $uploadedFile['type']
+        ]);
+
+        return $file->id;
+    }
+
+    /**
+     * Upload file to Amazon s3
+     *
+     * @param  UploadedFile $file
+     * @param  String $subdirectory
+     * @param  String $type
+     * @return Array $uploadedFile
+     */
+    private function s3Upload($file, $subdirectory, $type)
+    {
         $client_original_name = $file->getClientOriginalName();
-        $fileName = time() . '_' . $client_original_name; //?
-        $destinationPath = 'uploads/profile';
+        $fileName = time() . '_' . $client_original_name;
+        $destinationPath = 'uploads/' . $subdirectory;
         $path = $destinationPath . '/' . $fileName;
 
         $image = Image::make($file->getRealPath());
@@ -96,24 +117,32 @@ class UsersController extends Controller
             case 'profile_photo':
                 $image->fit(128, 128, function ($constraint) {
                     $constraint->upsize();
-                })->save($path);
+                });
                 break;
             case 'profile_cover':
                 $image->resize(1440, null, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
-                })->save($path);
+                });
                 break;
         endswitch;
 
+        $stream = $image->stream();
+
+        $s3 = Storage::disk('s3');
+        $s3->put($path, $stream->__toString(), 'public');
+        $client = $s3->getDriver()->getAdapter()->getClient();
+        $public_url = $client->getObjectUrl(env('S3_BUCKET'), $path);
+
         $original_name = pathinfo($client_original_name, PATHINFO_FILENAME);
 
-        $file = File::create([
-            'url' => $path,
+        $uploadedFile = [
             'original_name' => $original_name,
+            'file_name' => $fileName,
+            'public_url' => $public_url,
             'type' => $type
-        ]);
+        ];
 
-        return $file->id;
+        return $uploadedFile;
     }
 }
