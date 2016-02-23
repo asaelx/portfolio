@@ -11,6 +11,7 @@ use App\Http\Requests\UserNetworksRequest;
 use App\User;
 use App\File;
 use Intervention\Image\ImageManagerStatic as Image;
+use Storage;
 
 class UsersController extends Controller
 {
