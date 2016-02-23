@@ -1,48 +1,48 @@
 include mixins
 .modal(data-target="about")
     h2.title
-        | Acerca de mí
+        | About me
         +icon('close')
     .content
         .photo
             img.img(src="http://realnerdo.com/img/asaelx.jpg", alt="asaelx")
             .data
-                .name Asael Jaimes
-                .degree Ing. en Sistemas Computacionales
-                .job Diseñador y Desarrollador Web
-        p El nombre es Asael Jaimes, actualmente vivo en la ciudad de Mérida, Yucatán y me dedico a hacer cosas para la web. Tengo una pasión por la tecnología y el buen diseño.
-        p Estudié Ingeniería en Sistemas Computacionales porque me gusta mucho entender cómo funcionan las cosas, de igual manera me dediqué a estudiar diseño para saber cómo crear soluciones interesantes.
-        p Desde pequeño me ha gustado mucho experimentar con las cosas, desarmarlas y ver si puedo crear cosas nuevas. Me gusta aprender todo lo que pueda, soy muy autodidacta y proactivo.
-        p Desarrollo proyectos que combinan el cuidado al diseño y funcionalidad, de manera que estos se complementen para crear soluciones que brinden a los usuarios una experiencia intuitiva.
-        p Cuando no estoy en la web, me puedes encontrar alimentando mis otras pasiones. Me encanta ir al cine, ver todas las películas, sean buenas o malas, dibujar y escribir cualquier cosa que se me ocurra, ir a cualquier concierto al que pueda ir, viajar, tanto para conocer otra ciudad, sus comidas y tradiciones, como para asistir a alguna conferencia de diseño y tecnología.
+                .name {{ $admin->name }}
+                .degree Computer Science Engineer
+                .job {{ $admin->occupation }}
+        p My name is Asael Jaimes. I currently live in the city of Merida, Yucatan, Mexico and I make things for the internet. I'm very passionate about technology and great design.
+        p I studied Computer Science Engineering because I love to understand how things work. I also studied design in order to know how to create interesting solutions.
+        p Ever since I was a little kid I've always loved to experiment with things, disassemble them and find out if I can create new things. I love to learn as much as I can, I'm very self-taught and proactive.
+        p I develop projects which combine the care for design and functionality, so they can complement each other in order to create solutions with an intuitive experience for the users.
+        p When I'm not on the web, you can find me feeding my other passions. While I love to spend my time working, experimenting and learning about design and code stuff through my screen, I like to clear my mind doing a lot of skateboarding, it teaches me to face my fears and improving myself by mastering new tricks. I also love to watch movies, even the bad ones. I'm learning about filmmaking and photography, which I intend to combine it with traveling.
 
 .modal(data-target="contact")
     h2.title
-        | Contáctame
+        | Contact me
         +icon('close')
     .content
-        p Puedes contactarme para cosas como:
+        p You can contact me for stuff like:
         ul
-            li “Necesito un sitio web básico, simple, pero elegante para tener presencia en internet”.
-            li “Quiero una tienda en línea para vender mis productos”.
-            li “Necesito un sitio web administrable, al que le pueda editar su contenido fácilmente”.
-            li “Quiero unas tarjetas de presentación”.
-            li “Me gustaría un rediseño al sitio web que tengo”.
-            li “Vamos a tomarnos una cerveza y platicar de un proyecto interesante”.
-        p O para alguna otra cosa que se te ocurra y vemos qué se puede hacer.
+            li “I need a simple but elegant website to have presence on internet”.
+            li “I want an online store to sell my products”.
+            li “I need an administrable website where I can modify its content easily”.
+            li “I want a business card design”.
+            li “I'd like a redesign to the website I already have”.
+            li “Let's go grab a beer and talk about this awesome project I have”.
+        p Or any other thing in your mind and let's see what we can do.
         .info
             .photo
-                img.img(src="http://realnerdo.com/img/profile-big.png")
-            h3.title Mis datos
-            p.degree Ing. en Sistemas Computacionales
+                img.img(src="{{ asset('img/profile-big.png') }}")
+            h3.title My info
+            p.degree Computer Science Engineer
             p.phone
                 +icon('phone')
-                | (999) 217 5661
+                | +52 (999) 217 5661
             p.email
                 +icon('email')
-                a.link(href="#") asaelx@gmail.com
+                a.link(href!="mailto:{{ $admin->email }}") {{ $admin->email }}
         a.cv.btn.green(href="#", target="_blank")
-            | Ver currículum 
+            | Resume 
             +icon('right')
         
 

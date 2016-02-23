@@ -1,6 +1,6 @@
 
 <div data-target="about" class="modal">
-  <h2 class="title">Acerca de mí
+  <h2 class="title">About me
     <svg role="img" class="close-icon">
       <use xlink:href="#close-icon"></use>
     </svg>
@@ -8,50 +8,50 @@
   <div class="content">
     <div class="photo"><img src="http://realnerdo.com/img/asaelx.jpg" alt="asaelx" class="img"/>
       <div class="data">
-        <div class="name">Asael Jaimes</div>
-        <div class="degree">Ing. en Sistemas Computacionales</div>
-        <div class="job">Diseñador y Desarrollador Web</div>
+        <div class="name">{{ $admin->name }}</div>
+        <div class="degree">Computer Science Engineer</div>
+        <div class="job">{{ $admin->occupation }}</div>
       </div>
     </div>
-    <p>El nombre es Asael Jaimes, actualmente vivo en la ciudad de Mérida, Yucatán y me dedico a hacer cosas para la web. Tengo una pasión por la tecnología y el buen diseño.</p>
-    <p>Estudié Ingeniería en Sistemas Computacionales porque me gusta mucho entender cómo funcionan las cosas, de igual manera me dediqué a estudiar diseño para saber cómo crear soluciones interesantes.</p>
-    <p>Desde pequeño me ha gustado mucho experimentar con las cosas, desarmarlas y ver si puedo crear cosas nuevas. Me gusta aprender todo lo que pueda, soy muy autodidacta y proactivo.</p>
-    <p>Desarrollo proyectos que combinan el cuidado al diseño y funcionalidad, de manera que estos se complementen para crear soluciones que brinden a los usuarios una experiencia intuitiva.</p>
-    <p>Cuando no estoy en la web, me puedes encontrar alimentando mis otras pasiones. Me encanta ir al cine, ver todas las películas, sean buenas o malas, dibujar y escribir cualquier cosa que se me ocurra, ir a cualquier concierto al que pueda ir, viajar, tanto para conocer otra ciudad, sus comidas y tradiciones, como para asistir a alguna conferencia de diseño y tecnología.</p>
+    <p>My name is Asael Jaimes. I currently live in the city of Merida, Yucatan, Mexico and I make things for the internet. I'm very passionate about technology and great design.</p>
+    <p>I studied Computer Science Engineering because I love to understand how things work. I also studied design in order to know how to create interesting solutions.</p>
+    <p>Ever since I was a little kid I've always loved to experiment with things, disassemble them and find out if I can create new things. I love to learn as much as I can, I'm very self-taught and proactive.</p>
+    <p>I develop projects which combine the care for design and functionality, so they can complement each other in order to create solutions with an intuitive experience for the users.</p>
+    <p>When I'm not on the web, you can find me feeding my other passions. While I love to spend my time working, experimenting and learning about design and code stuff through my screen, I like to clear my mind doing a lot of skateboarding, it teaches me to face my fears and improving myself by mastering new tricks. I also love to watch movies, even the bad ones. I'm learning about filmmaking and photography, which I intend to combine it with traveling.</p>
   </div>
 </div>
 <div data-target="contact" class="modal">
-  <h2 class="title">Contáctame
+  <h2 class="title">Contact me
     <svg role="img" class="close-icon">
       <use xlink:href="#close-icon"></use>
     </svg>
   </h2>
   <div class="content">
-    <p>Puedes contactarme para cosas como:</p>
+    <p>You can contact me for stuff like:</p>
     <ul>
-      <li>“Necesito un sitio web básico, simple, pero elegante para tener presencia en internet”.</li>
-      <li>“Quiero una tienda en línea para vender mis productos”.</li>
-      <li>“Necesito un sitio web administrable, al que le pueda editar su contenido fácilmente”.</li>
-      <li>“Quiero unas tarjetas de presentación”.</li>
-      <li>“Me gustaría un rediseño al sitio web que tengo”.</li>
-      <li>“Vamos a tomarnos una cerveza y platicar de un proyecto interesante”.</li>
+      <li>“I need a simple but elegant website to have presence on internet”.</li>
+      <li>“I want an online store to sell my products”.</li>
+      <li>“I need an administrable website where I can modify its content easily”.</li>
+      <li>“I want a business card design”.</li>
+      <li>“I'd like a redesign to the website I already have”.</li>
+      <li>“Let's go grab a beer and talk about this awesome project I have”.</li>
     </ul>
-    <p>O para alguna otra cosa que se te ocurra y vemos qué se puede hacer.</p>
+    <p>Or any other thing in your mind and let's see what we can do.</p>
     <div class="info">
-      <div class="photo"><img src="http://realnerdo.com/img/profile-big.png" class="img"/></div>
-      <h3 class="title">Mis datos</h3>
-      <p class="degree">Ing. en Sistemas Computacionales</p>
+      <div class="photo"><img src="{{ asset('img/profile-big.png') }}" class="img"/></div>
+      <h3 class="title">My info</h3>
+      <p class="degree">Computer Science Engineer</p>
       <p class="phone">
         <svg role="img" class="phone-icon">
           <use xlink:href="#phone-icon"></use>
-        </svg>(999) 217 5661
+        </svg>+52 (999) 217 5661
       </p>
       <p class="email">
         <svg role="img" class="email-icon">
           <use xlink:href="#email-icon"></use>
-        </svg><a href="#" class="link">asaelx@gmail.com</a>
+        </svg><a href="mailto:{{ $admin->email }}" class="link">{{ $admin->email }}</a>
       </p>
-    </div><a href="#" target="_blank" class="cv btn green">Ver currículum 
+    </div><a href="#" target="_blank" class="cv btn green">Resume 
       <svg role="img" class="right-icon">
         <use xlink:href="#right-icon"></use>
       </svg></a>

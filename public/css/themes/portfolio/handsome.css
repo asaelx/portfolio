@@ -711,6 +711,66 @@ img {
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(21) {
+        -webkit-animation: zoom-in 0.8s 8.4s forwards ease;
+        animation: zoom-in 0.8s 8.4s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(22) {
+        -webkit-animation: zoom-in 0.8s 8.8s forwards ease;
+        animation: zoom-in 0.8s 8.8s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(23) {
+        -webkit-animation: zoom-in 0.8s 9.2s forwards ease;
+        animation: zoom-in 0.8s 9.2s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(24) {
+        -webkit-animation: zoom-in 0.8s 9.6s forwards ease;
+        animation: zoom-in 0.8s 9.6s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(25) {
+        -webkit-animation: zoom-in 0.8s 10s forwards ease;
+        animation: zoom-in 0.8s 10s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(26) {
+        -webkit-animation: zoom-in 0.8s 10.4s forwards ease;
+        animation: zoom-in 0.8s 10.4s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(27) {
+        -webkit-animation: zoom-in 0.8s 10.8s forwards ease;
+        animation: zoom-in 0.8s 10.8s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(28) {
+        -webkit-animation: zoom-in 0.8s 11.2s forwards ease;
+        animation: zoom-in 0.8s 11.2s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(29) {
+        -webkit-animation: zoom-in 0.8s 11.6s forwards ease;
+        animation: zoom-in 0.8s 11.6s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(30) {
+        -webkit-animation: zoom-in 0.8s 12s forwards ease;
+        animation: zoom-in 0.8s 12s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
       .shots .list .item .link {
         display: inline-block;
         width: 17.8571428571rem;
