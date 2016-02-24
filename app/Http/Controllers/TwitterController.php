@@ -10,6 +10,7 @@ use \Twitter as Tweet;
 use Auth;
 use App\File;
 use App\Twitter;
+use Storage;
 
 class TwitterController extends Controller
 {
