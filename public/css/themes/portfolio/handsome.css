@@ -997,6 +997,13 @@ img {
           opacity: 1;
           filter: alpha(opacity=100);
           transition: all 0.3s ease; }
+      .shot .article .body pre code {
+        border-radius: 0.2142857143rem;
+        padding: 1em 1.5em;
+        margin-bottom: 2rem; }
+        @media only screen and (max-width: 600px) {
+          .shot .article .body pre code {
+            margin-bottom: 1rem; } }
 
 .footer {
   -webkit-animation: up-in 0.8s 1s forwards ease;
