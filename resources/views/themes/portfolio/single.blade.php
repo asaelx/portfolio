@@ -82,7 +82,7 @@
             </svg>
       </h2>
       <div class="content">
-        <div class="photo"><img src="http://realnerdo.com/img/asaelx.jpg" alt="asaelx" class="img">
+        <div class="photo"><img src="https://s3-us-west-2.amazonaws.com/realnerdo/uploads/profile/asaelx.jpg" alt="asaelx" class="img">
           <div class="data">
             <div class="name">{{ $admin->name }}</div>
             <div class="degree">Computer Science Engineer</div>
@@ -114,7 +114,7 @@
         </ul>
         <p>Or any other thing in your mind and let's see what we can do.</p>
         <div class="info">
-          <div class="photo"><img src="{{ asset('img/profile-big.png') }}" class="img"></div>
+          <div class="photo"><img src="https://s3-us-west-2.amazonaws.com/realnerdo/uploads/profile/profile-big.png" class="img"></div>
           <h3 class="title">My info</h3>
           <p class="degree">Computer Science Engineer</p>
           <p class="phone">
