@@ -24289,6 +24289,9 @@ hljs.registerLanguage('zephir', function(hljs) {
 $(function(){
     var $body = $('body');
 
+    /* HighlightJS */
+    hljs.initHighlightingOnLoad();
+
     /* Language switch */
     var lang_switch = $('.switch');
     if(lang_switch.length){
@@ -24313,16 +24316,9 @@ $(function(){
 
     /* Delay shots */
     setTimeout(function(){
-        var shots = $('.shots'),
-            single = $('.single');
+        var shots = $('.shots');
         if(shots.length)
             shots.fadeIn(100);
-        if(single.length)
-        {
-            single.fadeIn(100);
-            /* HighlightJS */
-            hljs.initHighlightingOnLoad();
-        }
     }, 1300);
 
     /* Modal */
