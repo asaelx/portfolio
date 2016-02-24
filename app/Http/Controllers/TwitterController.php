@@ -81,25 +81,17 @@ class TwitterController extends Controller
                     'twitter' => $credentials->screen_name
                 ]);
 
-                $profile_image_url = file_get_contents(str_replace('_normal', '', $credentials->profile_image_url));
-                $profile_banner_url = file_get_contents($credentials->profile_banner_url);
-
-                $destinationPath = 'uploads/twitter';
-
-                $profile_image = $destinationPath . '/twitter_profile_' . $credentials->screen_name . '.jpg';
-                $profile_banner = $destinationPath . '/twitter_banner_' . $credentials->screen_name . '.jpg';
-
-                file_put_contents($profile_image, $profile_image_url);
-                file_put_contents($profile_banner, $profile_banner_url);
+                $uploadedFileProfile = $this->s3Upload($credentials->profile_image_url, 'twitter', 'profile_photo');
+                $uploadedFileCover = $this->s3Upload($credentials->profile_banner_url, 'twitter', 'profile_cover');
 
                 $file1 = File::create([
-                    'url' => $profile_image,
+                    'url' => $uploadedFileProfile['public_url'],
                     'original_name' => 'twitter_profile_' . $credentials->screen_name,
                     'type' => 'profile_photo'
                 ]);
 
                 $file2 = File::create([
-                    'url' => $profile_banner,
+                    'url' => $uploadedFileCover['public_url'],
                     'original_name' => 'twitter_banner_' . $credentials->screen_name,
                     'type' => 'profile_cover'
                 ]);
@@ -137,5 +129,54 @@ class TwitterController extends Controller
     {
         session()->forget('access_token');
         return redirect('/')->with('flash_notice', 'You\'ve successfully logged out!');
+    }
+
+    /**
+     * Upload file to Amazon s3
+     *
+     * @param  UploadedFile $file
+     * @param  String $subdirectory
+     * @param  String $type
+     * @return Array $uploadedFile
+     */
+    private function s3Upload($file, $subdirectory, $type)
+    {
+        $image = Image::make($file);
+
+        switch($type):
+            case 'profile_photo':
+                $image->fit(128, 128, function ($constraint) {
+                    $constraint->upsize();
+                });
+                $original_name = 'twitter_profile_photo';
+                break;
+            case 'profile_cover':
+                $image->resize(1440, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                });
+                $original_name = 'twitter_profile_cover';
+                break;
+        endswitch;
+
+        $stream = $image->stream();
+
+        $destinationPath = 'uploads/' . $subdirectory;
+        $fileName = time() . $original_name . '.jpg';
+        $path = $destinationPath . '/' . $fileName;
+
+        $s3 = Storage::disk('s3');
+        $s3->put($path, $stream->__toString(), 'public');
+        $client = $s3->getDriver()->getAdapter()->getClient();
+        $public_url = $client->getObjectUrl(env('S3_BUCKET'), $path);
+
+        $uploadedFile = [
+            'original_name' => $original_name,
+            'file_name' => $fileName,
+            'public_url' => $public_url,
+            'type' => $type
+        ];
+
+        return $uploadedFile;
     }
 }
