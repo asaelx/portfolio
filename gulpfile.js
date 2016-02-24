@@ -10,13 +10,15 @@ elixir.config.sourcemaps = false;
 // Theme
 elixir(function(mix) {
     mix.sass([
-        'themes/portfolio/handsome.sass'
+        'themes/portfolio/handsome.sass',
+        bw + 'highlightjs/styles/monokai-sublime.css'
     ], 'public/css/themes/portfolio/handsome.css');
 });
 
 elixir(function(mix) {
     mix.scripts([
         bw + 'jquery/dist/jquery.js',
+        bw + 'highlightjs/highlight.pack.js',
         'themes/portfolio/magic.js'
     ], 'public/js/themes/portfolio/magic.js');
 });
