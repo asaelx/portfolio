@@ -965,7 +965,7 @@ img {
         list-style: disc; }
       .shot .article .body ol {
         list-style: decimal; }
-      .shot .article .body img {
+      .shot .article .body img, .shot .article .body video {
         max-width: 100%;
         border-radius: 0.2142857143rem; }
       .shot .article .body a {
