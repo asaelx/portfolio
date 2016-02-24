@@ -888,7 +888,8 @@ img {
       font-family: "Montserrat", Helvetica, Arial, sans-serif;
       font-size: 28px;
       font-size: 2rem;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-align: center; }
       @media only screen and (max-width: 600px) {
         .shot .article .title {
           font-size: 20px;
@@ -899,14 +900,103 @@ img {
       visibility: hidden;
       opacity: 0;
       filter: alpha(opacity=0); }
+      .shot .article .body h1 {
+        font-size: 2.39976rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3em;
+        color: #6d8082;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif; }
+      .shot .article .body h2 {
+        font-size: 1.9998rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3em;
+        color: #6d8082;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif; }
+      .shot .article .body h3 {
+        font-size: 1.59984rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3em;
+        color: #6d8082;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif; }
+      .shot .article .body h4 {
+        font-size: 1.19988rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3em;
+        color: #6d8082;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif; }
+      .shot .article .body h5 {
+        font-size: 0.79992rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3em;
+        color: #6d8082;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif; }
+      .shot .article .body h6 {
+        font-size: 0.39996rem;
+        margin: 1.8em 0 0.5em 0;
+        line-height: 1.3em;
+        color: #6d8082;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif; }
       .shot .article .body p {
         font-size: 20px;
         font-size: 1.4285714286rem;
-        line-height: 1.5em; }
+        line-height: 1.5em;
+        margin-bottom: 2rem; }
         @media only screen and (max-width: 600px) {
           .shot .article .body p {
             font-size: 16px;
+            font-size: 1.1428571429rem;
+            line-height: 1.7em;
+            margin-bottom: 1rem; } }
+      .shot .article .body strong {
+        font-weight: bold; }
+      .shot .article .body em {
+        font-style: italic; }
+      .shot .article .body ul, .shot .article .body ol {
+        padding-left: 1.5rem; }
+      .shot .article .body li {
+        font-size: 18px;
+        font-size: 1.2857142857rem;
+        margin-bottom: 0.8rem; }
+        @media only screen and (max-width: 600px) {
+          .shot .article .body li {
+            font-size: 16px;
             font-size: 1.1428571429rem; } }
+      .shot .article .body ul {
+        list-style: disc; }
+      .shot .article .body ol {
+        list-style: decimal; }
+      .shot .article .body img {
+        max-width: 100%;
+        border-radius: 0.2142857143rem; }
+      .shot .article .body a {
+        color: #3498DB;
+        display: inline-block;
+        position: relative;
+        transition: all 0.3s ease; }
+        .shot .article .body a:hover, .shot .article .body a.active {
+          color: #217dbb; }
+        .shot .article .body a:before, .shot .article .body a:after {
+          content: "";
+          background: #3498DB;
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          left: 0;
+          visibility: hidden;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          transition: all 0.3s ease; }
+        .shot .article .body a:before {
+          bottom: -0.0714285714rem;
+          -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem); }
+        .shot .article .body a:hover:before, .shot .article .body a.active:before {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          visibility: visible;
+          opacity: 1;
+          filter: alpha(opacity=100);
+          transition: all 0.3s ease; }
 
 .footer {
   -webkit-animation: up-in 0.8s 1s forwards ease;
