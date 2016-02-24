@@ -12,8 +12,13 @@ $medium: "max-device-width: " + $medium-size
 $small: "max-device-width: " + $small-size
 $xsmall: "max-device-width: " + $xsmall-size
 
+$large: "and (min-device-width: " + $large-size + ") and (max-device-width: " + $max-width + ")"
+$medium: "and (min-device-width: " + $medium-size + ") and (max-device-width: " + $large-size + ")"
+$small: "and (min-device-width: " + $small-size + ") and (max-device-width: " + $medium-size + ")"
+$xsmall: "and (min-device-width: " + $xsmall-size + ") and (max-device-width: " + $small-size + ")"
+
 =breakpoint($size)
-    @media only screen and ($size)
+    @media only screen #{$size}
         @content
 
 *, *:after, *:before

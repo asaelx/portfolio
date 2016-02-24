@@ -112,7 +112,7 @@ img {
   padding: 1em;
   width: 100%; }
 
-@media only screen and (min-width: 20em) {
+@media only screen {
   .wrapper {
     width: 100%;
     max-width: 1200px; }
@@ -393,7 +393,7 @@ img {
           left: 0.1428571429rem; }
         .topbar .languages .switch label.sp:before {
           right: 0.1428571429rem; }
-    @media only screen and (max-device-width: 320px) {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
       .topbar .languages {
         width: 100%;
         float: none;
@@ -409,7 +409,7 @@ img {
     float: right; }
   .topbar .about .btn {
     float: left; }
-  @media only screen and (max-device-width: 320px) {
+  @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
     .topbar .about, .topbar .contact {
       width: 100%;
       text-align: center; }
@@ -568,27 +568,27 @@ img {
     content: " ";
     display: table;
     clear: both; }
-    @media only screen and (max-device-width: 1200px) {
+    @media only screen and (min-device-width: 1200px) and (max-device-width: 1200px) {
       .shots .list {
         float: none;
         margin: 0 auto;
         width: 900px; } }
-    @media only screen and (max-device-width: 900px) {
+    @media only screen and (min-device-width: 900px) and (max-device-width: 1200px) {
       .shots .list {
         width: 600px; } }
-    @media only screen and (max-device-width: 600px) {
+    @media only screen and (min-device-width: 600px) and (max-device-width: 900px) {
       .shots .list {
         width: 100%; } }
     .shots .list .item {
       float: left;
       text-align: center; }
-      @media only screen and (max-device-width: 1200px) {
+      @media only screen and (min-device-width: 1200px) and (max-device-width: 1200px) {
         .shots .list .item {
           width: calc(100% / 3); } }
-      @media only screen and (max-device-width: 900px) {
+      @media only screen and (min-device-width: 900px) and (max-device-width: 1200px) {
         .shots .list .item {
           width: calc(100% / 2); } }
-      @media only screen and (max-device-width: 600px) {
+      @media only screen and (min-device-width: 600px) and (max-device-width: 900px) {
         .shots .list .item {
           width: 100%; } }
       .shots .list .item:nth-child(1) {
@@ -783,7 +783,7 @@ img {
   .shot .row {
     width: 57.1428571429rem;
     margin: 0 auto; }
-    @media only screen and (max-device-width: 900px) {
+    @media only screen and (min-device-width: 900px) and (max-device-width: 1200px) {
       .shot .row {
         width: 100%; } }
   .shot .top {
@@ -839,7 +839,7 @@ img {
       .shot .top .made-with [class$="-icon"] {
         width: 2.1428571429rem;
         height: 2.1428571429rem; }
-    @media only screen and (max-width: 635px) {
+    @media only screen {
       .shot .top .back {
         text-align: center;
         width: 100%; }
@@ -890,7 +890,7 @@ img {
       font-size: 2rem;
       text-transform: uppercase;
       text-align: center; }
-      @media only screen and (max-device-width: 600px) {
+      @media only screen and (min-device-width: 600px) and (max-device-width: 900px) {
         .shot .article .title {
           font-size: 20px;
           font-size: 1.4285714286rem; } }
@@ -941,7 +941,7 @@ img {
         font-size: 1.4285714286rem;
         line-height: 1.5em;
         margin-bottom: 2rem; }
-        @media only screen and (max-device-width: 600px) {
+        @media only screen and (min-device-width: 600px) and (max-device-width: 900px) {
           .shot .article .body p {
             font-size: 16px;
             font-size: 1.1428571429rem;
@@ -957,7 +957,7 @@ img {
         font-size: 18px;
         font-size: 1.2857142857rem;
         margin-bottom: 0.8rem; }
-        @media only screen and (max-device-width: 600px) {
+        @media only screen and (min-device-width: 600px) and (max-device-width: 900px) {
           .shot .article .body li {
             font-size: 16px;
             font-size: 1.1428571429rem; } }
@@ -1057,7 +1057,7 @@ img {
       position: relative;
       border-radius: 0.2142857143rem;
       overflow: hidden; }
-      @media only screen and (max-device-width: 320px) {
+      @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
         .modal .content .photo {
           margin-bottom: 1rem;
           margin-right: 0;
@@ -1100,10 +1100,10 @@ img {
     .modal .content .info {
       padding-top: 1.7142857143rem;
       padding-left: 14.2857142857rem; }
-      @media only screen and (max-device-width: 600px) {
+      @media only screen and (min-device-width: 600px) and (max-device-width: 900px) {
         .modal .content .info {
           padding-bottom: 1rem; } }
-      @media only screen and (max-device-width: 320px) {
+      @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
         .modal .content .info {
           padding-left: 0; } }
       .modal .content .info .title {
@@ -1130,7 +1130,7 @@ img {
         position: absolute;
         left: 0;
         bottom: 0; }
-        @media only screen and (max-device-width: 320px) {
+        @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
           .modal .content .info .photo {
             display: none; } }
     .modal .content .cv {
@@ -1148,20 +1148,20 @@ img {
         left: 0.2em;
         -webkit-transform: translateX(0.05em);
         transform: translateX(0.05em); }
-      @media only screen and (max-device-width: 600px) {
+      @media only screen and (min-device-width: 600px) and (max-device-width: 900px) {
         .modal .content .cv {
           position: relative;
           right: auto;
           bottom: auto;
           margin-left: 14.2857142857rem; } }
-      @media only screen and (max-device-width: 320px) {
+      @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
         .modal .content .cv {
           margin-left: 0; } }
   .modal.visible {
     display: block;
     -webkit-animation: modal-in 0.3s forwards ease;
     animation: modal-in 0.3s forwards ease; }
-    @media only screen and (max-device-width: 900px) {
+    @media only screen and (min-device-width: 900px) and (max-device-width: 1200px) {
       .modal.visible {
         -webkit-animation: modal-in-small 0.3s forwards ease;
         animation: modal-in-small 0.3s forwards ease;
@@ -1169,7 +1169,7 @@ img {
         top: 1rem;
         -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0); } }
-    @media only screen and (max-device-width: 320px) {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
       .modal.visible {
         width: 90%; } }
 
