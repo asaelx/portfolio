@@ -24313,12 +24313,9 @@ $(function(){
 
     /* Delay shots */
     setTimeout(function(){
-        var shots = $('.shots'),
-            single = $('.single');
+        var shots = $('.shots');
         if(shots.length)
             shots.fadeIn(100);
-        if(single.length)
-            single.fadeIn(100);
     }, 1300);
 
     /* Modal */
