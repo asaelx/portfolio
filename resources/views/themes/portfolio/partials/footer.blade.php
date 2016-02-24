@@ -1,4 +1,4 @@
 
 <footer class="footer col-12">
-  <p>Diseño y código hechos con <span class="love">❤</span> por <a href="http://realnerdo.com/">Asael Jaimes</a></p>
+  <p>Design and code made with <span class="love" title="love">❤</span> by <a href="http://realnerdo.com/">Asael Jaimes</a></p>
 </footer>
