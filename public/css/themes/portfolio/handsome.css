@@ -592,182 +592,182 @@ img {
         .shots .list .item {
           width: 100%; } }
       .shots .list .item:nth-child(1) {
+        -webkit-animation: zoom-in 0.8s 0.2s forwards ease;
+        animation: zoom-in 0.8s 0.2s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(2) {
         -webkit-animation: zoom-in 0.8s 0.4s forwards ease;
         animation: zoom-in 0.8s 0.4s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(2) {
+      .shots .list .item:nth-child(3) {
+        -webkit-animation: zoom-in 0.8s 0.6s forwards ease;
+        animation: zoom-in 0.8s 0.6s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(4) {
         -webkit-animation: zoom-in 0.8s 0.8s forwards ease;
         animation: zoom-in 0.8s 0.8s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(3) {
+      .shots .list .item:nth-child(5) {
+        -webkit-animation: zoom-in 0.8s 1s forwards ease;
+        animation: zoom-in 0.8s 1s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(6) {
         -webkit-animation: zoom-in 0.8s 1.2s forwards ease;
         animation: zoom-in 0.8s 1.2s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(4) {
+      .shots .list .item:nth-child(7) {
+        -webkit-animation: zoom-in 0.8s 1.4s forwards ease;
+        animation: zoom-in 0.8s 1.4s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(8) {
         -webkit-animation: zoom-in 0.8s 1.6s forwards ease;
         animation: zoom-in 0.8s 1.6s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(5) {
+      .shots .list .item:nth-child(9) {
+        -webkit-animation: zoom-in 0.8s 1.8s forwards ease;
+        animation: zoom-in 0.8s 1.8s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(10) {
         -webkit-animation: zoom-in 0.8s 2s forwards ease;
         animation: zoom-in 0.8s 2s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(6) {
+      .shots .list .item:nth-child(11) {
+        -webkit-animation: zoom-in 0.8s 2.2s forwards ease;
+        animation: zoom-in 0.8s 2.2s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(12) {
         -webkit-animation: zoom-in 0.8s 2.4s forwards ease;
         animation: zoom-in 0.8s 2.4s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(7) {
+      .shots .list .item:nth-child(13) {
+        -webkit-animation: zoom-in 0.8s 2.6s forwards ease;
+        animation: zoom-in 0.8s 2.6s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(14) {
         -webkit-animation: zoom-in 0.8s 2.8s forwards ease;
         animation: zoom-in 0.8s 2.8s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(8) {
+      .shots .list .item:nth-child(15) {
+        -webkit-animation: zoom-in 0.8s 3s forwards ease;
+        animation: zoom-in 0.8s 3s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(16) {
         -webkit-animation: zoom-in 0.8s 3.2s forwards ease;
         animation: zoom-in 0.8s 3.2s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(9) {
+      .shots .list .item:nth-child(17) {
+        -webkit-animation: zoom-in 0.8s 3.4s forwards ease;
+        animation: zoom-in 0.8s 3.4s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(18) {
         -webkit-animation: zoom-in 0.8s 3.6s forwards ease;
         animation: zoom-in 0.8s 3.6s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(10) {
+      .shots .list .item:nth-child(19) {
+        -webkit-animation: zoom-in 0.8s 3.8s forwards ease;
+        animation: zoom-in 0.8s 3.8s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(20) {
         -webkit-animation: zoom-in 0.8s 4s forwards ease;
         animation: zoom-in 0.8s 4s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(11) {
+      .shots .list .item:nth-child(21) {
+        -webkit-animation: zoom-in 0.8s 4.2s forwards ease;
+        animation: zoom-in 0.8s 4.2s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(22) {
         -webkit-animation: zoom-in 0.8s 4.4s forwards ease;
         animation: zoom-in 0.8s 4.4s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(12) {
+      .shots .list .item:nth-child(23) {
+        -webkit-animation: zoom-in 0.8s 4.6s forwards ease;
+        animation: zoom-in 0.8s 4.6s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(24) {
         -webkit-animation: zoom-in 0.8s 4.8s forwards ease;
         animation: zoom-in 0.8s 4.8s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(13) {
+      .shots .list .item:nth-child(25) {
+        -webkit-animation: zoom-in 0.8s 5s forwards ease;
+        animation: zoom-in 0.8s 5s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(26) {
         -webkit-animation: zoom-in 0.8s 5.2s forwards ease;
         animation: zoom-in 0.8s 5.2s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(14) {
+      .shots .list .item:nth-child(27) {
+        -webkit-animation: zoom-in 0.8s 5.4s forwards ease;
+        animation: zoom-in 0.8s 5.4s forwards ease;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0); }
+      .shots .list .item:nth-child(28) {
         -webkit-animation: zoom-in 0.8s 5.6s forwards ease;
         animation: zoom-in 0.8s 5.6s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(15) {
-        -webkit-animation: zoom-in 0.8s 6s forwards ease;
-        animation: zoom-in 0.8s 6s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(16) {
-        -webkit-animation: zoom-in 0.8s 6.4s forwards ease;
-        animation: zoom-in 0.8s 6.4s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(17) {
-        -webkit-animation: zoom-in 0.8s 6.8s forwards ease;
-        animation: zoom-in 0.8s 6.8s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(18) {
-        -webkit-animation: zoom-in 0.8s 7.2s forwards ease;
-        animation: zoom-in 0.8s 7.2s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(19) {
-        -webkit-animation: zoom-in 0.8s 7.6s forwards ease;
-        animation: zoom-in 0.8s 7.6s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(20) {
-        -webkit-animation: zoom-in 0.8s 8s forwards ease;
-        animation: zoom-in 0.8s 8s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(21) {
-        -webkit-animation: zoom-in 0.8s 8.4s forwards ease;
-        animation: zoom-in 0.8s 8.4s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(22) {
-        -webkit-animation: zoom-in 0.8s 8.8s forwards ease;
-        animation: zoom-in 0.8s 8.8s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(23) {
-        -webkit-animation: zoom-in 0.8s 9.2s forwards ease;
-        animation: zoom-in 0.8s 9.2s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(24) {
-        -webkit-animation: zoom-in 0.8s 9.6s forwards ease;
-        animation: zoom-in 0.8s 9.6s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(25) {
-        -webkit-animation: zoom-in 0.8s 10s forwards ease;
-        animation: zoom-in 0.8s 10s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(26) {
-        -webkit-animation: zoom-in 0.8s 10.4s forwards ease;
-        animation: zoom-in 0.8s 10.4s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(27) {
-        -webkit-animation: zoom-in 0.8s 10.8s forwards ease;
-        animation: zoom-in 0.8s 10.8s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
-      .shots .list .item:nth-child(28) {
-        -webkit-animation: zoom-in 0.8s 11.2s forwards ease;
-        animation: zoom-in 0.8s 11.2s forwards ease;
-        visibility: hidden;
-        opacity: 0;
-        filter: alpha(opacity=0); }
       .shots .list .item:nth-child(29) {
-        -webkit-animation: zoom-in 0.8s 11.6s forwards ease;
-        animation: zoom-in 0.8s 11.6s forwards ease;
+        -webkit-animation: zoom-in 0.8s 5.8s forwards ease;
+        animation: zoom-in 0.8s 5.8s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
       .shots .list .item:nth-child(30) {
-        -webkit-animation: zoom-in 0.8s 12s forwards ease;
-        animation: zoom-in 0.8s 12s forwards ease;
+        -webkit-animation: zoom-in 0.8s 6s forwards ease;
+        animation: zoom-in 0.8s 6s forwards ease;
         visibility: hidden;
         opacity: 0;
         filter: alpha(opacity=0); }
