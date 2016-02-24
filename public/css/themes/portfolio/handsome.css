@@ -854,9 +854,11 @@ img {
     opacity: 0;
     filter: alpha(opacity=0); }
     .shot .article .cover {
-      width: 100%; }
+      width: 100%;
+      border-radius: 0.2142857143rem; }
       .shot .article .cover .img {
-        width: 100%; }
+        width: 100%;
+        border-radius: 0.2142857143rem; }
     .shot .article .col-12:nth-child(1) {
       padding-top: 0; }
     .shot .article .col-12:nth-child(2) {
