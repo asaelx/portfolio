@@ -25,9 +25,16 @@ $(function(){
 
     /* Delay shots */
     setTimeout(function(){
-        var shots = $('.shots');
+        var shots = $('.shots'),
+            single = $('.single');
         if(shots.length)
             shots.fadeIn(100);
+        if(single.length)
+        {
+            single.fadeIn(100);
+            /* HighlightJS */
+            hljs.initHighlightingOnLoad();
+        }
     }, 1300);
 
     /* Modal */
