@@ -114,7 +114,7 @@
                   <use xlink:href="#email-icon"></use>
                 </svg><a href="mailto:{{ $admin->email }}" class="link">{{ $admin->email }}</a>
           </p>
-        </div><a href="#" target="_blank" class="cv btn green">Resume 
+        </div><a href="https://s3-us-west-2.amazonaws.com/realnerdo/uploads/files/Asael+Resume.pdf" target="_blank" class="cv btn green">Resume 
               <svg role="img" class="right-icon">
                 <use xlink:href="#right-icon"></use>
               </svg></a>
